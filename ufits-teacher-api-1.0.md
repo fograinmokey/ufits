@@ -187,16 +187,16 @@
                 "projectId": 9,                         // 项目id
                 "userName": "任盈盈",                   // 用户名
                 "birthday": "1993-10-10",               // 生日
-                "maternityStageTag": 3,                 // 孕产阶段标识
+                "maternityStageTag": 3,                 // 孕产阶段标识, 0-未知，1-备孕，2-怀孕，3-产后
                 "maternityDate": "2019-10-10",          // 孕产日期
-                "address": "北京市丰台区南方庄22号路",    // 住址
+                "address": "北京市丰台区南方庄22号路",   // 住址
                 "money": 3000,                          // 金额
                 "coachId": 3,                           // 销售教练id
                 "effectiveDate": "2022-10-10",          // 卡有效期
                 "customerSourceId": 5,                  // 客户来源id（子选项id）
-                "payWay": 2,                            // 支付方式标识
-                "placeType": 1,                         // 场内或场外标识
-                "doorType": 1,                          // 上门与不上门标识
+                "payWay": 2,                            // 支付方式标识，0-大众点评，1-支付宝，2-微信，3-现金，4-刷卡，5-其他
+                "placeType": 1,                         // 场内或场外标识，0-场外，1-场内
+                "doorType": 1,                          // 是否上门标识，0-到店，1-上门
                 "inDoorFee": 20                         // 上门费，可无，无则不显示
                 "purchaseCourseNumber": 30              // 购课数
                 "giveCourseNumber"：5                   // 赠课数，可无
@@ -217,3 +217,39 @@
                     }
                 ]
             }
+            
+### 8 获取会员卡信息
++ 说明：需要教练权限
++ 地址：[GET]  /v1/teacher/cards/id/3
++ 参数：id - 会员卡id
++ 返回值：
+
+        {
+            "data": {
+                "cardId": 27,                               // 卡id
+                "cardNumber": "20190422000001",             // 卡号
+                "userName": "任盈盈",                       // 用户姓名
+                "phoneNumber": "17085645710",               // 手机号 
+                "maternityStageTag": 3,                     // 孕产阶段, 0-未知，1-备孕，2-怀孕，3-产后
+                "maternityDate": "2019-10-10",              // 孕产日期
+                "birthday": "1993-10-10",                   // 生日
+                "address": "北京市丰台区南方庄22号路",        // 住址
+                "packageType": 0,                           // 套餐类型，0-新买课，1-续课，2-套餐升级
+                "projectId": 9,                             // 项目id（有子项目使用子项目id）
+                "money": 3000,                              // 金额
+                "purchaseCourseNumber": 30,                 // 购课数
+                "giveCourseNumber": 0,                      // 赠课数
+                "remainCourseNumber": 30,                   // 剩余课数
+                "inDoorFee": 0,                             // 上门费
+                "payWay": 2,                                // 支付方式标识，0-大众点评，1-支付宝，2-微信，3-现金，4-刷卡，5-其他
+                "effectiveDate": "2022-10-10",              // 卡有效期
+                "customerSourceId": 5,                      // 客户来源id
+                "coachId": 3,                               // 销售教练id
+                "placeType": 1,                             // 场内或场外标识，0-场外，1-场内
+                "doorType": 1,                              // 是否上门标识，0-到店，1-上门                             
+                "comment": "comment",                       // 备注
+                "giveCardDate": "2019-04-22",               // 发卡日期
+                "cardState": 0,                             // 卡状态，0-审核中，1-正常，2-请假中，3-审核未通过
+                "projectTitle": "12节孕期瑜伽小班课"         // 项目名称
+            }
+        }
