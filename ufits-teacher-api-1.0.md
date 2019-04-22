@@ -2,56 +2,49 @@
 #### 提示：所有返回值均为json，状态码为http状态码，注意处理400状态
 ### 1 获取短信验证码 
 + 请求方式：GET
-+ 地址：/v1/teacher/users/sms_code?phone_number=phone_number
++ 地址：/v1/teacher/users/sms_code
 + 参数：
-    + [string] phone_number - 手机号
+    + [string] phone_number
 + 响应：
-    + 状态1：200 - OK
-        
+    + 示例：
+    
             {
                 "errors": [
                     {
-                        "status": "200",
-                        "title": "OK"
+                        "status": "status",
+                        "title": "title"
                     }
                 ]
             }
-        
-    + 状态2：400 - Bad Request
-        
-            {
-                "errors": [
-                    {
-                        "status": "400",
-                        "title": "手机号不符合要求"
-                    }
-                ]
-            }
-        
-    + 状态2：404 - Not Found
-        
-            {
-                "errors": [
-                    {
-                        "status": "404",
-                        "title": "用户不存在或已被禁用"
-                    }
-                ]
-            }
-        
+            
+    + 状态：status - title
+       + 200 - OK
+       + 400 - 手机号不符合要求
+       + 404 - 用户不存在或已被禁用
+    + 说明：
+      + phone_number：手机号
+      + status：状态码，同HTTP状态码
+      + title：状态说明
+      
 ### 2 根据小程序code登录
 + 请求方式：POST
-+ 地址：/v1/teacher/users/login_from_code?code=code
++ 地址：/v1/teacher/users/login_from_code
 + 参数：
-    + [string] code - 小程序code
+    + [string] code
 + 响应：
-    + 状态1：200 - OK
-        
+    + 示例：
+    
             {
                 "data": {
-                    "token": "token"    // 登录状态
+                    "token": "token"
                 }
             }
+    
+    + 状态：
+      + 200 - OK
+    + 说明：
+      + code：小程序code
+      + token：登录状态标识
     
  ### 3 根据code和获取到的用户授权信息登录
  + 请求方式：POST
@@ -60,91 +53,105 @@
     
         {
             "data": {
-                "code": "code",                 // 小程序code
-                "phoneNumber": "phoneNumber",   // 手机号
-                "nickName": "nickName",         // 昵称
-                "gender": gender                // 性别，0-女，1-男，int型
-                "address": "address",           // 住址
-                "avatar": "avatar",             // 头像url
+                "code": "code",               
+                "phoneNumber": "phoneNumber",
+                "nickName": "nickName",      
+                "gender": gender              
+                "address": "address",        
+                "avatar": "avatar",          
             }
         }
   
 + 响应：
-    + 状态1：200 - OK
-            
-            {
-                "data": {
-                    "token": "token"    // 登录状态
-                }
-            }
-        
-### 4 通过手机号登录
-+ 请求方式：POST
-+ 地址：/v1/teacher/users/login_from_phone
-+ 参数：
-    + [string] phone_number - 手机号
-    + [string] sms_code - 短信验证码
-+ 响应：
-    + 状态1：200 - OK
-            
+    + 示例：
+    
             {
                 "data": {
                     "token": "token"
                 }
             }
+                        
+    + 状态：
+      + 200 - OK
+    + 说明：
+      + code：小程序code
+      + phoneNumber：手机号
+      + nickName：昵称
+      + gender：性别，0-女，1-男，int型
+      + address：住址，为省市县等的拼装
+      + avatar：头像url
+      + token：登录状态标识，需要需要登录的接口时需将Authorization作为键，token值作为值放入header中，需要权限的接口皆为需要登录接口
         
+### 4 通过手机号登录
++ 请求方式：POST
++ 地址：/v1/teacher/users/login_from_phone
++ 参数：
+    + [string] phone_number
+    + [string] sms_code
++ 响应：
+    + 示例：
+    
+            {
+                "data": {
+                    "token": "token"
+                }
+            }
+    
+    + 状态：
+      + 200 - OK
+    + 说明：
+      + phone_number：手机号
+      + sms_code：短信验证码     
+      + token：登录状态标识
+      
 ### 5 获取所有项目
 + 请求方式：GET
-+ 地址：/v1/teacher/projects
++ 地址：/v1/teacher/projects 
 + 参数：无
-+ 说明：调用本接口需要教练级权限
 + 响应：
-    + 状态1：200 - OK
-           
-           {
+    + 成功示例：
+    
+            {
                "data": [
                    {
-                       "id": 2,                                     // 客户来源id
-                       "projectTitle": "收费体验课",                 // 项目名称
-                       "classTime": 0,                              // 课时数
-                       "money": 0,                                  // 项目金额
-                       "subProjects": [                             // 子项目
+                       "id": id,                                    
+                       "projectTitle": "projectTitle",             
+                       "classTime": classTime,                             
+                       "money": money,                               
+                       "subProjects": [                        
                            {
-                               "id": 10,                            // 子项目id
-                               "projectTitle": "2节收费体验课",     // 子项目名称
-                               "classTime": 14,                     // 子项目课时数
-                               "money": 9600                        // 子项目金额
-                           }
-                       ]
-                   },
-                   {
-                       "id": 1,
-                       "projectTitle": "免费体验课",
-                       "classTime": 0,
-                       "money": 0,
-                       "subProjects": [
-                           {
-                               "id": 11,
-                               "projectTitle": "1节免费体验课",
-                               "classTime": 1,
-                               "money": 0
+                               "id": id,                          
+                               "projectTitle": "projectTitle",    
+                               "classTime": classTime,                    
+                               "money": money                       
                            }
                        ]
                    }
                ]
            }
-       
-    + 状态2：401 - Unauthorized
-        
+           
+    + Unauthorized示例：
+    
             {
                 "errors": [
                     {
-                        "status": "401",            // 响应状态码
-                        "title": "Unauthorized",    // 状态描述
-                        "detail": "detail"          // 错误详情
+                        "status": "status",         
+                        "title": "title",   
+                        "detail": "detail"       
                     }
                 ]
             }
+            
+    + 状态：
+      + 200 - OK
+      + 401 - Unauthorized
+    + 说明：调用本接口需要教练级权限
+      + id：客户来源id    
+      + projectTitle：项目名称
+      + classTime：课时数
+      + money：项目金额
+      + subProjects 子项目
+      + detail：错误详情
         
 ### 6 获取客户来源
 + 请求方式：GET
@@ -152,14 +159,10 @@
 + 参数：无
 + 说明：调用本接口需要教练级权限，参考5状态2
 + 响应：
-    + 状态1：200 - OK
+    + 示例：
     
             {
                 "data": [
-                    {
-                        "id": 3,
-                        "sourceTitle": "线上"
-                    },
                     {                                           // 第一级为来源类别
                         "id": 2,                                // 来源id
                         "sourceTitle": "医院",                  // 来源名称 
@@ -180,27 +183,31 @@
 
         {
             "data": {               
-                "phoneNumber": "17085145710",
-                "projectId": 9,        
-                "userName": "任盈盈",                
-                "birthday": "1993-10-10",
-                "maternityStageTag": 3,
-                "maternityDate": "2019-10-10",
-                "address": "北京市丰台区南方庄22号路",
-                "money": 3000,
-                "coachId": 3,
-                "effectiveDate": "2022-10-10",
-                "customerSourceId": 5,
-                "payWay": 2,
-                "placeType": 1,
-                "doorType": 1,
-                "purchaseCourseNumber": 30
+                "phoneNumber": "17085145610",           // 手机号
+                "projectId": 9,                         // 项目id
+                "userName": "任盈盈",                   // 用户名
+                "birthday": "1993-10-10",               // 生日
+                "maternityStageTag": 3,                 // 孕产阶段标识
+                "maternityDate": "2019-10-10",          // 孕产日期
+                "address": "北京市丰台区南方庄22号路",    // 住址
+                "money": 3000,                          // 金额
+                "coachId": 3,                           // 销售教练id
+                "effectiveDate": "2022-10-10",          // 卡有效期
+                "customerSourceId": 5,                  // 客户来源id（子选项id）
+                "payWay": 2,                            // 支付方式标识
+                "placeType": 1,                         // 场内或场外标识
+                "doorType": 1,                          // 上门与不上门标识
+                "inDoorFee": 20                         // 上门费，可无，无则不显示
+                "purchaseCourseNumber": 30              // 购课数
+                "giveCourseNumber"：5                   // 赠课数，可无
+                "comment": "comment"                    // 备注，可无
             }
         }
         
-+ 说明：调用本接口需要教练级权限，参考5状态2
++ 说明：调用本接口需要教练级权限，参考5
 + 响应：
-    + 状态1：200 - OK
+    + 状态：200 - OK
+    + 示例
         
             {
                 "errors": [
