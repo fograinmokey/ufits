@@ -253,6 +253,7 @@
                 "effectiveDate": "2022-10-10",              // 卡有效期
                 "customerSourceId": 5,                      // 客户来源id
                 "coachId": 3,                               // 销售教练id
+                "coachName": "coachName"                    // 销售教练名字
                 "placeType": 1,                             // 场内或场外标识，0-场外，1-场内
                 "doorType": 1,                              // 是否上门标识，0-到店，1-上门                             
                 "comment": "comment",                       // 备注
