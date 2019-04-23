@@ -58,7 +58,9 @@
                 "gender": gender              
                 "address": "address",        
                 "avatar": "avatar",
+                "phoneNum": "phoneNum",
                 "phoneNumType": "phoneNumType",
+                "smsCode": "smsCode"
                 "iv": "iv",
                 "encryptedData": "encryptedData"          
             }
@@ -81,9 +83,11 @@
       + gender：性别，0-女，1-男，int型
       + address：住址，为省市县等的拼装
       + avatar：头像url
+      + phoneNum: 手机号
       + phoneNumType: 手机号类型，0-微信绑定手机号，1-其它手机号，2-ufits会员手机号
-      + iv：微信小程序加密算法初始向量
-      + encryptedData：微信小程序获取手机号加密数据
+      + smsCode: 短信验证码，可选
+      + iv：微信小程序加密算法初始向量，可选
+      + encryptedData：微信小程序获取手机号加密数据，可选
       + token：登录状态标识，需要需要登录的接口时需将Authorization作为键，token值作为值放入header中，需要权限的接口皆为需要登录接口
         
 ### 4 通过手机号登录
