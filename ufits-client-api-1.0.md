@@ -269,7 +269,7 @@
         ]
       }
     
-### 课程服务特别推荐列表 [GET] /courses?filter[recommendedCoefficient:ge]=1&sort=recommendedCoefficient
+### 课程服务特别推荐列表 [GET] /courses?filter[recommend]=1&sort=-modified
 + Parameters
   + sort -modified(从新到旧) | modified(从旧到新)
 + Response 200 (application/json)
@@ -398,7 +398,8 @@
  
 ### 活动列表 [GET] /activitys
 + Parameters
-  + filter[recommendOrder:ge]=1&sort=recommendOrder(推荐接口固定参数)
+  + filter[recommend]=1&sort=-modified
+(推荐接口固定参数)
   + page[number]=1&page[size]=10
   + sort -modified(从新到旧) | modified(从旧到新)
 + Response 200 (application/json)(活动列表展示)
@@ -606,7 +607,7 @@
 
 ### 孕产知识列表 [GET] /knowledges
 + Parameters
-  + filter[recommendOrder:ge]=1&sort=recommendOrder(推荐接口固定参数)
+  + filter[recommend]=1&sort=-modified(推荐接口固定参数)
   + page[number]=1&page[size]=10
   + sort -modified(从新到旧) | modified(从旧到新)
 + Response 200 (application/json)(孕产知识列表展示)
