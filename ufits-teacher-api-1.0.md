@@ -205,10 +205,14 @@
                 "payWay": 2,                            // 支付方式标识，0-大众点评，1-支付宝，2-微信，3-现金，4-刷卡，5-其他
                 "placeType": 1,                         // 场内或场外标识，0-场外，1-场内
                 "doorType": 1,                          // 是否上门标识，0-到店，1-上门
-                "inDoorFee": 20                         // 上门费，可无，无则不显示
-                "purchaseCourseNumber": 30              // 购课数
-                "giveCourseNumber"：5                   // 赠课数，可无
-                "comment": "comment"                    // 备注，可无
+                "inDoorFee": 20,                        // 上门费，可无，无则不显示
+                "purchaseCourseNumber": 30,             // 购课数
+                "giveCourseNumber"：5,                  // 赠课数，可无
+                "comment": "comment",                   // 备注，可无
+                "cooperationCoachIds": [                // 合作教练id
+                    1, 
+                    2
+                ]
             }
         }
         
