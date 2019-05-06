@@ -173,55 +173,6 @@
       + sms_code：短信验证码     
       + token：登录状态标识
       
-### 5 获取所有项目
-+ 请求方式：GET
-+ 地址：/v1/teacher/projects 
-+ 参数：无
-+ 响应：
-    + 成功示例：
-    
-            {
-               "data": [
-                   {
-                       "id": id,                                    
-                       "projectTitle": "projectTitle",             
-                       "classTime": classTime,                             
-                       "money": money,                               
-                       "subProjects": [                        
-                           {
-                               "id": id,                          
-                               "projectTitle": "projectTitle",    
-                               "classTime": classTime,                    
-                               "money": money                       
-                           }
-                       ]
-                   }
-               ]
-           }
-           
-    + Unauthorized示例：
-    
-            {
-                "errors": [
-                    {
-                        "status": "status",         
-                        "title": "title",   
-                        "detail": "detail"       
-                    }
-                ]
-            }
-            
-    + 状态：
-      + 200 - OK
-      + 401 - Unauthorized
-    + 说明：调用本接口需要教练级权限
-      + id：客户来源id    
-      + projectTitle：项目名称
-      + classTime：课时数
-      + money：项目金额
-      + subProjects 子项目
-      + detail：错误详情
-        
 ### 6 获取客户来源
 + 请求方式：GET
 + 地址：/v1/teacher/customer_sources
