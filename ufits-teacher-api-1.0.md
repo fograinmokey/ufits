@@ -22,14 +22,14 @@
 
         {
             "data": {
-                "code": "code",                     // 小程序code
-                "iv": "iv",                         // 小程序解密向量
-                "encryptedData": "encryptedData",   // 小程序加密数据
-                "province": "province",             // 省份
-                "city": "city",                     // 城市
-                "nickName": "nickName",             // 昵称
-                "gender": 2,                        // 性别
-                "avatar": "avatar"                  // 头像
+                "code": "code",                     // 小程序code，必填
+                "iv": "iv",                         // 小程序解密向量，必填
+                "encryptedData": "encryptedData",   // 小程序加密数据，必填
+                "province": "province",             // 省份，可选
+                "city": "city",                     // 城市，可选
+                "nickName": "nickName",             // 昵称，可选
+                "gender": 2,                        // 性别，可选
+                "avatar": "avatar"                  // 头像，可选
             }
         }
         
@@ -50,22 +50,44 @@
         {
             "data": [
                 {
-                    "id": 1,                    // 项目类型id
-                    "projectTitle": "免费体验课" // 项目类型名
+                    "id": 1,                                        // 项目类型id
+                    "projectTitle": "免费体验课",                    // 项目类型名
+                    "subProjects": [
+                        {
+                            "id": 17,
+                            "projectTitle": "免费体验课子项1",
+                            "classTime": 3,                         // 课时数
+                            "money": 0                              // 金额
+                        }
+                    ]
                 },
                 {
                     "id": 2,
-                    "projectTitle": "收费体验课"
+                    "projectTitle": "收费体验课",
+                    "subProjects": [
+                        {
+                            "id": 18,
+                            "projectTitle": "收费体验课子项1",
+                            "classTime": 5,
+                            "money": 300
+                        },
+                        {
+                            "id": 19,
+                            "projectTitle": "收费体验课子项2",
+                            "classTime": 4,
+                            "money": 0
+                        }
+                    ]
                 },
                 {
                     "id": 3,
                     "projectTitle": "孕期瑜伽小班课",
-                    "subProjects": [                                // 项目
+                    "subProjects": [
                         {
-                            "id": 15,                               // 项目id
-                            "projectTitle": "孕期瑜伽小班课子项1",   // 项目名
-                            "classTime": 10,                        // 课时数
-                            "money": 1500                           // 金额
+                            "id": 15,
+                            "projectTitle": "孕期瑜伽小班课子项1",
+                            "classTime": 10,
+                            "money": 1500
                         }
                     ]
                 },
