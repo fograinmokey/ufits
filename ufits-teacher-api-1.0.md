@@ -1,5 +1,66 @@
 ## 孕产平台教练端
 #### 提示：所有返回值均为json，状态码为http状态码，注意处理400状态
+
+### 1 登录
+#### 1.1 获取短信验证码
++ uri: [GET] /v1/teacher/users/sms_code
++ param: [string] phone_number
++ resp: 200
+
+        {
+            "errors": [
+                {
+                    "status": "200", // 状态码
+                    "title": "ok"    // 状态描述
+                }
+            ]
+        }
+
+### 2 我的客户
+#### 2.1 获取所有项目，含项目类型和具体项目; 用于教练端 我的客户 -> 发卡 -> 项目名称
++ uri: [GET] /v1/teacher/projects
++ param: 无
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 1,                    // 项目类型id
+                    "projectTitle": "免费体验课" // 项目类型名
+                },
+                {
+                    "id": 2,
+                    "projectTitle": "收费体验课"
+                },
+                {
+                    "id": 3,
+                    "projectTitle": "孕期瑜伽小班课",
+                    "subProjects": [                                // 项目
+                        {
+                            "id": 15,                               // 项目id
+                            "projectTitle": "孕期瑜伽小班课子项1",   // 项目名
+                            "classTime": 10,                        // 课时数
+                            "money": 1500                           // 金额
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "projectTitle": "孕产套课",
+                    "subProjects": [
+                        {
+                            "id": 16,
+                            "projectTitle": "孕产套课子项1",
+                            "classTime": 40,
+                            "money": 6000
+                        }
+                    ]
+                }
+            ]
+        }
+
+############################################################################################
+
 ### 1 获取短信验证码 
 + 请求方式：GET
 + 地址：/v1/teacher/users/sms_code
@@ -266,3 +327,11 @@
                 "projectTitle": "12节孕期瑜伽小班课"         // 项目名称
             }
         }
+        
+### 10 获取所有学生
++ 说明：需要教练权限
++ 地址：[GET]  /v1/teacher/users/students
++ 参数：无
++ 返回值：
+
+        
