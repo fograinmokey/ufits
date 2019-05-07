@@ -105,3 +105,26 @@
                 }
             ]
         }
+
+
+### 3 我的课表
+#### 3.1 根据日期获取教师课程列表; 用于教练端 我的课表首页展示
++ uri: [GET] /v1/teacher/courses/home
++ param: [Date] date
++ resp: 200
+
+        {
+            "data": {
+                "courseNum": 1, // 多少课
+                "courses": [
+                    {
+                        "timeRange": "2019-05-07 12:51 - 14:51",       // 时间段
+                        "courseType": "私教课",                        // 课程类型
+                        "strState": "未完成",                          // 完成状态
+                        "address": "方庄妇幼保健院",                    // 场所
+                        "courseName": "12节孕期瑜伽小班课"              // 标题
+                    }
+                ]
+            }
+        }
+   
