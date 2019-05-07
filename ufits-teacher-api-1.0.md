@@ -130,7 +130,7 @@
         }
         
 #### 3.2 获取课表详情; 用于教练端 我的课表首页 -> 课表详情
-+ uri: /v1/teacher/courses/home/detail
++ uri: [GET] /v1/teacher/courses/home/detail
 + param: [long] coachAttendClassId 上课分类id
 + resp: 200
 
