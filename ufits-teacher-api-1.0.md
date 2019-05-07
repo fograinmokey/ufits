@@ -110,7 +110,7 @@
 ### 3 我的课表
 #### 3.1 根据日期获取教师课程列表; 用于教练端 我的课表首页展示
 + uri: [GET] /v1/teacher/courses/home
-+ param: [Date] date 查询日期
++ param: [Date] date 查询日期，如：2019/05/07
 + resp: 200
 
         {
