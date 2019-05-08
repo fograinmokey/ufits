@@ -3,8 +3,14 @@
 
 ### 1 登录
 #### 1.1 获取短信验证码
-+ uri: [GET] /v1/teacher/users/sms_code
-+ param: [string] phone_number
++ uri: 
+
+        [GET] /v1/teacher/users/sms_code
+        
++ param: 
+
+        [string] phone_number 手机号
+        
 + resp: 200
 
         {
@@ -17,7 +23,10 @@
         }
 
 #### 1.2 登录/注册
-+ uri: [POST] /v1/teacher/users
++ uri: 
+
+        [POST] /v1/teacher/users
+        
 + param: [json]
 
         {
@@ -44,7 +53,10 @@
 ### 2 我的客户
 #### 2.1 获取所有项目，含项目类型和具体项目
     用于教练端 我的客户 -> 发卡 -> 项目名称
-+ uri: [GET] /v1/teacher/projects
++ uri: 
+
+        [GET] /v1/teacher/projects
+        
 + param: 无
 + resp: 200
 
@@ -111,8 +123,14 @@
 ### 3 我的课表
 #### 3.1 根据日期获取教师课程列表
     用于教练端 我的课表首页展示
-+ uri: [GET] /v1/teacher/courses/home
-+ param: [Date] date 查询日期，如：2019/05/07
++ uri: 
+
+        [GET] /v1/teacher/courses/home
+        
++ param: 
+
+        [Date] date 查询日期，如：2019/05/07
+        
 + resp: 200
 
         {
@@ -133,8 +151,14 @@
         
 #### 3.2 获取课表详情
     用于教练端 我的课表首页 -> 课表详情
-+ uri: [GET] /v1/teacher/courses/home/detail
-+ param: [long] coachAttendClassId 上课分类id
++ uri: 
+
+        [GET] /v1/teacher/courses/home/detail
+        
++ param: 
+
+        [long] coachAttendClassId 上课分类id
+        
 + resp: 200
 
         {
@@ -157,8 +181,14 @@
         
 #### 3.3 获取查询日期的年月下的天是否有课
     用于教练端 我的课表首页日期控件展示
-+ uri: [GET] /v1/teacher/courses/home/tip
-+ param: [Date] queryDate 查询日期
++ uri: 
+
+        [GET] /v1/teacher/courses/home/tip
+        
++ param: 
+
+        [Date] queryDate 查询日期
+        
 + resp: 200
 
         {
@@ -262,8 +292,14 @@
 #### 3.4 获取小结
     用于教练端 我的客户 -> 购买项目 -> 课程详情 -> 课程小结
     我的课表 -> 课表详情 -> 查看课程小结
-+ uri: [GET] /v1/teacher/summaries/{id}
-+ param: [long] id 小结id
++ uri: 
+
+        [GET] /v1/teacher/summaries/{id}
+        
++ param: 
+
+        [long] id 小结id
+        
 + resp: 200
 
         {
@@ -304,8 +340,14 @@
 
 #### 3.5 根据评估id获取评估
     用于教练端 我的课表 -> 课表详情 -> 查看客户评估
-+ uri: [GET] /v1/teacher/evaluations/{id}
-+ param: [long] id 评估id
++ uri: 
+
+        [GET] /v1/teacher/evaluations/{id}
+        
++ param: 
+    
+        [long] id 评估id
+        
 + resp: 200
 
         {
@@ -360,3 +402,33 @@
                 "studentName": "张小芳"                          // 会员姓名
             }
         }
+
+### 4 我的客户模块
+#### 4.1 通过手机号或客户名搜索客户
+    用于教练端 我的客户页面搜索
++ uri: 
+
+        [GET] /v1/teacher/users/search
+        
++ param: 二填一
+
+        [String] phoneNum 手机号
+        [String] customerName 学员名
+        
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 25,                                                              // 学员id
+                    "realName": "张小芳",                                                  // 学员名
+                    "firstLetter": "Z",                                                    // 学员名首字母
+                    "gender": 0,                                                           // 学员性别：0：女，1：男
+                    "phoneNum": "17085145711",                                             // 学员手机号
+                    "avatar": "https://wx.qlogo.cn/mmopen/vi_32/Q0jEEV45pl84k94gw/0",      // 学员头像
+                    "state": 0,  // 状态，0：审核中，1：正常，2：请假中，3：审核未通过
+                    "otherAddCoachName": "ycl"     // 其他添加教练的名字，可空，非空则显示 "某某添加"，否则不显示
+                }
+            ]
+        }
+        
