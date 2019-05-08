@@ -42,7 +42,8 @@
         }
         
 ### 2 我的客户
-#### 2.1 获取所有项目，含项目类型和具体项目; 用于教练端 我的客户 -> 发卡 -> 项目名称
+#### 2.1 获取所有项目，含项目类型和具体项目
+    用于教练端 我的客户 -> 发卡 -> 项目名称
 + uri: [GET] /v1/teacher/projects
 + param: 无
 + resp: 200
@@ -108,7 +109,8 @@
 
 
 ### 3 我的课表
-#### 3.1 根据日期获取教师课程列表; 用于教练端 我的课表首页展示
+#### 3.1 根据日期获取教师课程列表
+    用于教练端 我的课表首页展示
 + uri: [GET] /v1/teacher/courses/home
 + param: [Date] date 查询日期，如：2019/05/07
 + resp: 200
@@ -129,7 +131,8 @@
             }
         }
         
-#### 3.2 获取课表详情; 用于教练端 我的课表首页 -> 课表详情
+#### 3.2 获取课表详情
+    用于教练端 我的课表首页 -> 课表详情
 + uri: [GET] /v1/teacher/courses/home/detail
 + param: [long] coachAttendClassId 上课分类id
 + resp: 200
@@ -152,7 +155,8 @@
             }
         }
         
-#### 3.3 获取查询日期的年月下的天是否有课; 用于教练端 我的课表首页日期控件展示
+#### 3.3 获取查询日期的年月下的天是否有课
+    用于教练端 我的课表首页日期控件展示
 + uri: [GET] /v1/teacher/courses/home/tip
 + param: [Date] queryDate 查询日期
 + resp: 200
@@ -255,3 +259,45 @@
             ]
         }
         
+#### 3.4 获取小结
+    用于教练端 我的客户 -> 购买项目 -> 课程详情 -> 课程小结
+    我的课表 -> 课表详情 -> 查看课程小结
++ uri: [GET] /v1/teacher/summaries/{id}
++ param: [long] id 小结id
++ resp: 200
+
+        {
+            "data": {
+                "cardNumber": "20190416000002",                 // 卡号
+                "datetimeRange": "2019-05-07 12:51 - 14:51",    // 课程时间段
+                "strPlace": "方庄妇幼保健院",                    // 场所
+                "studentName": "小龙女",                        // 用户
+                "courseTypeId": 2,                              // 课程类型id
+                "courseType": "私教课",                         // 课程类型
+                "attendClassRecords": [                         // 上课记录
+                    {
+                        "picUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg", // 图片
+                        "actionTitle": "俯卧撑",                 // 标题
+                        "count": 2,                              // 共做了几组
+                        "num": 10                                // 每组个数
+                    },
+                    {
+                        "picUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+                        "actionTitle": "仰卧起坐",
+                        "count": 2,
+                        "num": 15
+                    }
+                ],
+                "tasks": [                                      // 作业
+                    {
+                        "picUrl": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+                        "actionTitle": "俯卧撑",
+                        "count": 2,
+                        "num": 10
+                    }
+                ],
+                "coachComment": "学院很认真。",                 // 教练备注
+                "customerComment": "教练教得好。",              // 客户评价
+                "hasDoorFee": 0                                // 是否收取上门费标识，可忽略
+            }
+        }
