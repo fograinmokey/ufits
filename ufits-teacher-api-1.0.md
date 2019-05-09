@@ -500,4 +500,30 @@
                 ],
                 "isMainCoach": 1                                        // 是否是主教练，0：不是，1：是
             }
-        }                       
+        }
+        
+#### 4.4 修改学员基本信息
+    用于教练端 我的客户 -> 客户信息 -> 基本信息
++ uri: 
+
+        [PUT] /v1/teacher/users/{id}
+        
++ param: 
+
+    [long] id 学员id
+    
++ resp: 200
+
+        {
+            "data": {
+                "nickName": "nickName",             // 昵称
+                "realName": "realName",             // 姓名
+                "gender": 0,                        // 性别：0：女，1：男
+                "birthday": "2019-05-09",           // 生日
+                "maternityStageTag": 3,             // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
+                "maternityDate": "2019-05-05",      // 孕产日期
+                "address": "address",               // 住址
+                "comment": "comment"                // 评论
+            }
+        }   
+                                           
