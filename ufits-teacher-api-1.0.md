@@ -574,4 +574,29 @@
                 "cardState": 0,                                     // 状态，0：审核中，1：正常，2：请假中，3：审核未通过
                 "projectTitle": "免费体验课子项1"                    // 项目名
             }
-        }                                                               
+        }
+        
+#### 4.6 获取用户购买项目（即所有卡）
+    用于教练端 我的客户->客户信息->购买项目 列表展示
++ uri: 
+        
+        [GET] /v1/teacher/cards/student/25
+                
++ param:
+
+        [long] studentId 学员id
+                                                                                     
++ resp: 200
+
+                {
+                    "data": [
+                        {
+                            "cardId": 41,                           // 卡id
+                            "cardNumber": "20190425000001",         // 卡号
+                            "effectiveDate": "2019-05-30",          // 有效期
+                            "projectTitle": "免费体验课子项1",       // 项目名称
+                            "remainingClassTime": 80,               // 剩余课时
+                            "created": 1557308772000                // 可忽略
+                        }
+                    ]
+                }
