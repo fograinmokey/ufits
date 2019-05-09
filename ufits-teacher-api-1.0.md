@@ -526,4 +526,52 @@
                 "comment": "comment"                // 评论
             }
         }   
-                                           
+        
+#### 4.5 获取会员卡信息
+    用于教练端 我的客户 -> 基本信息 -> 查看卡详情
+ + uri: 
+ 
+        [GET] /v1/teacher/cards/id/41
+        
++ param: 
+
+        [long] id 卡id
+        
++ resp: 200
+
+        {
+            "data": {
+                "cardId": 41,                                       // 卡id
+                "cardNumber": "20190425000001",                     // 卡号
+                "userName": "张小芳",                               // 学员名
+                "phoneNumber": "17085145711",                       // 手机
+                "maternityStageTag": 3,                             // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
+                "maternityDate": "2019-05-08",                      // 孕产日期
+                "birthday": "2001-04-20",                           // 生日
+                "address": "贵州省贵阳市云岩区创业路2栋3单元32f",     // 住址
+                "packageType": 0,                                   // 套餐类型，0：新买课，1：续课，2，套餐升级
+                "projectId": 17,                                    // 项目id
+                "money": 10000,                                     // 金额
+                "purchaseCourseNumber": 100,                        // 购课数
+                "giveCourseNumber": 2,                              // 赠课数
+                "remainCourseNumber": 80,                           // 剩余课时数
+                "inDoorFee": 0,                                     // 上门费
+                "payWay": 2,                                        // 支付方式，0：大众点评，1：支付宝，2：微信，3：现金，4：刷卡，5：其他
+                "effectiveDate": "2019-05-30",                      // 有效期
+                "customerSourceId": 4,                              // 来源id
+                "customerSource": "方庄妇幼保健院",                  // 来源
+                "coachId": 5,                                       // 销售教练id
+                "coachName": "ycl",                                 // 销售教练名
+                "cooperationCoach": {                               // 合作教练
+                    "5": "ycl",                                     // 教练id：教练名
+                    "26": "李四"
+                },
+                "placeType": 0,                                     // 场内外，0：场外，1：场内
+                "doorType": 0,                                      // 是否有上门，0：否，1：是
+                "comment": "没有",                                  // 备注
+                "mainCoachTag": 1,                                  // 是否是主教练，0：否，1：是
+                "giveCardDate": "2019-05-08",                       // 开卡日期
+                "cardState": 0,                                     // 状态，0：审核中，1：正常，2：请假中，3：审核未通过
+                "projectTitle": "免费体验课子项1"                    // 项目名
+            }
+        }                                                               
