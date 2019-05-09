@@ -600,3 +600,35 @@
                         }
                     ]
                 }
+                
+#### 4.7 获取卡的课程详情
+    用于教练端 我的客户 -> 客户信息 -> 购买项目 -> 课程详情
++ uri:
+
+        [GET] /v1/teacher/courses/card/detail?cardId=41     
+        
++ param: 
+
+        [long] cardId 卡id
+        
++ resp: 200
+
+        {
+            "data": {
+                "cardId": 41,                               // 卡id
+                "projectName": "免费体验课子项1",            // 项目
+                "classTime": 100,                           // 课时数
+                "remainClassTime": 80,                      // 剩余课时数
+                "effectiveDate": "2019-05-30",              // 有效期
+                "buyDate": "2019-05-08",                    // 时间
+                "cardClassRecords": [                       // 此卡上课记录（已完成的上课列表）
+                    {
+                        "classDate": "2019-05-09",          // 上课日期
+                        "classTypeId": 2,                   // 课程类型id
+                        "classType": "私教课",              // 课程类型名
+                        "classTitle": "免费体验课子项1",     // 课程服务标题
+                        "classCoachName": "ycl"             // 上课教练
+                    }
+                ]
+            }
+        }                               
