@@ -369,7 +369,7 @@
                 "caesareanEx": "0",                             // 剖腹产异常，0：疤痕红肿、筋膜远端触痛，1：疤痕增生，2：陈旧疤痕；可多选，逗号隔开
                 "childBirth": "2019-05-08 10:10:10",            // 分娩日期
                 "childbirthMode": 1,                            // 分娩方式，0：顺产，1：剖腹产
-                "gestationEx": "gestationEx",                   // 妊娠特殊情况
+                "gestationEx": "gestationEx",                   // 妊娠特殊情况, 可空
                 "gestationNum": 2,                              // 妊娠次数
                 "height": "height",                             // 身高
                 "hipline": "hipline",                           // 臀围
@@ -401,7 +401,18 @@
                 "weight": "weight",                             // 体重
                 "wrist": "wrist",                               // 手腕评估，0：无不适，1：腱鞘炎，2：腕管综合征；可多选，逗号隔开
                 "studentId": 6,                                 // 学院id
-                "studentName": "张小芳"                          // 会员姓名
+                "studentName": "张小芳",                        //  姓名
+                "courses": [                                    // 修复计划
+                    {
+                        "id": 14,                               // 课程id
+                        "thumbnail": "http://static.mifanxing.com/article/image/215/69/0000001.jpg",    // 缩略图
+                        "courseDesc": "此课程适应孕期产妇15",    // 课程描述
+                        "courseName": "孕期瑜伽15期"            // 课程标题
+                    }
+                ],
+                "images": [                                     // 照片记录
+                    "2019-04-30/2309f5e6be3341d1a2ff3e265e20b2dc.jpg"   // 照片地址
+                ]
             }
         }
 
