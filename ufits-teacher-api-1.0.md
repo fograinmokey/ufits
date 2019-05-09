@@ -433,4 +433,26 @@
                 }
             ]
         }
-  
+        
+#### 4.2 获取当前教练的所有学生
+    用于教练端 我的客户模块 展示用户列表
++ uri: 
+
+        [GET] /v1/teacher/users/students
+        
++ param: 无
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 25,                                           // 学员id
+                    "realName": "张小芳",                               // 学员名
+                    "firstLetter": "Z",                                 // 学员名首字母
+                    "gender": 0,                                        // 性别：0：女，1：男
+                    "phoneNum": "17085145711",                          // 手机号
+                    "avatar": "https://wx.qlogo.cn/mmopKFAwN4k94gw/0",  // 头像
+                    "state": 0                                          // 状态，0：审核中，1：正常，2：请假中，3：审核未通过
+                }
+            ]
+        }
