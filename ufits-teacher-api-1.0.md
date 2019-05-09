@@ -456,3 +456,37 @@
                 }
             ]
         }
+
+#### 4.3 获取学员基本信息
+    用于教练端 我的客户 -> 客户信息 -> 基本信息
++ uri: 
+
+        [GET] /v1/teacher/users/{id}
+        
++ param: 
+
+        [long] id 学员id
+        
++ resp: 200
+
+        {
+            "data": {
+                "id": 25,                                               // 学员id
+                "nickName": "小芳",                                     // 昵称
+                "realName": "张小芳",                                   // 姓名
+                "gender": 0,                                            // 性别：0：女，1：男
+                "birthday": "2002-04-20",                               // 生日
+                "phoneNum": "17085145711",                              // 手机号
+                "maternityStageTag": 3,                                 // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
+                "maternityDate": "2019-05-08",                          // 孕产日期
+                "address": "贵州省贵阳市云岩区创业路2栋3单元32f",         // 住址
+                "comment": "比较瘦",                                    // 备注
+                "cards": [                                              // 学员拥有的卡列表
+                    {
+                        "cardId": 41,                                   // 卡id
+                        "cardNumber": "20190425000001"                  // 卡号
+                    }
+                ],
+                "isMainCoach": 1                                        // 是否是主教练，0：不是，1：是
+            }
+        }                       
