@@ -631,4 +631,27 @@
                     }
                 ]
             }
-        }                               
+        }              
+        
+#### 4.8 获取为这个学员（卡）服务的教练
+    用于教练端 我的客户 -> 购买项目 -> 服务教练名单
++ uri: 
+
+        [GET] /v1/teacher/coach-attends/coaches-for-student?cardId=41
+        
++ param:
+
+        [long] cardId 卡id
+        
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 5,                    // 教练id
+                    "realName": "ycl",          // 教练名
+                    "jobTitle": "中级教练",      // 职称
+                    "photo": "https://wx.qbEtrEEV45pl84k94gw/0"     // 照片
+                }
+            ]
+        }                                             
