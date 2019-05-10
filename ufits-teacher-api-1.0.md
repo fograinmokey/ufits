@@ -622,6 +622,7 @@
                 "buyDate": "2019-05-08",                    // 时间
                 "cardClassRecords": [                       // 此卡上课记录（已完成的上课列表）
                     {
+                        "beginTime": "2019-05-09 14:51",    // 上课时间
                         "classDate": "2019-05-09",          // 上课日期
                         "classTypeId": 2,                   // 课程类型id
                         "classType": "私教课",              // 课程类型名
