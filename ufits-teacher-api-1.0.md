@@ -751,4 +751,50 @@
                     ]
                 }
             ]
-        }                                                                                                               
+        } 
+        
+#### 4.14 开卡
+    用于教练端 我的客户 -> 发卡
++ uri: 
+
+        [GET] /v1/teacher/cards
+        
++ param: json
+
+        {
+            "data": {               
+               "userName": "黄蓉",                      // 学员名
+               "phoneNumber": "17085145713",            // 手机
+               "maternityStageTag": 3,                  // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
+               "maternityDate": "2019-04-09",           // 孕产日期
+               "birthday": "2009-05-09",                // 生日
+               "address": "北京市丰台区方庄桥南",        // 住址
+               "packageType": 0,                        // 套餐类型，0：新买课，1：续课，2，套餐升级
+               "projectId": 18,                         // 项目id
+               "money": 600,                            // 金额
+               "purchaseCourseNumber": 5,               // 购课数
+               "giveCourseNumber": 1,                   // 赠课数
+               "inDoorFee": 5,                          // 上门费
+               "payWay": 2,                             // 支付方式，0：大众点评，1：支付宝，2：微信，3：现金，4：刷卡，5：其他
+               "effectiveDate": "2020-04-20",           // 卡有效期
+               "customerSourceId": 4,                   // 客户来源id
+               "coachId": 5,                            // 销售教练
+               "cooperationCoach": {
+               		"26": "李四"                        // 合作教练id和名字
+               },
+               "placeType": 0,                          // 场内外，0：场外，1：场内
+               "doorType": 1,                           // 是否有上门，0：否，1：是
+               "comment": "no comment"                  // 备注
+            }
+        }
+        
++ resp: 
+
+        {
+            "errors": [
+                {
+                    "status": "200",
+                    "title": "OK"
+                }
+            ]
+        }                                                                                                                                          
