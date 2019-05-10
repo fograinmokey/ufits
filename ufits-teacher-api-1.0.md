@@ -654,4 +654,27 @@
                     "photo": "https://wx.qbEtrEEV45pl84k94gw/0"     // 照片
                 }
             ]
-        }                                             
+        }    
+        
+#### 4.9 获取所有教练
+    用于教练端 我的客户 -> 客户信息 -> 购买项目 -> 课程详情 -> 服务教练名单 -> 添加 -> 添加服务教练列表
++ uri: 
+
+        [GET] /v1/teacher/users/all-teachers
+        
++ param: 无
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 4,                                            // 教练id
+                    "realName": "小高",                                 // 姓名
+                    "jobTitle": "助教",                                 // 职称
+                    "photo": "http://static.mif61140065189888.jpg",     // 照片
+                    "phoneNum": "18611194890",                          // 手机
+                    "gender": 0,                                        // 性别：0：女，1：男
+                    "firstLetter": "X"                                  // 姓大写首字母
+                }
+            ]
+        }                                                             
