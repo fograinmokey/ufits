@@ -701,4 +701,30 @@
                 "photo": "https://wx.qq.gw/0",     // 照片
                 "coachContent": "没有。"           // 教师详细介绍
             }
-        }                                                                           
+        }
+        
+#### 4.12 获取所有项目，含项目类型和具体项目
+    用于教练端 我的客户 -> 发卡 -> 项目名称
++ uri: 
+
+    [GET] /v1/teacher/projects
+    
++ param: 无
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 1,                                    // 项目分类id
+                    "projectTitle": "免费体验课",                // 项目分类名
+                    "subProjects": [                            // 项目
+                        {
+                            "id": 1,                            // 项目id
+                            "projectTitle": "免费体验课33",      // 项目名
+                            "classTime": 0,                     // 课时数
+                            "money": 0                          // 金额
+                        }
+                    ]
+                }
+            ]
+        }                                                                                           
