@@ -727,4 +727,28 @@
                     ]
                 }
             ]
-        }                                                                                           
+        }
+        
+#### 4.13 获取客户来源列表，包含合作机构和机构类别
+    用于教练端 我的客户 -> 开卡 -> 来源
++ uri: 
+
+        [GET] /v1/teacher/organizations
+        
++ param: 无
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 1,                                    // 来源类别id
+                    "sourceTitle": "合作机构分类1",              // 来源类别名
+                    "subCustomerSource": [
+                        {
+                            "id": 1,                            // 来源id
+                            "sourceTitle": "北京月子会所"        // 来源名
+                        }
+                    ]
+                }
+            ]
+        }                                                                                                               
