@@ -680,4 +680,25 @@
         
 #### 4.10 获取课程小结
     用于教练端 我的课表 -> 课表详情 -> 查看课程小结 
-+ tip: 同 3.4                                                                
++ tip: 同 3.4         
+
+#### 4.11 获取教练详情
+    用于教练端 我的客户 -> 客户信息 -> 购买项目 -> 服务教练名单 -> 教练详情
++ uri: 
+
+        [GET] /v1/teacher/users/coach-detail/5
+        
++ param: 
+
+        [long] coachId 教练id
+        
++ resp: 200
+
+        {
+            "data": {
+                "realName": "ycl",                  // 姓名
+                "jobTitle": "中级教练",             // 职称
+                "photo": "https://wx.qq.gw/0",     // 照片
+                "coachContent": "没有。"           // 教师详细介绍
+            }
+        }                                                                           
