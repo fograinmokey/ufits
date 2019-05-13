@@ -929,4 +929,34 @@
                     "title": "高级"
                 }
             ]
+        }                    
+        
+#### 5.4 获取合作机构，不包含分类
+    用于教练端 我的课程 -> 预约 -> 场所 选到店时使用
++ uri:
+
+        [GET] /v1/teacher/organizations/list
+        
++ param: 无
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 1,                        // 机构id
+                    "sourceTitle": "北京月子会所"    // 机构名
+                },
+                {
+                    "id": 2,
+                    "sourceTitle": "月子会所"
+                },
+                {
+                    "id": 3,
+                    "sourceTitle": "上海妇幼保健院1"
+                },
+                {
+                    "id": 4,
+                    "sourceTitle": "方庄妇幼保健院"
+                }
+            ]
         }                                                                                                                                                                                                                       
