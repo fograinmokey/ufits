@@ -849,4 +849,32 @@
                     "title": "OK"
                 }
             ]
-        }                                                                                                                                                                       
+        }       
+        
+### 5 我的课程
+#### 5.1 获取当前教练的未完成的课程列表
+    用于教练端 我的课程模块未完成课程列表展示
++ uri: 
+
+        [GET] /v1/teacher/coach-attend-classes
+        
++ param: 无
++ resp: 200
+
+        {
+            "data": {
+                "uncompletedCourseNum": 1,                      // 未完成的课程数
+                "courses": [
+                    {
+                        "timeRange": "2019-05-07 12:51-14:51",  // 上课时间段
+                        "courseTypeId": 2,                      // 课程类型id
+                        "courseType": "私教课",                 // 课程类型名
+                        "state": 0,                             // 状态：0：已预约，1：已签到，2：已签退，3：已总结，4：已结束，5：预约失败
+                        "acId": 18,                             // 预约上课id
+                        "nature": 1,                            // 课程性质，0：公开，1：私教
+                        "address": "上门",                      // 地址
+                        "courseName": "12节孕期瑜伽小班课"       // 课程名
+                    }
+                ]
+            }
+        }                                                                                                                                                                                    
