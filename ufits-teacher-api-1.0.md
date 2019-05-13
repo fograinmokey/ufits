@@ -801,4 +801,52 @@
                 }
             ]
         }         
-                                                                                                                                                   
+                     
+#### 4.15 修改卡信息
+    用于教练端 我的客户 -> 基本信息 -> 查看卡详情 -> 修改
++ uri: 
+
+        [PUT] /v1/teacher/cards/42
+        
++ param: 
+
+        [long] id 卡id
+        
+        {
+            "data": {               
+               "userName": "黄蓉",                      // 学员名
+               "phoneNumber": "17085145713",            // 手机
+               "maternityStageTag": 3,                  // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
+               "maternityDate": "2019-04-09",           // 孕产日期
+               "birthday": "2009-05-09",                // 生日
+               "address": "北京市丰台区方庄桥南",        // 详细住址
+               "packageType": 1,                        // 套餐类型，0：新买课，1：续课，2，套餐升级
+               "projectId": 19,                         // 项目标识
+               "money": 600,                            // 金额
+               "purchaseCourseNumber": 5,               // 课时数/购课数
+               "giveCourseNumber": 1,                   // 赠送课时/课数
+               "remainCourseNumber": 3,                 // 剩余课时
+               "inDoorFee": 5,                          // 上门费
+               "payWay": 2,                             // 支付方式，0：大众点评，1：支付宝，2：微信，3：现金，4：刷卡，5：其他
+               "effectiveDate": "2020-04-20",           // 有效日期
+               "customerSourceId": 4,                   // 来源合作机构标识
+               "coachId": 5,                            // 销售教练
+               "cooperationCoach": {        
+               		"26": "李四"                          // 合作教练，id：name
+               },   
+               "placeType": 0,                          // 场内外，0：场外，1：场内
+               "doorType": 1,                           // 是否有上门，0：否，1：是
+               "comment": "no comment"                  // 备注
+            }
+        }
+        
++ resp: 200
+
+        {
+            "errors": [
+                {
+                    "status": "200",
+                    "title": "OK"
+                }
+            ]
+        }                                                                                                                                                                       
