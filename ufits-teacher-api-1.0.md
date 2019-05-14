@@ -853,14 +853,8 @@
 #### 3.17 添加服务教练
     用于教练端 我的客户 -> 购买项目 -> 课程详情 -> 服务教练名单 -> 添加
 + uri: 
-        [GET] /v1/teacher/coach-attends            
         
-### 4 我的课程
-#### 4.1 获取当前教练的未完成的课程列表
-    用于教练端 我的课程模块未完成课程列表展示
-+ uri: 
-
-        [POST] /v1/teacher/coach-attend-classes
+        [POST] /v1/teacher/coach-attends            
         
 + param: json
         
@@ -885,7 +879,14 @@
                     "title": "OK"
                 }
             ]
-        }                
+        }                      
+        
+### 4 我的课程
+#### 4.1 获取当前教练的未完成的课程列表
+    用于教练端 我的课程模块未完成课程列表展示
++ uri: 
+
+        [GET] /v1/teacher/coach-attend-classes
         
 + param: 无
 + resp: 200
