@@ -614,6 +614,7 @@
         {
             "data": {
                 "cardId": 41,                               // 卡id
+                "studentId": 25,                            // 学员id
                 "projectName": "免费体验课子项1",            // 项目
                 "classTime": 100,                           // 课时数
                 "remainClassTime": 80,                      // 剩余课时数
@@ -649,6 +650,8 @@
             "data": [
                 {
                     "id": 5,                    // 教练id
+                    "studentId": 25，           // 学员id
+                    "cardId": 41,               // 卡id
                     "realName": "ycl",          // 教练名
                     "jobTitle": "中级教练",      // 职称
                     "photo": "https://wx.qbEtrEEV45pl84k94gw/0"     // 照片
