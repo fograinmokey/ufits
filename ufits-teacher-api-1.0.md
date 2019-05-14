@@ -1004,7 +1004,9 @@
                "attendDate": "2019-05-15",      // 开课日期
                "beginTime": "10:10:10",         // 上课时间
                "courseLevelId": 4,              // 课程服务，需调用5.3获取
-               "comment": "comment123"          // 备注
+               "comment": "comment123",         // 备注
+               "longitude": 23.45,              // 经度
+               "latitude": 45.22                // 维度
             }
         }    
         
