@@ -46,7 +46,8 @@
 
         {
             "data": {
-                "token": "token"
+                "token": "token",   // 登录状态标识
+                "userId": 3         // 用户id
             }
         }
         
@@ -981,4 +982,39 @@
                     "20190510000002": "收费体验课子项2"     // 学员卡号和项目名
                 }
             }
-        }                                                                                                                                                                                                                                                                       
+        }      
+        
+#### 5.6 预约
+    用于教练端 我的课程模块 -> 预约
++ uri: 
+
+        [POST] /v1/teacher/attend-classes
+        
++ param: json
+
+        {
+            "data": {               
+               "categoryId": 2,                 // 课程分类id
+               "phoneNum": "17085145713",       // 会员手机号
+               "name": "黄蓉",                  // 会员姓名
+               "cardNum": "20190510000002",     // 会员卡号
+               "doorType": 0,                   // 场所，0：到店，1：上门
+               "organizationId": 4,             // 可选，如果到店则需要调用5.4接口获取合作店铺
+               "timeLength": 40,                // 上课时长，以分钟为单位
+               "attendDate": "2019-05-15",      // 开课日期
+               "beginTime": "10:10:10",         // 上课时间
+               "courseLevelId": 4,              // 课程服务，需调用5.3获取
+               "comment": "comment123"          // 备注
+            }
+        }    
+        
++ resp: 201
+
+        {
+            "errors": [
+                {
+                    "status": "201",
+                    "title": "Created"
+                }
+            ]
+        }                                                                                                                                                                                                                                                                                         
