@@ -1092,7 +1092,10 @@
 
         {
             "data": {
-                "attendClassId": 51 // 预约上课id
+                "attendClassId": 51,                    // 预约上课id
+                "longitude": 23.5,                      // 经度
+                "latitude": 45.33,                      // 维度
+                "address": "北京市丰台区南方庄99号院"    // 地址
             }
         }
         
