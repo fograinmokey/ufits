@@ -1080,4 +1080,30 @@
                 "mainCoachName": "mainCoachName",               // 主教练名，当课程性质为公开课时才显示
                 "helpCoachName": "helpCoachName",               // 助教名，当课程性质为公开课时才显示
             }
-        }                                                                                                                                                                                                                                                                                                                     
+        } 
+        
+#### 4.8 签到
+    用于教练端 我的课程 -> 上课详情 -> 签到
++ uri:
+ 
+        [PUT] /v1/teacher/attend-classes/sign-in
+        
++ param: json
+
+        {
+            "data": {
+                "attendClassId": 51 // 预约上课id
+            }
+        }
+        
++ resp: 200
+
+        {
+            "errors": [
+                {
+                    "status": "200",
+                    "title": "OK"
+                }
+            ]
+        }                    
+                                                                                                                                                                                                                                                                                                                                
