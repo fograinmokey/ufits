@@ -1108,5 +1108,25 @@
                     "title": "OK"
                 }
             ]
-        }                    
+        }
+        
+#### 4.9 获取开卡时位置信息
+    用于教练端 我的课程 -> 上课详情 -> 签到 距离判断
++ uri: 
+
+        [GET] /v1/teacher/courses/mycourses/detail/card-location
+        
++ param:
+
+        [string] cardNum 卡号
+        
++ resp: 200
+        
+        {
+            "data": {
+                "longitude": 23.5,                    // 经度
+                "latitude": 45.33,                    // 纬度
+                "address": "北京市丰台区南方庄99号院"  // 地址
+            }
+        }                                                
                                                                                                                                                                                                                                                                                                                                 
