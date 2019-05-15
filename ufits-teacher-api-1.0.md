@@ -1037,9 +1037,7 @@
                "attendDate": "2019-05-15",      // 开课日期
                "beginTime": "10:10:10",         // 上课时间
                "courseLevelId": 4,              // 课程服务，需调用5.3获取
-               "comment": "comment123",         // 备注
-               "longitude": 23.45,              // 经度
-               "latitude": 45.22                // 维度
+               "comment": "comment123"          // 备注
             }
         }    
         
@@ -1068,16 +1066,16 @@
 
         {
             "data": {
-                "peopleNumber": 1,                             // 上课人数
-                "cardNumber": "20190510000002",                // 学员卡号
-                "studentName": "黄蓉",                         // 学员姓名
-                "datetimeRange": "2019-05-14 10:10-10:50",     // 上课时间段
-                "courseTypeId": 2,                             // 课程类型id 
+                "peopleNumber": 1,                              // 上课人数
+                "cardNumber": "20190510000002",                 // 学员卡号
+                "studentName": "黄蓉",                          // 学员姓名
+                "datetimeRange": "2019-05-14 10:10-10:50",      // 上课时间段
+                "courseTypeId": 2,                              // 课程类型id 
                 "courseType": "私教课",                         // 课程类型
-                "state": "0",                                  // 状态：0：已预约，1：已签到，2：已签退，3：已总结，4：已结束，5：预约失败
-                "address": "方庄妇幼保健院",                    // 上课场所
+                "state": "0",                                   // 状态：0：已预约，1：已签到，2：已签退，3：已总结，4：已结束，5：预约失败
+                "address": "方庄妇幼保健院",                     // 上课场所
                 "detailAddress": "北京市丰台区南方庄99号院",     // 上课地址
-                "mainCoachName": "mainCoachName",              // 主教练名
-                "helpCoachName": "helpCoachName",              // 助教名
+                "mainCoachName": "mainCoachName",               // 主教练名，当课程性质为公开课时才显示
+                "helpCoachName": "helpCoachName",               // 助教名，当课程性质为公开课时才显示
             }
         }                                                                                                                                                                                                                                                                                                                     
