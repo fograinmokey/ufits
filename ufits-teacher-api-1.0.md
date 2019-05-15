@@ -1200,4 +1200,31 @@
                     "title": "有氧室"
                 }
             ]
-        }                                                                                                                                                                                                                                                                                                                                                                                                                      
+        }   
+        
+#### 4.13 根据动作类别获取动作
+    用于教练端 我的课程 -> 上课详情 -> 做小结 -> 上课记录 -> 课程记录添加 -> 根据动作库分类加载动作列表
++ uri:
+
+        [GET] /v1/teacher/actions?categoryId=1
+        
++ param:
+        
+        [long] categoryId 动作类别id
+        
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 1,                                                // 动作id
+                    "title": "俯卧撑",                                       // 动作名
+                    "thumbnail": "http://static.mifanxing.com/iy0992.jpg"   // 缩略图
+                },
+                {
+                    "id": 2,
+                    "title": "仰卧起坐",
+                    "thumbnail": "http://static.mifanxing.com/iyy732702420992.jpg"
+                }
+            ]
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                               
