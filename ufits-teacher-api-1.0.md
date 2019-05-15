@@ -789,7 +789,9 @@
                },
                "placeType": 0,                          // 场内外，0：场外，1：场内
                "doorType": 1,                           // 是否有上门，0：否，1：是
-               "comment": "no comment"                  // 备注
+               "comment": "no comment",                 // 备注
+               "longitude": 23.45,                      // 经度
+               "latitude": 45.22                        // 维度
             }
         }
         
