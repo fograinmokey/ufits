@@ -1079,6 +1079,7 @@
                 "detailAddress": "北京市丰台区南方庄99号院",     // 上课地址
                 "mainCoachName": "mainCoachName",               // 主教练名，当课程性质为公开课时才显示
                 "helpCoachName": "helpCoachName",               // 助教名，当课程性质为公开课时才显示
+                "attendClassId": 51                             // 预约上课id
             }
         } 
         
@@ -1128,5 +1129,32 @@
                 "latitude": 45.33,                    // 纬度
                 "address": "北京市丰台区南方庄99号院"  // 地址
             }
-        }                                                
-                                                                                                                                                                                                                                                                                                                                
+        }
+        
+#### 4.10 签退
+    用于教练端 我的课程 -> 上课详情 -> 签退                                                        
++ uri: 
+
+        [PUT] /v1/teacher/attend-classes/sign-out
+        
++ param: json
+
+        {
+            "data": {
+                "attendClassId": 51,                    // 预约上课id
+                "longitude": 23.5,                      // 经度
+                "latitude": 45.33,                      // 维度
+                "address": "北京市丰台区南方庄99号院"    // 地址
+            }
+        }
+        
++ resp: 200
+
+        {
+            "errors": [
+                {
+                    "status": "200",
+                    "title": "OK"
+                }
+            ]
+        }                                                                                                                                                                                                                                                                                                                                                                
