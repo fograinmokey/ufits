@@ -69,7 +69,7 @@
                 "courseNum": 1, // 多少课
                 "courses": [
                     {
-                        "id": 13,                                       // 上课分类id
+                        "id": 13,                                       // 教练上课id
                         "timeRange": "2019-05-07 12:51-14:51",          // 时间段
                         "courseTypeId": 2,                              // 课程类型id
                         "courseType": "私教课",                         // 课程类型
@@ -89,7 +89,7 @@
         
 + param: 
 
-        [long] coachAttendClassId 上课分类id
+        [long] coachAttendClassId 教练上课id
         
 + resp: 200
 
@@ -899,6 +899,7 @@
                 "uncompletedCourseNum": 1,                      // 未完成的课程数
                 "courses": [
                     {
+                        "id": 2,                                // 教练上课id
                         "timeRange": "2019-05-07 12:51-14:51",  // 上课时间段
                         "courseTypeId": 2,                      // 课程类型id
                         "courseType": "私教课",                 // 课程类型名
@@ -1051,4 +1052,32 @@
                     "title": "Created"
                 }
             ]
-        }                                                                                                                                                                                                                                                                                         
+        }
+        
+#### 4.7 获取我的课程详情
+    用于教练端 我的课程模块 -> 上课详情
++ uri:
+
+        [GET] /v1/teacher/courses/mycourses/detail?coachAttendClassId=70
+        
++ param: 
+
+        [long] coachAttendClassId 教练上课id
+        
++ resp: 200
+
+        {
+            "data": {
+                "peopleNumber": 1,                             // 上课人数
+                "cardNumber": "20190510000002",                // 学员卡号
+                "studentName": "黄蓉",                         // 学员姓名
+                "datetimeRange": "2019-05-14 10:10-10:50",     // 上课时间段
+                "courseTypeId": 2,                             // 课程类型id 
+                "courseType": "私教课",                         // 课程类型
+                "state": "0",                                  // 状态：0：已预约，1：已签到，2：已签退，3：已总结，4：已结束，5：预约失败
+                "address": "方庄妇幼保健院",                    // 上课场所
+                "detailAddress": "北京市丰台区南方庄99号院",     // 上课地址
+                "mainCoachName": "mainCoachName",              // 主教练名
+                "helpCoachName": "helpCoachName",              // 助教名
+            }
+        }                                                                                                                                                                                                                                                                                                                     
