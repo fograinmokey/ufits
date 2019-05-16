@@ -1230,4 +1230,50 @@
             ]
         }
         
-#### 4.14 客户家庭作业 同上课记录                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+#### 4.14 客户家庭作业 同上课记录     
+
+#### 4.15 小结
+    用于教练端 我的课程 -> 上课详情 -> 小结
++ uri: 
+
+        [POST] /v1/teacher/summaries
+        
++ param: json
+
+        {
+            "data": {
+                "attendClassId": 2,             // 预约上课id
+                "courseTypeId": 2,              // 课程分类id, 如私教、公开、查房 的id
+                "customerComment": "abc",       // 客户的评价
+                "coachComment": "efg",          // 上个教练给我的备注
+                "hasDoorFee": 0,                // 是否收取上门费，0：否，1：是
+                "studentId": 2,                 // 学员id
+                "attendClassContent": "acd",    // 上课内容
+                "keyUserRecord": "efg",         // 重点用户记录
+                "attendClassRecords": [         // 上课记录
+                    {
+                        "actionId": 2,          // 动作id
+                        "count": 10,            // 共做了几组
+                        "num": 5                // 每组多少个
+                    }
+                ],
+                "tasks": [                      // 作业
+                    {
+                        "actionId": 2,          // 动作id
+                        "count": 10,            // 共做了几组
+                        "num": 5                // 每组多少个
+                    }
+                ]
+            }
+        }
+        
++ resp: 200
+
+        {
+            "errors": [
+                {
+                    "status": "1000",       // 是否需要评估，1000：需要评估，1001：不需要评估
+                    "title": "需要评估"     // 描述
+                }
+            ]
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
