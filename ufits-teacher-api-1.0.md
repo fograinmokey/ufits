@@ -38,7 +38,8 @@
                 "city": "city",                     // 城市，可选
                 "nickName": "nickName",             // 昵称，可选
                 "gender": 2,                        // 性别，可选
-                "avatar": "avatar"                  // 头像，可选
+                "avatar": "avatar",                 // 头像，可选
+                "address": "北京市丰台区横一条"      // 用户在微信上填的地址
             }
         }
         
@@ -1227,4 +1228,6 @@
                     "thumbnail": "http://static.mifanxing.com/iyy732702420992.jpg"
                 }
             ]
-        }                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        }
+        
+#### 4.14 客户家庭作业 同上课记录                                                                                                                                                                                                                                                                                                                                                                                                                                                       
