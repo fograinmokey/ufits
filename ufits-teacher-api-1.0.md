@@ -1465,4 +1465,39 @@
                     "publishDate": "2019-05-06"
                 }
             ]
-        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        }
+        
+#### 5.2 获取所有动作库类别列表
+    用于教练端 孕产知识模块 -> 动作库 -> 左侧分类列表
++ tip: 同 4.12
+
+#### 5.3 根据动作类别获取动作
+    用于教练端 孕产知识模块 -> 动作库 -> 右侧动作列表
++ tip: 同 4.13
+
+#### 5.4 获取动作详情
+    用于教练端 孕产知识模块 -> 动作库 -> 右侧动作列表 -> 具体动作
++ uri: 
+
+        [GET] /v1/teacher/actions/{id}
+        
++ param: 
+
+        [long] id 动作id
+        
++ resp: 200
+
+        {
+            "data": {
+                "title": "腿部按摩",                            // 动作标题
+                "actionCategoryTitle": "有氧室",                // 动作分类
+                "description": "腿部锻炼将会缓解肿胀",           // 动作描述
+                "content": "内容部分",                          // 动作详情介绍
+                "thumbnail": "http://mifanxing.com/1.jpg",      // 缩略图
+                "pictures": [                                   // 图片列表
+                    "http://mifanxing.com/91.jpg",              // 图片地址
+                    "http://mifanxing.com/92.jpg",
+                    "http://mifanxing.com/93.jpg"
+                ]
+            }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
