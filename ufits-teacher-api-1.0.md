@@ -424,8 +424,8 @@
         
 + param: 二填一
 
-        [String] phoneNum 手机号
-        [String] customerName 学员名
+        [string] phoneNum 手机号
+        [string] customerName 学员名
         
 + resp: 200
 
