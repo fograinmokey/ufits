@@ -1434,4 +1434,34 @@
                     "title": "Created"
                 }
             ]
-        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+        }   
+        
+### 5 孕产知识模块
+    用于教练端 孕产知识模块 -> 孕产知识库 列表
++ uri:
+
+        [GET] /v1/teacher/knowledges
+        
++ param:
+
+        [int] pageNum 当前是第几页
+        [int] pageSize 每页展示数目
+        
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "knowledgeId": 8,                   // 孕产知识id
+                    "picture": "2019-05-10/fb.jpg",     // 列表图片
+                    "title": "32电风扇",                // 标题
+                    "publishDate": "2019-05-10"         // 发布时间
+                },
+                {
+                    "knowledgeId": 7,
+                    "picture": "http://mifanxing.com/111111.jpg",
+                    "title": "孕期了解Ⅲ",
+                    "publishDate": "2019-05-06"
+                }
+            ]
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
