@@ -1596,8 +1596,7 @@
 
 + Parameters
   + userId - 用户id（例如用户id为1）
-  + state- 学生预约课状态（解释：0：已预约；state的值固定为0）
-  + userId=2&state=0（示例）
+  + userId=2（示例）
   
 + Description
     + leaveTimeBucket - 请假时间
