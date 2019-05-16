@@ -1327,5 +1327,34 @@
                     "title": "高级"
                 }
             ]
-        }                                                    
+        }
+        
+#### 4.18 根据课程级别id获取课程列表
+    用于教练端 我的课程 -> 上课详情 -> 评估 -> 修复计划 -> 课程服务分类
++ uri: 
+
+        [GET] /v1/teacher/courses/mycourses/list
+        
++ param: 
+
+        [long] courseLevelId 课程级别id
+        
++ resp: 200
+
+        {
+            "data": [
+                {
+                    "id": 6,                                            // 课程id
+                    "thumbnail": "http://mifanxing.com/4577111.jpg",    // 缩略图
+                    "courseDesc": "同让宝宝",                           // 课程描述
+                    "courseName": "产前体检"                            // 课程名
+                },
+                {
+                    "id": 7,
+                    "thumbnail": "http://mifanxing.com/4577111.jpg",
+                    "courseDesc": "米内特",
+                    "courseName": "产前锻炼"
+                }
+            ]
+        }                                                                                        
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
