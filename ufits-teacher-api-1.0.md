@@ -1502,7 +1502,35 @@
                     "http://mifanxing.com/93.jpg"
                 ]
             }
-        } 
+        }
+        
+#### 5.5 获取孕产知识详情
+    用于教练端 孕产知识模块 -> 孕产知识库 -> 列表 -> 详情
++ uri: 
+
+        [GET] /v1/teacher/knowledges/{id}   // 7 
+        
++ param:
+
+        [long] id 孕产知识id
+        
++ resp:
+
+        {
+            "data": {
+                "title": "孕期了解Ⅲ",                              // 标题
+                "publishDate": "2019-05-06 18:47",                  // 发布时间
+                "content": "一、有好的营养 二、有好的睡眠asd",        // 内容
+                "description": "这是一项在孕期的知识",               // 描述
+                "thumbnail": "http://mifanxing.com/1.jpg",          // 缩略图
+                "createDate": "2019-05-08 11:43",                   // 创建时间
+                "pictures": [                                       // 图片列表
+                    "http://mifanxing.com/1.jpg",                   // 图片地址
+                    "http://mifanxing.com/2.jpg",
+                    "http://mifanxing.com/3.jpg"
+                ]
+            }
+        }                            
  
  ### NOTE       
     针对学员端状态红点数据查询：
