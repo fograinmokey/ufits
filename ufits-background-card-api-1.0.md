@@ -251,6 +251,7 @@
                 "phoneNum": "27084159673",          // 学员手机号
                 "salespersonName": "efg",           // 销售教练
                 "gender": 1,                        // 性别：0：女，1：男
-                "address": "address"                // 学员住址
+                "address": "address",               // 学员住址
+                "avatar": "avatar"                  // 学员头像
             }
         }                                                                                                                                 
