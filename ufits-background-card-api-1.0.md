@@ -224,4 +224,33 @@
                     "title": "No Content"
                 }
             ]
-        }                                                                                                     
+        }
+        
+#### 1.7 根据卡号获取学员信息
+    用于后台管理 会员卡管理 -> 点击表格中的卡号
++ uri: 
+
+        [GET] /users/student
+        
++ param:
+
+        [string] cardNum 卡号
+        
++ resp: 200
+        
+        {
+            "data": {
+                "cardNum": "cardNum",               // 卡号
+                "projectTitle": "projectTitle",     // 套餐类型(项目名称)
+                "classTime": 40.5,                  // 课时数
+                "remainingClassTime": 10.3,         // 剩余课时数
+                "giftClassTime": 2,                 // 赠送课时
+                "getCardDate": "2019-05-17",        // 发卡时间
+                "effectiveDate": "2020-10-10",      // 有效时间
+                "studentName": "abc",               // 学员姓名
+                "phoneNum": "27084159673",          // 学员手机号
+                "salespersonName": "efg",           // 销售教练
+                "gender": 1,                        // 性别：0：女，1：男
+                "address": "address"                // 学员住址
+            }
+        }                                                                                                                                 
