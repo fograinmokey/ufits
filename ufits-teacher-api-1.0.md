@@ -1071,6 +1071,7 @@
             "data": {
                 "peopleNumber": 1,                              // 上课人数
                 "cardNumber": "20190510000002",                 // 学员卡号
+                "studentId": 27,                                // 学员id
                 "studentName": "黄蓉",                          // 学员姓名
                 "datetimeRange": "2019-05-14 10:10-10:50",      // 上课时间段
                 "courseTypeId": 2,                              // 课程类型id 
