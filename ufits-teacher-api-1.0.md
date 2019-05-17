@@ -1457,7 +1457,7 @@
                     "knowledgeId": 8,                   // 孕产知识id
                     "picture": "2019-05-10/fb.jpg",     // 列表图片
                     "title": "32电风扇",                // 标题
-                    "publishDate": "2019-05-10"         // 发布时间
+                    "publishDate": "2019-05-10 10:10"   // 发布时间
                 },
                 {
                     "knowledgeId": 7,
