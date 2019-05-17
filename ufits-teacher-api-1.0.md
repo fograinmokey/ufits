@@ -1495,6 +1495,7 @@
                 "description": "腿部锻炼将会缓解肿胀",           // 动作描述
                 "content": "内容部分",                          // 动作详情介绍
                 "thumbnail": "http://mifanxing.com/1.jpg",      // 缩略图
+                "createDate": "2019-05-17 17:17",               // 创建时间
                 "pictures": [                                   // 图片列表
                     "http://mifanxing.com/91.jpg",              // 图片地址
                     "http://mifanxing.com/92.jpg",
