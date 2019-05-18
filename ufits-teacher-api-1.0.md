@@ -1375,7 +1375,7 @@
                 "studentName": "abc",           // 会员姓名
                 "age": 18,                      // 会员年龄
                 "gestationNum": 2,              // 妊娠次数
-                "childBirth": "2019-05-16 10:10:10", //分娩日期
+                "childBirth": "2019-05-16",     //分娩日期
                 "babyBirthWeight": "3.5kg",     // 宝宝出生体重
                 "gestationEx": "abc",           // 妊娠特殊情况
                 "childbirthMode": 0,            // 分娩方式，0：顺产，1：剖腹产
