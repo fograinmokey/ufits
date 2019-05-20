@@ -1082,7 +1082,8 @@
                 "mainCoachName": "mainCoachName",               // 主教练名，当课程性质为公开课时才显示
                 "helpCoachName": "helpCoachName",               // 助教名，当课程性质为公开课时才显示
                 "attendClassId": 51,                            // 预约上课id, 也是评估id
-                "nature": 1                                     // 课程性质，0：公开，1：私教
+                "nature": 1,                                    // 课程性质，0：公开，1：私教
+                "coachAttendClassId": 70                        // 教练预约上课id
             }
         } 
         
@@ -1099,7 +1100,8 @@
                 "attendClassId": 51,                    // 预约上课id
                 "longitude": 23.5,                      // 经度
                 "latitude": 45.33,                      // 维度
-                "address": "北京市丰台区南方庄99号院"    // 地址
+                "address": "北京市丰台区南方庄99号院",   // 地址
+                "coachAttendClassId": 70                // 教练上课id
             }
         }
         
@@ -1147,7 +1149,8 @@
                 "attendClassId": 51,                    // 预约上课id
                 "longitude": 23.5,                      // 经度
                 "latitude": 45.33,                      // 维度
-                "address": "北京市丰台区南方庄99号院"    // 地址
+                "address": "北京市丰台区南方庄99号院",   // 地址
+                "coachAttendClassId": 70                // 教练上课id
             }
         }
         
@@ -1245,6 +1248,7 @@
         {
             "data": {
                 "attendClassId": 2,             // 预约上课id
+                "coachAttendClassId": 70,       // 教练上课id
                 "courseTypeId": 2,              // 课程分类id, 如私教、公开、查房 的id
                 "customerComment": "abc",       // 客户的评价
                 "coachComment": "efg",          // 上个教练给我的备注
@@ -1370,6 +1374,7 @@
         {
             "data": {
                 "attendClassId": 2,             // 预约上课id
+                "coachAttendClassId": 70,       // 教练上课id
                 "studentId": 2,                 // 学员id
                 "state": 1,                     // 状态，0：草稿，1：提交
                 "studentName": "abc",           // 会员姓名
