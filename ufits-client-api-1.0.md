@@ -2481,5 +2481,31 @@
         ]
       }
 
+### 会员中心模块动态提示[GET]/users/student/{id}   
++ Parameters
+  + id - 用户ID （示例id=4）
++ Description
+    + orderDisplay - 我的订单模块
+    + courseDisplay - 我的课程模块
+    + teacherDisplay - 我的老师模块
+    + taskDisplay - 我的作业模块
+    + attendClassDisplay - 我的预约模块
+    + leaveApplyDisplay - 请假申请模块
+    + changeDisplay - 我的改变模块
+    + evaluationDisplay - 评估方案模块
+    + true:为有新的动态可展示；false：为没有新的动态不展示
++ Response 200 (application/json)
 
+      {
+        "data": {
+            "orderDisplay": false,
+            "courseDisplay": false,
+            "teacherDisplay": false,
+            "taskDisplay": false,
+            "attendClassDisplay": false,
+            "leaveApplyDisplay": false,
+            "changeDisplay": false,
+            "evaluationDisplay": false
+        }
+      }
 
