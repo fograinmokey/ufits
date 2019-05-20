@@ -2933,7 +2933,7 @@
 ### 会员卡阶段评估列表 [GET] admin/evaluations/cardEvaluation
 + Parameters
   + cardId - 卡ID
-  + cardId=4（示例）
+  + filter[cardId]=4（示例）
 + Description
     + id - 评估ID
     + attendTimeBucket - 评估时间段
