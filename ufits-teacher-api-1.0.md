@@ -51,6 +51,22 @@
                 "userId": 3         // 用户id
             }
         }
+        
+#### 1.3 判断用户是否登录
++ uri: 
+
+        [GET] /v1/teacher/users/isLogin
+        
++ param: 无
++ header: 
+
+        Authorization: "93b824a2-5f99-4cc4-bcce-aea99ea893dc"   // token
+        
++ resp: 200
+
+        {
+            "data": true    // 登录状态，true：已登录，false：未登录
+        }                        
    
 ### 2 我的课表
 #### 2.1 根据日期获取教师课程列表
