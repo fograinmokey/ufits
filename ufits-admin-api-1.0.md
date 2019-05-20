@@ -1896,7 +1896,7 @@
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN | ROLE_SUPER_ADMIN
-+ Request (application/json)
++ Request (application/json)（私教课）
     
       {
     	 "data":{
@@ -1909,6 +1909,24 @@
     		 "courseLevelId":3,
     		 "studentId":[25],
     		 "cardId":[41]
+    	 }
+      }
+
++ Request (application/json)（公开课）
+
+      {
+    	 "data":{
+    		 "categoryId":1,
+    		 "mianCoachId":2,
+    		 "assistCoachId":"4",
+    		 "place":1,
+    		 "shopId":2,
+    		 "attendDate":"2019-05-25",
+    		 "beginTime":"2019-05-25 14:51:11",
+    		 "timeLength":15,
+    		 "courseLevelId":3,
+    		 "studentId":[25,27],
+    		 "cardId":[41,42]
     	 }
       }
 
