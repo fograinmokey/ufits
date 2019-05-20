@@ -1081,7 +1081,7 @@
                 "detailAddress": "北京市丰台区南方庄99号院",     // 上课地址
                 "mainCoachName": "mainCoachName",               // 主教练名，当课程性质为公开课时才显示
                 "helpCoachName": "helpCoachName",               // 助教名，当课程性质为公开课时才显示
-                "attendClassId": 51,                            // 预约上课id
+                "attendClassId": 51,                            // 预约上课id, 也是评估id
                 "nature": 1                                     // 课程性质，0：公开，1：私教
             }
         } 
