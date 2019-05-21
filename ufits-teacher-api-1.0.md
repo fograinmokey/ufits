@@ -286,7 +286,11 @@
                 ],
                 "coachComment": "学院很认真。",                 // 教练备注
                 "customerComment": "教练教得好。",              // 客户评价
-                "hasDoorFee": 0                                // 是否收取上门费标识，可忽略
+                "hasDoorFee": 0,                               // 是否收取上门费标识，可忽略
+                "images": {                                    
+                    "9": "2019-05-21/df.png",                  // 照片记录, key：关联id（如 summaryAttachmentId），值为照片地址
+                    "10": "2019-05-21/db9.png"
+                },
             }
         }
 
@@ -357,12 +361,13 @@
                         "id": 14,                               // 课程id
                         "thumbnail": "http://static.mifanxing.com/article/image/215/69/0000001.jpg",    // 缩略图
                         "courseDesc": "此课程适应孕期产妇15",    // 课程描述
-                        "courseName": "孕期瑜伽15期"            // 课程标题
+                        "courseName": "孕期瑜伽15期"             // 课程标题
                     }
                 ],
-                "images": [                                     // 照片记录
-                    "2019-04-30/2309f5e6be3341d1a2ff3e265e20b2dc.jpg"   // 照片地址
-                ]
+                 "images": {                                    
+                    "9": "2019-05-21/df.png",                   // 照片记录, key：关联id（如 evaluationAttachmentId），值为照片地址
+                    "10": "2019-05-21/db9.png"
+                },
             }
         }   
         
@@ -1460,6 +1465,27 @@
                 }
             ]
         }   
+        
+#### 4.20 删除关联表图片
++ uri:
+
+        [DELETE] /v1/teacher/attachments
+        
++ param:
+
+        [long] inlineId 关联id，如summaryAttachmentId、evaluationAttachmentId
+        [string] attachmentTag 图片标识，如：summary_attachment（小结图片）、evaluation_attachment（评估图片）
+        
++ resp: 204
+
+        {
+            "errors": [
+                {
+                    "status": "204",
+                    "title": "No Content"
+                }
+            ]
+        }                           
         
 ### 5 孕产知识模块
 #### 5.1 获取带分页的孕产知识列表，倒序排列
