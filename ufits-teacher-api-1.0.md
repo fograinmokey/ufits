@@ -1473,20 +1473,24 @@
 + resp: 200
 
         {
-            "data": [
-                {
-                    "knowledgeId": 8,                   // 孕产知识id
-                    "picture": "2019-05-10/fb.jpg",     // 列表图片
-                    "title": "32电风扇",                // 标题
-                    "publishDate": "2019-05-10 10:10"   // 发布时间
-                },
-                {
-                    "knowledgeId": 7,
-                    "picture": "http://mifanxing.com/111111.jpg",
-                    "title": "孕期了解Ⅲ",
-                    "publishDate": "2019-05-06"
-                }
-            ]
+            "data": {
+                "pageNum": 1,                                   // 当前是第几页
+                "pageTotal": 5,                                 // 总共有多少页
+                "knowledgeList": [                              // 孕产知识列表
+                    {
+                        "knowledgeId": 9,                       // 孕产知识id
+                        "picture": "2019-05-17/3.jpg",          // 列表图片
+                        "title": "teat1",                       // 标题
+                        "publishDate": "2019-05-17 15:15"       // 发布时间
+                    },
+                    {
+                        "knowledgeId": 8,
+                        "picture": "2019-05-10/b.jpg",
+                        "title": "32电风扇",
+                        "publishDate": "2019-05-10 15:46"
+                    }
+                ]
+            }
         }
         
 #### 5.2 获取所有动作库类别列表
