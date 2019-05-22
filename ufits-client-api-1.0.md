@@ -2325,7 +2325,7 @@
         ]
       }
 
-### 评估方案详情[GET]/evaluations/clientDetails/4
+### 评估方案详情[GET]/evaluations/clientDetails/51
 + Parameters
   + userId - 评估id（例id为4）
 + Description
@@ -2333,51 +2333,35 @@
 
       {
         "data": {
-            "id": 64,
-            "state": "草稿",
+            "id": 51,
+            "state": "提交",
             "userId": 27,
             "realName": "黄蓉",
-            "age": 12,
-            "gestationNum": 23,
+            "age": 22,
+            "gestationNum": 34,
             "childbirth": "2019-05-21",
-            "babyBirthWeight": "23",
-            "gestationEx": "妊娠特殊情况太特殊",
+            "babyBirthWeight": "12",
+            "gestationEx": "妊娠情况很特殊",
             "childbirthMode": "顺产",
             "spontaneousLabor": [
-                "无撕裂无侧切",
                 "有侧切",
                 "撕裂Ⅰ度"
             ],
             "sleepCondition": "欠缺",
             "sleepLackReason": "易惊醒",
-            "sleepTime": "12",
+            "sleepTime": "21",
             "mentality": "不佳",
-            "appetite": "一般",
+            "appetite": "不佳",
             "posture": [
-                "正常",
-                "上交叉综合证",
-                "下交叉综合证"
+                "下交叉综合证",
+                "扁平足"
             ],
-            "neck": "有不适",
-            "neckAbout": "左",
-            "neckEx": [
-                "僵硬",
-                "疼痛"
-            ],
-            "arm": [
-                "无不适",
-                "酸软"
-            ],
+            "neck": "无不适",
+            "arm": "无不适",
             "shoulder": "有不适",
             "shoulderAbout": "左",
-            "shoulderEx": [
-                "僵硬",
-                "疼痛"
-            ],
-            "wrist": [
-                "无不适",
-                "腱鞘炎"
-            ],
+            "shoulderEx": "僵硬",
+            "wrist": "无不适",
             "waist": "有不适",
             "waistAbout": "右腰",
             "waistEx": [
@@ -2391,13 +2375,9 @@
                 "疼痛"
             ],
             "sciaticNerve": "有",
-            "sciaticNerveEx": [
-                "伴随腰痛",
-                "同侧骨盆后侧痛"
-            ],
             "leg": [
-                "水肿",
-                "膝关节痛"
+                "膝关节痛",
+                "足根痛"
             ],
             "pelvicFloor": [
                 "压力性尿失禁",
@@ -2405,15 +2385,15 @@
             ],
             "abdomenMuscle": "阳性",
             "abdomenMuscleAbout": "脐上",
-            "abdomenMuscleSeparateLen": "23",
-            "abdomenMuscleDepth": "11",
+            "abdomenMuscleSeparateLen": "123",
+            "abdomenMuscleDepth": "23",
             "abdomenWall": "紧绷疼痛",
-            "bust": "23",
-            "waistline": "12",
-            "abdomenling": "32",
-            "hipline": "12",
-            "height": "32",
-            "weight": "32",
+            "bust": "12",
+            "waistline": "23",
+            "abdomenling": "12",
+            "hipline": "33",
+            "height": "44",
+            "weight": "44",
             "courses": [
                 {
                     "courseTitle": "产前体检",
@@ -2427,8 +2407,7 @@
                 }
             ],
             "pictures": [
-                "2019-05-21/d6dcf2cde8524957ad894edbd41bf92f.png",
-                "2019-05-21/dbb76148ce7947deb1b2e664998ca8e9.png"
+                "2019-05-21/a843d8161d394b3083eeaf66bca627ab.png"
             ]
         }
       }
