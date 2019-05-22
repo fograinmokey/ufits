@@ -193,7 +193,9 @@
                },
                "placeType": 0,                          // 场内外，0：场外，1：场内
                "doorType": 1,                           // 是否有上门，0：否，1：是
-               "comment": "no comment"                  // 备注
+               "comment": "no comment",                 // 备注
+               "editTag": "check",                      // 修改状态，当值为check时为后台审核操作，为空或其它值则不是
+               "checkState"                             // 审核状态，通过为on，不通过为off  
             }
         }
         
