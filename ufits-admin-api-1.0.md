@@ -3636,3 +3636,175 @@
             }
         ]
        }
+
+### 地区查询 [GET] /admin/regions
++ Parameters
+  + filter[parentId]=0&filter[regionTitle:like]=%25河%25（查询所有省以及模糊匹配）
+  + filter[parentId]=47（查询河北省所有市示例）
+  + filter[parentId]=161（查询张家口所有区县示例）
+
++ Response 200 (application/json) （查询河北省所有市）
+       
+       {
+        "meta": {
+            "totalPages": 2,
+            "totalElements": 11,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 10,
+            "first": true,
+            "last": false,
+            "sort": null
+        },
+        "links": {
+            "self": "/admin/regions?filter[parentId]=47&page[number]=1&page[size]=10",
+            "first": "/admin/regions?filter[parentId]=47&page[number]=1&page[size]=10",
+            "next": "/admin/regions?filter[parentId]=47&page[number]=2&page[size]=10",
+            "last": "/admin/regions?filter[parentId]=47&page[number]=2&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 48,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "石家庄市"
+            },
+            {
+                "id": 72,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "唐山市"
+            },
+            {
+                "id": 87,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "秦皇岛市"
+            },
+            {
+                "id": 95,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "邯郸市"
+            },
+            {
+                "id": 115,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "邢台市"
+            },
+            {
+                "id": 135,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "保定市"
+            },
+            {
+                "id": 161,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "张家口市"
+            },
+            {
+                "id": 179,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "承德市"
+            },
+            {
+                "id": 191,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "沧州市"
+            },
+            {
+                "id": 208,
+                "enabled": 1,
+                "parentId": 47,
+                "regionTitle": "廊坊市"
+            }
+        ]
+      }
+
++ Response 200 (application/json) （查询张家口所有区县）
+
+      {
+        "meta": {
+            "totalPages": 2,
+            "totalElements": 17,
+            "size": 10,
+            "number": 1,
+            "numberOfElements": 10,
+            "first": true,
+            "last": false,
+            "sort": null
+        },
+        "links": {
+            "self": "/admin/regions?filter[parentId]=161&page[number]=1&page[size]=10",
+            "first": "/admin/regions?filter[parentId]=161&page[number]=1&page[size]=10",
+            "next": "/admin/regions?filter[parentId]=161&page[number]=2&page[size]=10",
+            "last": "/admin/regions?filter[parentId]=161&page[number]=2&page[size]=10"
+        },
+        "data": [
+            {
+                "id": 162,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "桥东区"
+            },
+            {
+                "id": 163,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "桥西区"
+            },
+            {
+                "id": 164,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "宣化区"
+            },
+            {
+                "id": 165,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "下花园区"
+            },
+            {
+                "id": 166,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "宣化县"
+            },
+            {
+                "id": 167,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "张北县"
+            },
+            {
+                "id": 168,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "康保县"
+            },
+            {
+                "id": 169,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "沽源县"
+            },
+            {
+                "id": 170,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "尚义县"
+            },
+            {
+                "id": 171,
+                "enabled": 1,
+                "parentId": 161,
+                "regionTitle": "蔚　县"
+            }
+        ]
+      }
