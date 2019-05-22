@@ -2325,9 +2325,9 @@
         ]
       }
 
-### 评估方案详情[GET]/evaluations/clientDetails/51
+### 评估方案详情[GET]/evaluations/clientDetails/{id}
 + Parameters
-  + userId - 评估id（例id为4）
+  + id - 评估id（例id为51）
 + Description
 + Response 200 (application/json)
 
