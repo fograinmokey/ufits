@@ -1996,7 +1996,7 @@
         }
       }
 
-### 删除 [DELETE] /v1/teacher/attend-classes/{id} 
+### 删除 [DELETE] /admin/attendClass/{id} 
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN | ROLE_SUPER_ADMIN
