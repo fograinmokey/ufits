@@ -3637,6 +3637,28 @@
         ]
        }
 
+### 用户详情 [GET] /users/details
++ Parameters
+  + phoneNumber - 手机号（必填）注意：本接口适用手机号获取用户信息
+  + phoneNumber=17085145711（示例）
+
++ Response 200 (application/json)
+
+      {
+        "data": {
+            "id": 25,
+            "nickname": "小芳",
+            "realName": "李白",
+            "sex": 1,
+            "birthday": "2001-04-20",
+            "avatar": "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKFASdZ7SWviaHbqlp6tEVO5lLkaic3TIs8BBuczkQsWp7Hf1DvW9vyias1owNlEtrEEV45pl84k94gw/0",
+            "photo": "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKFASdZ7SWviaHbqlp6tEVO5lLkaic3TIs8BBuczkQsWp7Hf1DvW9vyias1owNlEtrEEV45pl84k94gw/0",
+            "sexName": "男",
+            "hasCard": false
+        }
+      }
+    
+
 ### 地区查询 [GET] /admin/regions
 + Parameters
   + filter[parentId]=0&filter[regionTitle:like]=%25河%25（查询所有省以及模糊匹配）
