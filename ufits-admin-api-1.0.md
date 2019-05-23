@@ -2706,11 +2706,11 @@
       }
 
 ## 用户管理
-### 用户详情描述 [GET] /users/userCardInfo?userId=1&cardId=4
+### 用户详情描述 [GET] /users/userCardInfo?userId={id}
 + Parameters
   + userId - 用户ID（必填）
   + cardId - 卡ID（非必填）
-  + userId=1&cardId=4（示例）
+  + userId=25（示例）
 + Description
     + userName - 用户名称
     + phoneNumber - 用户手机号
