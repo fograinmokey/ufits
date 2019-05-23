@@ -925,6 +925,7 @@
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN | ROLE_SUPER_ADMIN
+    + attachmentIds - 为内容图片id（非必填）
 + Request (application/json)
     
       {
@@ -952,6 +953,7 @@
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN | ROLE_SUPER_ADMIN
+    + attachmentIds - 为内容图片id（非必填）
 + Request (application/json)
         
       {
@@ -1113,6 +1115,7 @@
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN | ROLE_SUPER_ADMIN
+    + attachmentIds - 为内容图片id（非必填）
 + Request (application/json)
     
       {
@@ -1142,6 +1145,7 @@
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN | ROLE_SUPER_ADMIN
+    + attachmentIds - 为内容图片id（非必填）
 + Request (application/json)
         
       {
@@ -1284,19 +1288,21 @@
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN | ROLE_SUPER_ADMIN
+    + attachmentIds - 为内容图片id（非必填）
 + Request (application/json)
     
       {
-    	  "data":{
-    		 "activityTitle":"月子线下活动123",
-    		 "description":"活动描述史蒂芬森123",
-    		 "content":"活动内容是的是的所多123",
-    		 "organizationId":2,
-    		 "stage":1,
-    		 "recommend":1,
-    		 "hasSign":1,
-    		 "thumbnail":"http://static.mifanxing.com/iyyren/image/201806/06/1638/000000.jpg"
-    	 }
+    	"data":{
+    		"activityTitle":"月子线下活动001",
+    		"description":"活动描述史蒂芬森001",
+    		"content":"活动内容是的是的所多001",
+    		"organizationId":2,
+    		"stage":1,
+    		"recommend":1,
+    		"hasSign":1,
+    		"attachmentIds":[1,2],
+    		"thumbnail":"http://static.mifanxing.com/iyyren/image/201806/06/1638/000000.jpg"
+    	}
       }
 
 + Response 200 (application/json)
@@ -1313,19 +1319,21 @@
 + Description
     + [MUST] authenticated
     + [MUST] ROLE_ADMIN | ROLE_SUPER_ADMIN
+    + attachmentIds - 为内容图片id（非必填）
 + Request (application/json)
         
       {
-    	 "data":{
-    		 "activityTitle":"月子线下活动1234",
-    		 "description":"活动描述史蒂芬森1234",
-    		 "content":"活动内容是的是的所多1234",
-    		 "organizationId":2,
-    		 "stage":1,
-    		 "recommend":1,
-    		 "hasSign":1,
-    		 "thumbnail":"http://static.mifanxing.com/iyyren/image/201806/06/1638/000000.jpg"
-    	 }
+    	"data":{
+    		"activityTitle":"月子线下活动002",
+    		"description":"活动描述史蒂芬森001",
+    		"content":"活动内容是的是的所多001",
+    		"organizationId":2,
+    		"stage":1,
+    		"recommend":1,
+    		"hasSign":1,
+    		"attachmentIds":[1,2],
+    		"thumbnail":"http://static.mifanxing.com/iyyren/image/201806/06/1638/000000.jpg"
+    	}
       }
       
 + Response 200 (application/json)
@@ -3664,7 +3672,7 @@
   + filter[parentId]=0&filter[regionTitle:like]=%25河%25（查询所有省以及模糊匹配）
   + filter[parentId]=47（查询河北省所有市示例）
   + filter[parentId]=161（查询张家口所有区县示例）
-
+  
 + Response 200 (application/json) （查询河北省所有市）
        
        {
@@ -3830,3 +3838,4 @@
             }
         ]
       }
+
