@@ -98,27 +98,38 @@
     
       {
         "data": {
-            "id": 2,
+            "id": 24,
             "enabled": 1,
             "creator": 0,
             "modifier": 0,
-            "created": "2019-04-10 17:46:41",
-            "modified": "2019-04-10 17:46:37",
-            "wechatId": "2",
-            "phoneNumber": "18331931950",
+            "created": "2019-05-07 16:49:37",
+            "modified": "2019-05-07 16:49:37",
+            "wechatId": "oGxm-4vdnp2-gDUaiov4yxlTYwQU",
+            "phoneNumber": "17600261644",
             "pwdLogIn": 0,
             "identity": 1,
             "isAdmin": 0,
-            "nickname": "健康医师",
-            "realName": "白求恩",
-            "sex": 0,
-            "birthday": "2018-08-01",
+            "nickname": "小白",
+            "realName": "江小白",
+            "sex": 1,
             "organizationId": 0,
-            "pregnancyStage": 1,
-            "jobTitle": "高级教练",
-            "remarks": "上winVB让她宝宝贝贝人不同让宝宝",
-            "coachContent": "教练详情介绍。。",
-            "photo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+            "pregnancyStage": 0,
+            "regionId": 301,
+            "address": "山西运城",
+            "avatar": "https://wx.qlogo.cn/mmopen/vi_32/vib6CNBXrDLZcicF9cZsC7uLFwclnN7RXAgVnOYr9Ipfn6gT9QR8m8IMFx5UicPxniboHtVhty8aib29BDazXNL5ssw/132",
+            "jobTitle": "中级教师",
+            "photo": "https://wx.qlogo.cn/mmopen/vi_32/vib6CNBXrDLZcicF9cZsC7uLFwclnN7RXAgVnOYr9Ipfn6gT9QR8m8IMFx5UicPxniboHtVhty8aib29BDazXNL5ssw/132",
+            "sexName": "男",
+            "region": {
+                "id": 301,
+                "parentId": 231,
+                "regionTitle": "运城市",
+                "parent": {
+                    "id": 231,
+                    "parentId": 0,
+                    "regionTitle": "山西省"
+                }
+            },
             "hasCard": false
         }
       }
