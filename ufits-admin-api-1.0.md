@@ -1973,18 +1973,21 @@
     
       {
         "data": {
-            "category": "公开课",
+            "categoryId": 2,
+            "mianCoachId": 2,
+            "courseLevelId": 3,
+            "nature": 1,
+            "category": "私教课",
             "mianCoach": "白求恩",
             "place": "上门",
-            "organization": "医院1",
-            "shop": "方庄月子门店",
-            "attendDate": "2019-05-20",
-            "beginTime": "14:51",
-            "endTime": "15:06",
+            "attendDate": "2019-05-09",
+            "beginTime": "21:51",
+            "endTime": "22:06",
             "timeLength": 15,
             "courseLevel": "高级",
             "student": [
                 {
+                    "userId": 25,
                     "userName": "李白",
                     "phoneNumber": "17085145711",
                     "cardNumber": "20190425000001"
@@ -2708,17 +2711,35 @@
   + userId - 用户ID（必填）
   + cardId - 卡ID（非必填）
   + userId=1&cardId=4（示例）
-
++ Description
+    + userName - 用户名称
+    + phoneNumber - 用户手机号
+    + SalespersonName - 销售教练
+    + sexName - 性别名称
+    + region - 用户所在地区
+    + address - 详细地址
+    + isShow - 用户是否有卡
 + Response 200 (application/json)
 
       {
         "data": {
-            "userName": "海燕",
-            "phoneNumber": "13051638532",
-            "sexName": "女",
-            "address": "北京市丰台区七里庄",
-            "show": true,
-            "salespersonName": "张三1"
+            "userName": "李白",
+            "phoneNumber": "17085145711",
+            "sexName": "男",
+            "region": {
+                "id": 17,
+                "parentId": 13,
+                "regionTitle": "丰台区",
+                "parent": {
+                    "id": 13,
+                    "parentId": 0,
+                    "regionTitle": "北京市"
+                }
+            },
+            "address": "北京市丰台区北大地",
+            "avatar": "https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKFASdZ7SWviaHbqlp6tEVO5lLkaic3TIs8BBuczkQsWp7Hf1DvW9vyias1owNlEtrEEV45pl84k94gw/0",
+            "salespersonName": "ycl",
+            "show": true
         }
       }
 
