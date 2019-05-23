@@ -386,14 +386,16 @@
             "modified": "2019-04-10 15:20:05",
             "levelId": 3,
             "courseTitle": "产后恢复",
+            "thumbnail": "http://static.mifanxing.com/article/image/215/69/4577111.jpg",
             "description": "上菜鸟winVB让她宝宝贝贝人不同让宝宝",
             "content": "合同如火如荼好人挺好玩儿是的深V是VB填入黑胡椒一次次地CSAC阿萨阿所产生的吃的是草",
-            "recommendedCoefficient": 2,
+            "recommend": 1,
             "pictures": [
-                "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
-            ]
+                "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420991.jpg"
+            ],
+            "levelTitle": "高级"
         }
-      } 
+      }
 
 ### 获取短信验证码 [GET] /v1/teacher/users/sms_code?phone_number={id}
 + Response 200 (application/json)
@@ -586,11 +588,14 @@
             "activityTitle": "孕妇一日游活动",
             "content": "报辅导班投标人突然不容易被被污染别人吧不要让",
             "postDate": "2019-04-11 11:05",
-            "recommendOrder": 0,
+            "organizationId": 2,
+            "stage": 0,
+            "recommend": 1,
             "hasSign": 1,
             "pictures": [
-                "http://static.mifanxing.com/article/image/215/69/4577111.jpg"
-            ]
+                "http://static.mifanxing.com/article/image/215/69/4577116.jpg"
+            ],
+            "organizationTitle": "月子会所"
         }
       } 
 
@@ -1568,16 +1573,18 @@
 
       {
         "data": {
-            "id": 1,
+            "id": 8,
             "enabled": 1,
             "creator": 0,
             "modifier": 0,
-            "taskId": 4,
-            "actionId": 1,
-            "groupsCount": 2,
-            "groupActionCount": 30,
-            "actionTitle": "俯卧撑",
-            "actionImage": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+            "taskId": 6,
+            "actionId": 5,
+            "groupsCount": 1,
+            "groupActionCount": 0,
+            "actionTitle": "腿部按摩1111",
+            "categoryTitle": "有氧室",
+            "ranking": 0,
+            "actionImage": "http://static.mifanxing.com/iyyren/image/201806/06/1638/1111111111.jpg"
         }
       }
 
