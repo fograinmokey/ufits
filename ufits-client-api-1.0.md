@@ -1815,7 +1815,7 @@
   + coachScore - 教练评价
   + attendClassScore - 课程评价
   + attendClassScore - 服务评价
-  + attachmentId - 上传图片返回的id（非必填）
+  + attachmentIds - 上传图片返回的id（非必填）
 + Description
     + [MUST] authenticated
 + Request（application/json）
@@ -1829,7 +1829,7 @@
     		"coachScore":"5",
     		"attendClassScore":"5",
     		"serviceScore":"5",
-    		"attachmentId":"3"
+    		"attachmentIds":[3]
     	}
       }
 
