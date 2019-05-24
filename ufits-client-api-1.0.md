@@ -1376,11 +1376,10 @@
         ]
       }
 
-### 为用户服务过教练列表[GET]/studentAttendClass/userCoach?userId=1&state=3
+### 为用户服务过教练列表[GET]/studentAttendClass/userCoach?userId=1
     
 + Parameters
     + userId  用户id
-    + state 固定值3；学生-上课表中课程已完结（必填）
 + Response 200 (application/json)
 
       {
