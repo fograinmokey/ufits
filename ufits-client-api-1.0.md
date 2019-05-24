@@ -1348,6 +1348,47 @@
         }
       }
 
+### 上课记录详情[GET]/summaryActions{id}
+
++ Response 200 (application/json)
+    
+      {
+        "data": {
+            "id": 35,
+            "summaryId": 56,
+            "actionId": 1,
+            "groupsCount": 5,
+            "groupActionCount": 12,
+            "actionTitle": "俯卧撑",
+            "actionImage": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg",
+            "categoryTitle": "室内",
+            "ranking": 0
+        }
+      }
+
+### 课后作业详情[GET]/taskActions{id}
+
++ Response 200 (application/json)
+
+      {
+        "data": {
+            "id": 25,
+            "enabled": 1,
+            "creator": 24,
+            "modifier": 0,
+            "created": "2019-05-20 18:50:43",
+            "modified": "2019-05-20 18:50:43",
+            "taskId": 55,
+            "actionId": 3,
+            "groupsCount": 22,
+            "groupActionCount": 22,
+            "actionTitle": "瑜伽锻炼",
+            "categoryTitle": "室内",
+            "ranking": 0,
+            "actionImage": "http://static.mifanxing.com/iyyren/image/201806/06/1638/347865732702420992.jpg"
+        }
+      }
+
 ## 我的老师
 ### 开卡教练列表[GET] /v1/teacher/cards/openCardCoach?userId=1
 + Parameters
