@@ -3032,6 +3032,10 @@
 + Parameters
   + cardId - 卡ID
   + cardId=4（示例）
+  + filter[userId]=22（示例）
+  + filter[realName]=小（示例）
+  + filter[phoneNumber]=18（示例）
+  + page[number]=1&page[size]=10
 + Description
     + id - 教练ID
     + realName - 教练名称
