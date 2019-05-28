@@ -1832,8 +1832,8 @@
   + userId - 用户id（必填）
   + studentAttendClassId - 学生预约课id（必填）
   + attendClassId - 预约课程id（必填）
-  + attendClassId=14&userId=4&studentAttendClassId=11（大于12小时开课示例）
-  + attendClassId=17&userId=1&studentAttendClassId=15（小于12小时开课示例）
+  + attendClassId=14&userId=4&studentAttendClassId=11（大于6小时开课示例）
+  + attendClassId=17&userId=1&studentAttendClassId=15（小于6小时开课示例）
 + Response 201 (application/json)（取消预约课程成功）
    
       {
