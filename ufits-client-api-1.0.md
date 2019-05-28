@@ -1718,7 +1718,7 @@
   + attendClassId - 用户预约课id
   + userId - 用户id
   + attendClassId=14&userId=4 （私教课程详情接口事例）
-  + attendClassId=8&userId=1  （公开课程详情接口事例）
+  + attendClassId=8&userId=5 （公开课程详情接口事例）
 + Description
     + attendTypeName - 课程性质
     + attendTimeBucket - 上课时间段
