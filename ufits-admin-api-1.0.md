@@ -590,56 +590,96 @@
     
       {
         "meta": {
-            "totalPages": 1,
-            "totalElements": 6,
+            "totalPages": 2,
+            "totalElements": 11,
             "size": 10,
             "number": 1,
-            "numberOfElements": 6,
+            "numberOfElements": 10,
             "first": true,
-            "last": true,
+            "last": false,
             "sort": null
         },
         "links": {
             "self": "/admin/courseLevels?page[number]=1&page[size]=10",
             "first": "/admin/courseLevels?page[number]=1&page[size]=10",
-            "last": "/admin/courseLevels?page[number]=1&page[size]=10"
+            "next": "/admin/courseLevels?page[number]=2&page[size]=10",
+            "last": "/admin/courseLevels?page[number]=2&page[size]=10"
         },
         "data": [
             {
                 "id": 1,
                 "created": "2019-04-10 15:19:18",
-                "modified": "2019-04-10 15:19:18",
-                "levelTitle": "初级"
+                "modified": "2019-05-17 15:47:50",
+                "levelTitle": "初级",
+                "timeCoefficient": 0.5
             },
             {
                 "id": 2,
                 "created": "2019-04-10 18:34:48",
-                "modified": "2019-04-10 18:34:43",
-                "levelTitle": "中级"
+                "modified": "2019-05-22 18:05:09",
+                "levelTitle": "中级",
+                "timeCoefficient": 1
             },
             {
                 "id": 3,
                 "created": "2019-04-10 18:34:51",
                 "modified": "2019-04-10 18:34:46",
-                "levelTitle": "高级"
+                "levelTitle": "高级",
+                "timeCoefficient": 1.5
             },
             {
                 "id": 4,
                 "created": "2019-05-05 16:53:36",
-                "modified": "2019-05-05 16:55:34",
-                "levelTitle": "中高级1"
+                "modified": "2019-05-08 10:54:40",
+                "levelTitle": "中高级1",
+                "description": "级别描述信息",
+                "timeCoefficient": 1.7
             },
             {
                 "id": 5,
                 "created": "2019-05-08 10:33:44",
                 "modified": "2019-05-08 10:33:44",
-                "levelTitle": "中高级00"
+                "levelTitle": "中高级00",
+                "description": "级别描述信息00",
+                "timeCoefficient": 1.7
             },
             {
-                "id": 6,
-                "created": "2019-05-08 10:34:57",
-                "modified": "2019-05-08 10:35:20",
-                "levelTitle": "中高级123"
+                "id": 8,
+                "levelTitle": "公开课级别",
+                "description": "注意：为了方便默认第一个为公开课级别",
+                "timeCoefficient": 0
+            },
+            {
+                "id": 15,
+                "created": "2019-05-17 11:13:19",
+                "modified": "2019-05-17 11:13:19",
+                "levelTitle": "吞吞吐吐拖",
+                "description": "啊啊啊啊人",
+                "timeCoefficient": 4
+            },
+            {
+                "id": 16,
+                "created": "2019-05-17 11:13:45",
+                "modified": "2019-05-28 18:51:21",
+                "levelTitle": "ff14",
+                "description": "aaa",
+                "timeCoefficient": 2
+            },
+            {
+                "id": 17,
+                "created": "2019-05-17 11:14:01",
+                "modified": "2019-05-17 11:14:01",
+                "levelTitle": "无敌风暴战",
+                "description": "大师傅",
+                "timeCoefficient": 4
+            },
+            {
+                "id": 18,
+                "created": "2019-05-17 11:14:15",
+                "modified": "2019-05-17 11:14:15",
+                "levelTitle": "工会尽快",
+                "description": "同一天",
+                "timeCoefficient": 1.2
             }
         ]
       }
