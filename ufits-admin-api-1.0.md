@@ -2041,23 +2041,23 @@
 
 + Response 200 (application/json) （公开课）
     
-      {
+       {
         "data": {
             "categoryId": 1,
-            "mianCoachId": 2,
-            "assistCoachId": 26,
+            "mianCoachId": 26,
+            "assistCoachId": 22,
             "courseLevelId": 1,
             "nature": 0,
             "category": "公开课",
-            "mianCoach": "白求恩",
-            "assistCoach": "李四",
+            "mianCoach": "李四",
+            "assistCoach": "张教练",
             "place": "到店",
-            "organization": "医院1",
-            "shop": "方庄月子门店",
-            "attendDate": "2034-05-15",
-            "beginTime": "20:51",
-            "endTime": "21:21",
-            "timeLength": 30,
+            "organization": "月子会所",
+            "shop": "瘦身健康中心",
+            "attendDate": "2019-05-15",
+            "beginTime": "10:51",
+            "endTime": "11:06",
+            "timeLength": 15,
             "courseLevel": "初级",
             "student": [
                 {
@@ -2067,16 +2067,24 @@
                     "cardNumber": "20190414000000"
                 },
                 {
-                    "userId": 25,
-                    "userName": "李白",
-                    "phoneNumber": "17085145711",
-                    "cardNumber": "20190425000001"
+                    "userId": 3,
+                    "userName": "李四",
+                    "phoneNumber": "18810649831",
+                    "cardNumber": "20190414000001"
+                },
+                {
+                    "userId": 2,
+                    "userName": "王五",
+                    "phoneNumber": "18331931950",
+                    "cardNumber": "20190414000002"
                 }
             ],
-            "mianCoachPhoneNumber": "18331931950",
-            "assistCoachPhoneNumber": "17085145712"
+            "mianCoachPhoneNumber": "17085145712",
+            "assistCoachPhoneNumber": "13000000000",
+            "organizationId": 2,
+            "shopId": 2
         }
-      }    
+      }   
 
 ### 删除 [DELETE] /admin/attendClass/{id} 
 + Description
