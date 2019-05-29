@@ -2008,33 +2008,75 @@
 + Response 200 (application/json)
 
 ### 详情 [GET] /admin/attendClass/{id}
-
-+ Response 200 (application/json)
++ Description
+  + 私教课id=35（示例）
+  + 公开课id=33（示例）
++ Response 200 (application/json) （私教课）
     
       {
         "data": {
             "categoryId": 2,
-            "mianCoachId": 2,
+            "mianCoachId": 26,
             "courseLevelId": 3,
             "nature": 1,
             "category": "私教课",
-            "mianCoach": "白求恩",
+            "mianCoach": "李四",
             "place": "上门",
-            "attendDate": "2019-05-09",
-            "beginTime": "21:51",
-            "endTime": "22:06",
+            "attendDate": "2020-05-09",
+            "beginTime": "14:51",
+            "endTime": "15:06",
             "timeLength": 15,
             "courseLevel": "高级",
             "student": [
+                {
+                    "userId": 24,
+                    "userName": "周芷若",
+                    "phoneNumber": "17600261644",
+                    "cardNumber": "20190425000000"
+                }
+            ],
+            "mianCoachPhoneNumber": "17085145712"
+        }
+      }
+
++ Response 200 (application/json) （公开课）
+    
+      {
+        "data": {
+            "categoryId": 1,
+            "mianCoachId": 2,
+            "assistCoachId": 26,
+            "courseLevelId": 1,
+            "nature": 0,
+            "category": "公开课",
+            "mianCoach": "白求恩",
+            "assistCoach": "李四",
+            "place": "到店",
+            "organization": "医院1",
+            "shop": "方庄月子门店",
+            "attendDate": "2034-05-15",
+            "beginTime": "20:51",
+            "endTime": "21:21",
+            "timeLength": 30,
+            "courseLevel": "初级",
+            "student": [
+                {
+                    "userId": 1,
+                    "userName": "海燕",
+                    "phoneNumber": "13051638532",
+                    "cardNumber": "20190414000000"
+                },
                 {
                     "userId": 25,
                     "userName": "李白",
                     "phoneNumber": "17085145711",
                     "cardNumber": "20190425000001"
                 }
-            ]
+            ],
+            "mianCoachPhoneNumber": "18331931950",
+            "assistCoachPhoneNumber": "17085145712"
         }
-      }
+      }    
 
 ### 删除 [DELETE] /admin/attendClass/{id} 
 + Description
