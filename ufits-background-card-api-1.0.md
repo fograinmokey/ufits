@@ -128,7 +128,7 @@
     用于后台管理 会员卡管理 -> 开卡
 + uri: 
 
-        [GET] /v1/teacher/cards
+        [POST] /v1/teacher/cards
         
 + param: json
 
