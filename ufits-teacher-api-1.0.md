@@ -34,15 +34,17 @@
 
         {
             "data": {
-                "code": "code",                     // 小程序code，必填
-                "iv": "iv",                         // 小程序解密向量，必填
-                "encryptedData": "encryptedData",   // 小程序加密数据，必填
-                "province": "province",             // 省份，可选
-                "city": "city",                     // 城市，可选
-                "nickName": "nickName",             // 昵称，可选
-                "gender": 2,                        // 性别，可选
-                "avatar": "avatar",                 // 头像，可选
-                "address": "北京市丰台区横一条"      // 用户在微信上填的地址
+                "code": "code",                     // 小程序code，注册、登录必填
+                "phoneIv": "iv",                    // 小程序获取手机号加密算法初始向量，注册必填，登录不用填
+                "phoneEncryptedData": "data",       // 微信小程序获取手机号加密数据，注册必填，登录不用填
+                "unionidIv": "iv",                  // 小程序获取unionid加密算法初始向量，注册、登录必填
+                "unionidEncryptedData": "data",     // 微信小程序获取unionid加密数据，注册、登录必填
+                "province": "province",             // 省份，注册可选
+                "city": "city",                     // 城市，注册可选
+                "nickName": "nickName",             // 昵称，注册必填
+                "gender": 2,                        // 性别，注册必填
+                "avatar": "avatar",                 // 头像，注册必填
+                "address": "北京市丰台区横一条"      // 用户在微信上填的地址，注册必填
             }
         }
         
@@ -566,6 +568,7 @@
             "data": {
                 "cardId": 41,                                       // 卡id
                 "cardNumber": "20190425000001",                     // 卡号
+                "userId": 2,                                        // 学员id
                 "userName": "张小芳",                               // 学员名
                 "phoneNumber": "17085145711",                       // 手机
                 "maternityStageTag": 3,                             // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
