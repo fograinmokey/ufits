@@ -1652,13 +1652,23 @@
             "creator": 0,
             "modifier": 0,
             "created": "2019-05-06 20:16:10",
-            "modified": "2019-05-08 14:09:28",
+            "modified": "2019-05-30 16:19:06",
             "categoryId": 3,
             "organizationTitle": "上海妇幼保健院1",
             "logo": "http://static.mifanxing.com/iyyren/image/201806/06/1638/1111111111.jpg",
             "description": "腿部锻炼将会缓解肿胀1",
-            "regionId": 3,
-            "address": "黄浦区苏州路3号"
+            "regionId": 804,
+            "address": "黄浦区苏州路3号",
+            "region": {
+                "id": 804,
+                "parentId": 803,
+                "regionTitle": "黄浦区",
+                "parent": {
+                    "id": 803,
+                    "parentId": 0,
+                    "regionTitle": "上海市"
+                }
+            }
         }
       }
 
