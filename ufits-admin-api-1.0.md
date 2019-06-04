@@ -1645,7 +1645,7 @@
 
 + Response 200 (application/json)
 
-      {
+       {
         "data": {
             "id": 3,
             "enabled": 1,
@@ -3074,6 +3074,78 @@
             "numberOfElements": 5,
             "sort": null,
             "first": true
+        }
+      }
+
+### 会员卡上课记录详情 [GET] /admin/attendClass/studentClassRecord
++ Parameters
+  + attendClassId=11&userId=4（私教课示例）
+  + attendClassId=27&userId=25（公开课示例）
++ Description
+    + category - 上课类型
+    + mianCoach - 主教练
+    + assistCoach - 助教练
+    + place - 场所
+    + attendTimeBucket - 上课时间段(上课具体时间)
+    + studentSignIn - 用户签到
+    + coachSignInState - 教练签到状态
+    + coachSignInAddress - 教练签到地址
+    + coachSignBackState - 教练签退状态
+    + coachSignBackAddress - 教练签退地址
+    + attendClassContent - 公开课上课记录(上课内容)
+    + classRecord - 上课记录
+    + homeworks - 课后作业
+    + coachRemarks - 教练备注
+    + commentContent - 客户评价
+    + salespersonName - 销售教练
+    + state - 课程状态
+
++ Response 200 (application/json)（私教课）
+
+      {
+        "data": {
+            "category": "查房",
+            "mianCoach": "白求恩",
+            "place": "上门",
+            "attendTimeBucket": "2019-04-25 17:49~18:19",
+            "studentSignIn": "系统自动签到",
+            "coachSignInState": "已签到",
+            "coachSignInAddress": "上海市静安区温馨小区五单元801室",
+            "coachSignBackState": "已签退",
+            "coachSignBackAddress": "上海市宜家小区2010室",
+            "classRecord": [
+                "瑜伽锻炼"
+            ],
+            "homeworks": [
+                "测试动作11133"
+            ],
+            "coachRemarks": "学院很认真。",
+            "commentContent": "w我的评价是教练不错，动作到位，很有作用。",
+            "salespersonName": "小苏",
+            "state": "已预约"
+        }
+      }
+
++ Response 200 (application/json) （公开课）
+
+       {
+        "data": {
+            "category": "公开课",
+            "mianCoach": "张教练",
+            "assistCoach": "小高",
+            "place": "方庄月子门店",
+            "attendTimeBucket": "2019-05-10 20:51~21:21",
+            "studentSignIn": "已签到",
+            "coachSignInState": "已签到",
+            "coachSignInAddress": "上海市静安区温馨小区五单元801室",
+            "coachSignBackState": "已签退",
+            "coachSignBackAddress": "上海市宜家小区2010室",
+            "attendClassContent": "这节课做了俯卧撑、仰卧起坐以及瑜伽等。",
+            "classRecord": "教练尚未记录",
+            "homeworks": "教练未留作业",
+            "commentContent": "评价评价评价评价评价~~~",
+            "salespersonName": "ycl",
+            "state": "已完结"
         }
       }
 
