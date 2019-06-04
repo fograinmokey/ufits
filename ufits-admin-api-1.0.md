@@ -3842,6 +3842,12 @@
         ]
        }
 
+### 后台管理注销登录 [GET] /admin/users/logout
++ Description
+    + [MUST] authenticated
+
++ Response 204 (application/json)
+
 ### 用户详情 [GET] /users/details
 + Parameters
   + phoneNumber - 手机号（必填）注意：本接口适用手机号获取用户信息
