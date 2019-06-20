@@ -1276,6 +1276,7 @@
 
         {
             "data": {
+                "cardNumber": "cardNumber",     // 卡号
                 "attendClassId": 2,             // 预约上课id
                 "coachAttendClassId": 70,       // 教练上课id
                 "courseTypeId": 2,              // 课程分类id, 如私教、公开、查房 的id
@@ -1402,6 +1403,7 @@
 
         {
             "data": {
+                "cardNumber": "cardNumber",     // 卡号
                 "attendClassId": 2,             // 预约上课id
                 "coachAttendClassId": 70,       // 教练上课id
                 "studentId": 2,                 // 学员id
