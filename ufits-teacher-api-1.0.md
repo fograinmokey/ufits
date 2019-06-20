@@ -577,6 +577,7 @@
                 "address": "贵州省贵阳市云岩区创业路2栋3单元32f",     // 住址
                 "packageType": 0,                                   // 套餐类型，0：新买课，1：续课，2，套餐升级
                 "projectId": 17,                                    // 项目id
+                "projectTitle": "免费体验课子项1",                   // 项目名
                 "money": 10000,                                     // 金额
                 "purchaseCourseNumber": 100,                        // 购课数
                 "giveCourseNumber": 2,                              // 赠课数
@@ -597,8 +598,7 @@
                 "comment": "没有",                                  // 备注
                 "mainCoachTag": 1,                                  // 是否是主教练，0：否，1：是
                 "giveCardDate": "2019-05-08",                       // 开卡日期
-                "cardState": 0,                                     // 状态，0：审核中，1：正常，2：请假中，3：审核未通过
-                "projectTitle": "免费体验课子项1"                    // 项目名
+                "cardState": 0                                      // 状态，0：审核中，1：正常，2：请假中，3：审核未通过
             }
         }
         
