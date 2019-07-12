@@ -2104,9 +2104,12 @@
 
 ### 列表 [GET] /admin/attendClass
 + Parameters
+  + admin/studentAttendClass?filter[userId]=1&sort=-modified（通过用户id查询示例）
   + page[number]=1&page[size]=10
   + sort -modified(从新到旧) | modified(从旧到新)
-
++ Description
+  + organizationTitle - 合作机构名称
+  + studentName - 学生姓名
 + Response 200 (application/json)
 
       {
@@ -2505,6 +2508,8 @@
 + Parameters
   + packageType(0:新买卡，1：续课，2：套餐升级)
   + 不填packageType统计页销售教练排名
+  + filter[startDate]=2019-05-08（非必填；时间筛选条件）
+  + filter[endDate]=2019-06-04（非必填；时间筛选条件）
 + Description
   + coachId - 教练ID
   + coachName - 教练名称
@@ -2578,6 +2583,8 @@
 + Parameters
   + sort必填项,0：默认全部排序
   + 1：上课记录排序，2：课后作业排序
+  + filter[startDate]=2019-05-08（非必填；时间筛选条件）
+  + filter[endDate]=2019-06-04（非必填；时间筛选条件）	
 + Description
   + actionId - 动作ID
   + actionTitle - 动作名称
@@ -2661,6 +2668,8 @@
 ### 教练上课记录排名 [GET] /admin/coachAttendClass/coachAttendClassRank
 + Parameters
   + categoryId(非必填) 分类ID
+  + filter[startDate]=2019-05-08（非必填；时间筛选条件）
+  + filter[endDate]=2019-06-04（非必填；时间筛选条件）
 + Description
   + actionId - 动作ID
   + actionTitle - 动作名称
@@ -2733,6 +2742,8 @@
 + Parameters
   + activityId= 11
   + filter[activityTitle]=月子
+  + filter[startDate]=2019-05-08（非必填；时间筛选条件）
+  + filter[endDate]=2019-06-04（非必填；时间筛选条件）
   + page[number]=1&page[size]=10
 + Description
     + id - 活动报名ID
@@ -2971,6 +2982,8 @@
   + attendDate - 日期（非必填；2019-05-10）
   + state - 状态（非必填；状态，0：审核中，1：正常，2：请假中，3：审核未通过）
   + cardAttendClass?studentUserId=1&cardId=4（示例）
+  + filter[startDate]=2019-05-08（非必填；时间筛选条件）
+  + filter[endDate]=2019-06-04（非必填；时间筛选条件）
 + Description
     + id - 课程ID
     + attendTimeBucket - 上课时间段
@@ -3153,6 +3166,8 @@
 + Parameters
   + cardId - 卡ID
   + filter[cardId]=4（示例）
+  + filter[startDate]=2019-05-08（非必填；时间筛选条件）
+  + filter[endDate]=2019-06-04（非必填；时间筛选条件）
 + Description
     + id - 评估ID
     + attendTimeBucket - 评估时间段
@@ -3207,6 +3222,8 @@
   + filter[userId]=22（示例）
   + filter[realName]=小（示例）
   + filter[phoneNumber]=18（示例）
+  + filter[startDate]=2019-05-08（非必填；时间筛选条件）
+  + filter[endDate]=2019-06-04（非必填；时间筛选条件）
   + page[number]=1&page[size]=10
 + Description
     + id - 教练ID
