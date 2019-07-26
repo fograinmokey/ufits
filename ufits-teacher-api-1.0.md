@@ -959,7 +959,7 @@
     用于我的客户 -> 购买项目 -> 课程详情 -> 评估     
 + uri:
 
-        [POST] /v1/teacher/evaluations
+        [POST] /v1/teacher/evaluationcards
 + param:
         
         {
