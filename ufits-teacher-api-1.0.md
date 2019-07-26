@@ -956,7 +956,7 @@
         }
         
 #### 3.19 针对会员卡的评估，可随时评估
-    用于我的客户 -> 购买项目 -> 课程详情 -> 评估     
+    用于我的客户 -> 购买项目 -> 课程详情 -> 评估列表 -> 评估     
 + uri:
 
         [POST] /v1/teacher/evaluationcards
@@ -1031,6 +1031,83 @@
             ]
         }                                                                            
         
+#### 3.20 获取会员卡的所有评估
+    用于我的客户 -> 购买项目 -> 课程详情 -> 评估列表
++ uri:
+
+        [GET] /v1/teacher/evaluationcards
++ param:
+        
+        [long] cardId 会员卡id
++ resp: 200
+
+        {
+            "data": {
+                "id": 1,                                        // id
+                "studentId": 1,                                 // 学员id
+                "cardId": 1,                                    // 会员卡id
+                "state": 0,                                     // 状态，0：草稿，1：提交
+                "studentName": "张小芳",                        //  姓名
+                "age": 24,                                      // 会员年龄
+                "abdomenling": "abdomenling",                   // 腹围
+                "abdomenMuscle": 0,                             // 腹直肌，0：阴性，1：阳性
+                "abdomenMuscleAbout": 0,                        // 腹直肌位置，0：脐上，1：脐中，2：脐下
+                "abdomenMuscleDepth": "abdomenMuscleDepth",     // 腹直肌深度
+                "abdomenMuscleSeparateLen": "len",              // 腹直肌总分离长度
+                "abdomenWall": 1,                               // 腹壁，正常弹性，1：松软无力，2：紧绷疼痛
+                "appetite": 0,                                  // 食欲，0：好，1：一般，2：不佳
+                "arm": "1,2",                                   // 手臂评估，0：无不适，1：酸软，2：无力，3：疼痛，4：麻，5：胸廓出口综合征；可多选，逗号隔开
+                "babyBirthWeight": "babyBirthWeight",           // 宝宝出生体重
+                "BMI": "BMI",                                   // BMI指数
+                "bust": "bust",                                 // 胸围
+                "caesareanEx": "0",                             // 剖腹产异常，0：疤痕红肿、筋膜远端触痛，1：疤痕增生，2：陈旧疤痕；可多选，逗号隔开
+                "childBirth": "2019-05-08 10:10:10",            // 分娩日期
+                "childbirthMode": 1,                            // 分娩方式，0：顺产，1：剖腹产
+                "gestationEx": "gestationEx",                   // 妊娠特殊情况, 可空
+                "gestationNum": 2,                              // 妊娠次数
+                "height": "height",                             // 身高
+                "hipline": "hipline",                           // 臀围
+                "leg": "0",                                     // 下肢评估，0：水肿，1：膝关节痛，2：足根痛；可多选，逗号隔开
+                "mentality": 0,                                 // 精神状态，0：好，1：一般，2：不佳
+                "neck": 0,                                      // 颈部评估，0：无不适，1：有不适
+                "neckAbout": 0,                                 // 颈部不适位置，0：左，1：右
+                "neckEx": "0",                                  // 颈部不适性质，0：僵硬，1：疼痛，2：酸痛，3：活动受限；可多选，逗号隔开
+                "others": "others",                             // 其它
+                "pelvicFloor": "0",                             // 盆底功能评估，0：压力性尿失禁，1：急迫性尿失禁；可多选，逗号隔开
+                "pelvis": 0,                                    // 骨盆评估，0：无不适，1：有不适
+                "pelvisAbout": 0,                               // 骨盆不适位置，0：左，1：右，2：前，3后
+                "pelvisEx": "0",                                // 骨盆不适性质，0：僵硬，1：疼痛，2：酸痛，3：下腹明显坠胀感，4：单侧耻骨牵拉感；可多选，逗号隔开
+                "posture": "1",                                 // 体态评估，0：正常，1：上交叉综合证，2：下交叉综合证，3：膝外翻、X型腿，4：膝内翻、O型腿，5：扁平足，6：高弓足；可多选，逗号隔开
+                "sciaticNerve": 1,                              // 坐骨神经症状，0：无，1：有
+                "sciaticNerveEx": "1",                          // 坐骨神经异常，0：伴随腰痛，1：同侧骨盆后侧痛，2：不伴随其他位置痛；可多选，逗号隔开
+                "shoulder": 1,                                  // 肩部评估，0：无不适，1：有不适
+                "shoulderAbout": 1,                             // 肩部不适位置，0：左，1：右
+                "shoulderEx": "2",                              // 肩部不适性质，0：僵硬，1：疼痛，2：酸痛，3：活动受限；可多选，逗号隔开
+                "sleepCondition": 1,                            // 睡眠情况，0：充足，1：一般，2：欠缺
+                "sleepLackReason": 2,                           // 睡眠欠缺原因，0：入睡难，1：易惊醒，2：照顾宝宝
+                "sleepTime": "sleepTime",                       // 睡眠时长
+                "spontaneousLaborEx": "2",                      // 顺产异常，0：无撕裂无侧切，1：有侧切，2：撕裂Ⅰ度，3：撕裂Ⅱ度，4：撕裂Ⅲ度，5：撕裂Ⅳ度；可多选，逗号隔开
+                "waist": 1,                                     // 腰部评估，0：无不适，1：有不适
+                "waistAbout": 3,                                // 腰不适位置，0：左腰，1：右腰，3：腰椎
+                "waistEx": "2",                                 // 腰部不适性质，0：僵硬，1：疼痛，2：酸痛，3：活动受限；可多选，逗号隔开
+                "waistline": "waistline",                       // 腰围
+                "weight": "weight",                             // 体重
+                "wrist": "wrist",                               // 手腕评估，0：无不适，1：腱鞘炎，2：腕管综合征；可多选，逗号隔开
+                "courses": [                                    // 修复计划
+                    {
+                        "id": 14,                               // 课程id
+                        "thumbnail": "http://static.mifanxing.com/article/image/215/69/0000001.jpg",    // 缩略图
+                        "courseDesc": "此课程适应孕期产妇15",    // 课程描述
+                        "courseName": "孕期瑜伽15期"             // 课程标题
+                    }
+                ],
+                 "images": {                                    
+                    "9": "2019-05-21/df.png",                   // 照片记录, key：关联id（如 evaluationAttachmentId），值为照片地址
+                    "10": "2019-05-21/db9.png"
+                },
+            }
+        }
+                                   
 ### 4 我的课程
 #### 4.1 获取当前教练的未完成的课程列表
     用于教练端 我的课程模块未完成课程列表展示
