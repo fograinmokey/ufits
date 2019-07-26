@@ -107,8 +107,8 @@
                         "courseTypeId": 2,                              // 课程类型id
                         "courseType": "私教课",                         // 课程类型
                         "strState": "未完成",                           // 完成状态
-                        "address": "方庄妇幼保健院",                    // 场所
-                        "courseName": "12节孕期瑜伽小班课"              // 标题
+                        "address": "方庄妇幼保健院",                     // 场所
+                        "courseName": "12节孕期瑜伽小班课"               // 标题
                     }
                 ]
             }
@@ -136,7 +136,7 @@
                 "courseType": "私教课",                                 // 课程类型
                 "state": "未完成",                                      // 完成状态，已完成/未完成
                 "address": "方庄妇幼保健院",                             // 上课场所
-                "detailAddress": "北京市丰台区南方庄99号院",             // 上课地址
+                "detailAddress": "北京市丰台区南方庄99号院",              // 上课地址
                 "courseSummaryId": "courseSummaryId",                   // 课程小结id
                 "customerAssessId": "customerAssessId",                 // 评估id
                 "mainCoachName": "mainCoachName",                       // 主教练名
@@ -270,7 +270,7 @@
         {
             "data": {
                 "cardNumber": "20190416000002",                 // 卡号
-                "datetimeRange": "2019-05-07 12:51-14:51",    // 课程时间段
+                "datetimeRange": "2019-05-07 12:51-14:51",      // 课程时间段
                 "strPlace": "方庄妇幼保健院",                    // 场所
                 "studentName": "小龙女",                        // 用户
                 "courseTypeId": 2,                              // 课程类型id
@@ -812,7 +812,7 @@
                "maternityStageTag": 3,                  // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
                "maternityDate": "2019-04-09",           // 孕产日期
                "birthday": "2009-05-09",                // 生日
-               "address": "北京市丰台区方庄桥南",        // 住址
+               "address": "北京市丰台区方庄桥南",         // 住址
                "packageType": 0,                        // 套餐类型，0：新买课，1：续课，2，套餐升级
                "projectId": 18,                         // 项目id
                "money": 600,                            // 金额
@@ -862,7 +862,7 @@
                "maternityStageTag": 3,                  // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
                "maternityDate": "2019-04-09",           // 孕产日期
                "birthday": "2009-05-09",                // 生日
-               "address": "北京市丰台区方庄桥南",        // 详细住址
+               "address": "北京市丰台区方庄桥南",         // 详细住址
                "packageType": 1,                        // 套餐类型，0：新买课，1：续课，2，套餐升级
                "projectId": 19,                         // 项目标识
                "money": 600,                            // 金额
@@ -970,7 +970,7 @@
                 "studentName": "abc",           // 会员姓名
                 "age": 18,                      // 会员年龄
                 "gestationNum": 2,              // 妊娠次数
-                "childBirth": "2019-05-16",     //分娩日期
+                "childBirth": "2019-05-16",     // 分娩日期
                 "babyBirthWeight": "3.5kg",     // 宝宝出生体重
                 "gestationEx": "abc",           // 妊娠特殊情况
                 "childbirthMode": 0,            // 分娩方式，0：顺产，1：剖腹产
@@ -1222,7 +1222,7 @@
                 "courseType": "私教课",                         // 课程类型
                 "state": "0",                                   // 状态：0：已预约，1：已签到，2：已签退，3：已总结，4：已结束，5：预约失败
                 "address": "方庄妇幼保健院",                     // 上课场所
-                "detailAddress": "北京市丰台区南方庄99号院",     // 上课地址
+                "detailAddress": "北京市丰台区南方庄99号院",      // 上课地址
                 "mainCoachName": "mainCoachName",               // 主教练名，当课程性质为公开课时才显示
                 "helpCoachName": "helpCoachName",               // 助教名，当课程性质为公开课时才显示
                 "attendClassId": 51,                            // 预约上课id, 也是评估id
@@ -1244,7 +1244,7 @@
                 "attendClassId": 51,                    // 预约上课id
                 "longitude": 23.5,                      // 经度
                 "latitude": 45.33,                      // 维度
-                "address": "北京市丰台区南方庄99号院",   // 地址
+                "address": "北京市丰台区南方庄99号院",    // 地址
                 "coachAttendClassId": 70                // 教练上课id
             }
         }
@@ -1276,7 +1276,7 @@
             "data": {
                 "longitude": 23.5,                    // 经度
                 "latitude": 45.33,                    // 纬度
-                "address": "北京市丰台区南方庄99号院"  // 地址
+                "address": "北京市丰台区南方庄99号院"   // 地址
             }
         }
         
@@ -1293,7 +1293,7 @@
                 "attendClassId": 51,                    // 预约上课id
                 "longitude": 23.5,                      // 经度
                 "latitude": 45.33,                      // 维度
-                "address": "北京市丰台区南方庄99号院",   // 地址
+                "address": "北京市丰台区南方庄99号院",    // 地址
                 "coachAttendClassId": 70                // 教练上课id
             }
         }
@@ -1530,7 +1530,7 @@
                 "studentName": "abc",           // 会员姓名
                 "age": 18,                      // 会员年龄
                 "gestationNum": 2,              // 妊娠次数
-                "childBirth": "2019-05-16",     //分娩日期
+                "childBirth": "2019-05-16",     // 分娩日期
                 "babyBirthWeight": "3.5kg",     // 宝宝出生体重
                 "gestationEx": "abc",           // 妊娠特殊情况
                 "childbirthMode": 0,            // 分娩方式，0：顺产，1：剖腹产
@@ -1700,8 +1700,8 @@
             "data": {
                 "title": "孕期了解Ⅲ",                               // 标题
                 "publishDate": "2019-05-06 18:47",                  // 发布时间
-                "content": "一、有好的营养 二、有好的睡眠asd",        // 内容
-                "description": "这是一项在孕期的知识",               // 描述
+                "content": "一、有好的营养 二、有好的睡眠asd",         // 内容
+                "description": "这是一项在孕期的知识",                // 描述
                 "thumbnail": "http://mifanxing.com/1.jpg",          // 缩略图
                 "createDate": "2019-05-08 11:43",                   // 创建时间
                 "pictures": [                                       // 图片列表
