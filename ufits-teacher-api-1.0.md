@@ -953,7 +953,83 @@
                     "phoneNum": "18331931950"
                 }
             ]
-        }                                    
+        }
+        
+#### 3.19 针对会员卡的评估，可随时评估
+    用于我的客户 -> 购买项目 -> 课程详情 -> 评估     
++ uri:
+
+        [POST] /v1/teacher/evaluations
++ param:
+        
+        {
+            "data": {
+                "studentId": 2,                 // 学员id
+                "cardId": "1",                  // 会员卡id
+                "state": 1,                     // 状态，0：草稿，1：提交
+                "studentName": "abc",           // 会员姓名
+                "age": 18,                      // 会员年龄
+                "gestationNum": 2,              // 妊娠次数
+                "childBirth": "2019-05-16",     //分娩日期
+                "babyBirthWeight": "3.5kg",     // 宝宝出生体重
+                "gestationEx": "abc",           // 妊娠特殊情况
+                "childbirthMode": 0,            // 分娩方式，0：顺产，1：剖腹产
+                "spontaneousLaborEx": "0",      // 顺产异常，0：无撕裂无侧切，1：有侧切，2：撕裂Ⅰ度，3：撕裂Ⅱ度，4：撕裂Ⅲ度，5：撕裂Ⅳ度；可多选，逗号隔开
+                "caesareanEx": "0,1",           // 剖腹产异常，0：疤痕红肿、筋膜远端触痛，1：疤痕增生，2：陈旧疤痕；可多选，逗号隔开
+                "sleepCondition": 1,            // 睡眠情况，0：充足，1：一般，2：欠缺
+                "sleepLackReason": 2,           // 睡眠欠缺原因，0：入睡难，1：易惊醒，2：照顾宝宝
+                "sleepTime": "4",               // 睡眠时长
+                "mentality": 0,                 // 精神状态，0：好，1：一般，2：不佳
+                "appetite": 0,                  // 食欲，0：好，1：一般，2：不佳
+                "posture": "1,2",               // 体态评估，0：正常，1：上交叉综合证，2：下交叉综合证，3：膝外翻、X型腿，4：膝内翻、O型腿，5：扁平足，6：高弓足；可多选，逗号隔开
+                "neck": 1,                      // 颈部评估，0：无不适，1：有不适
+                "neckAbout": 1,                 // 颈部不适位置，0：左，1：右
+                "neckEx": "1,2",                // 颈部不适性质，0：僵硬，1：疼痛，2：酸痛，3：活动受限；可多选，逗号隔开
+                "arm": "1,2",                   // 手臂评估，0：无不适，1：酸软，2：无力，3：疼痛，4：麻，5：胸廓出口综合征；可多选，逗号隔开
+                "shoulder": 0,                  // 肩部评估，0：无不适，1：有不适
+                "shoulderAbout": 1,             // 肩部不适位置，0：左，1：右
+                "shoulderEx": "1,2"             // 肩部不适性质，0：僵硬，1：疼痛，2：酸痛，3：活动受限；可多选，逗号隔开
+                "wrist": "1,2",                 // 手腕评估，0：无不适，1：腱鞘炎，2：腕管综合征；可多选，逗号隔开
+                "waist": 0,                     // 腰部评估，0：无不适，1：有不适
+                "waistAbout": 3,                // 腰不适位置，0：左腰，1：右腰，3：腰椎
+                "waistEx": "1,2",               // 腰部不适性质，0：僵硬，1：疼痛，2：酸痛，3：活动受限；可多选，逗号隔开
+                "pelvis": 0,                    // 骨盆评估，0：无不适，1：有不适
+                "pelvisAbout": 1,               // 骨盆不适位置，0：左，1：右，2：前，3：后
+                "pelvisEx": "1,2",              // 骨盆不适性质，0：僵硬，1：疼痛，2：酸痛，3：下腹明显坠胀感，4：单侧耻骨牵拉感；可多选，逗号隔开
+                "sciaticNerve": 1,              // 坐骨神经症状，0：无，1：有
+                "sciaticNerveEx": "1,2",        // 坐骨神经异常，0：伴随腰痛，1：同侧骨盆后侧痛，2：不伴随其他位置痛；可多选，逗号隔开
+                "leg": "1,2",                   // 下肢评估，0：水肿，1：膝关节痛，2：足根痛；可多选，逗号隔开
+                "pelvicFloor": "0,1",           // 盆底功能评估，0：压力性尿失禁，1：急迫性尿失禁；可多选，逗号隔开
+                "abdomenMuscle": 1,             // 腹直肌，0：阴性，1：阳性
+                "abdomenMuscleAbout": 1,        // 腹直肌位置，0：脐上，1：脐中，2：脐下
+                "abdomenMuscleSeparateLen": 1,  // 腹直肌总分离长度
+                "abdomenMuscleDepth": 1,        // 腹直肌深度
+                "abdomenWall": 1,               // 腹壁，正常弹性，1：松软无力，2：紧绷疼痛
+                "bust": "45cm",                 // 胸围
+                "waistline": "10cm",            // 腰围
+                "abdomenling": "30cm",          // 腹围
+                "hipline": "50cm",              // 臀围
+                "height": "160mm",              // 身高
+                "weight": "60kg",               // 体重
+                "BMI": "12.32",                 // BMI指数
+                "others": "others",             // 其它
+                "courses": [                    // 建议项目（修复计划）
+                    {
+                        "id": 2                 // 课程id
+                    }
+                ]
+            }
+        }
++ resp: 201
+
+        {
+            "errors": [
+                {
+                    "status": "201",
+                    "title": "Created"
+                }
+            ]
+        }                                                                            
         
 ### 4 我的课程
 #### 4.1 获取当前教练的未完成的课程列表
@@ -1356,14 +1432,18 @@
 #### 4.16 图片上传
     用于教练端 我的课程 -> 公开课课程小结
               我的课程 -> 上课详情 -> 评估 -> 照片记录
+              我的客户 -> 购买项目 -> 课程详情 -> 评估 -> 图片上传
 + uri: 
 
         [POST] /v1/teacher/attachments/images
         
 + param: 
 
+        [long] userId 学员id（当attachmentTag为evaluation_card_attachment时必传，其它情况不用传）
+        [long] cardId 会员卡id（当attachmentTag为evaluation_card_attachment时必传，其它情况不用传）
         [long] attendClassId 预约上课id
-        [string] attachmentTag 图片标识，如：summary_attachment（小结图片）、evaluation_attachment（评估图片）
+        [string] attachmentTag 图片标识，如：summary_attachment（小结图片）、evaluation_attachment（评估图片）、
+            evaluation_card_attachment（针对会员卡评估时的图片）
         [file] file 要上传的图片
         
 + resp: 201
@@ -1608,7 +1688,7 @@
     用于教练端 孕产知识模块 -> 孕产知识库 -> 列表 -> 详情
 + uri: 
 
-        [GET] /v1/teacher/knowledges/{id}   // 7 
+        [GET] /v1/teacher/knowledges/{id}
         
 + param:
 
@@ -1618,7 +1698,7 @@
 
         {
             "data": {
-                "title": "孕期了解Ⅲ",                              // 标题
+                "title": "孕期了解Ⅲ",                               // 标题
                 "publishDate": "2019-05-06 18:47",                  // 发布时间
                 "content": "一、有好的营养 二、有好的睡眠asd",        // 内容
                 "description": "这是一项在孕期的知识",               // 描述
