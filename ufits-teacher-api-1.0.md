@@ -1042,6 +1042,29 @@
 + resp: 200
 
         {
+            "data": [
+                {
+                    "id": 1,                            // 评估id
+                    "evaluationDate": "2019-07-26"      // 评估日期
+                },
+                {
+                    "id": 2,
+                    "evaluationDate": "2019-07-26"
+                }
+            ]
+        }
+           
+#### 3.21 根据评估id获取会员卡的评估
+    用于我的客户 -> 购买项目 -> 课程详情 -> 评估列表 -> 评估详情
++ uri:
+
+        [GET] /v1/teacher/evaluationcards/{id}
++ param:                                      
+        
+        [long] id 评估id
++ resp: 200
+
+        {
             "data": {
                 "id": 1,                                        // id
                 "studentId": 1,                                 // 学员id
@@ -1101,13 +1124,13 @@
                         "courseName": "孕期瑜伽15期"             // 课程标题
                     }
                 ],
-                 "images": {                                    
+                "images": {                                    
                     "9": "2019-05-21/df.png",                   // 照片记录, key：关联id（如 evaluationAttachmentId），值为照片地址
                     "10": "2019-05-21/db9.png"
-                },
+                }
             }
         }
-                                   
+                         
 ### 4 我的课程
 #### 4.1 获取当前教练的未完成的课程列表
     用于教练端 我的课程模块未完成课程列表展示
