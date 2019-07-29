@@ -1046,11 +1046,13 @@
             "data": [
                 {
                     "id": 1,                            // 评估id
+                    "coachName": "李四",                // 评估教练
                     "evaluationDate": "2019-07-26"      // 评估日期
                 },
                 {
                     "id": 2,
-                    "evaluationDate": "2019-07-26"
+                    "coachName": "李四",                // 评估教练
+                    "evaluationDate": "2019-07-27"
                 }
             ]
         }
