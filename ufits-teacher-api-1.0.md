@@ -654,6 +654,7 @@
             "data": {
                 "cardId": 41,                               // 卡id
                 "studentId": 25,                            // 学员id
+                "studentName": "张三",                      // 学员姓名
                 "projectName": "免费体验课子项1",            // 项目
                 "classTime": 100,                           // 课时数
                 "remainClassTime": 80,                      // 剩余课时数
