@@ -1544,7 +1544,7 @@
 
         [long] userId 学员id（当attachmentTag为evaluation_card_attachment时必传，其它情况不用传）
         [long] cardId 会员卡id（当attachmentTag为evaluation_card_attachment时必传，其它情况不用传）
-        [long] attendClassId 预约上课id
+        [long] attendClassId 预约上课id（当attachmentTag为evaluation_card_attachment时不用传）
         [string] attachmentTag 图片标识，如：summary_attachment（小结图片）、evaluation_attachment（评估图片）、
             evaluation_card_attachment（针对会员卡评估时的图片）
         [file] file 要上传的图片
