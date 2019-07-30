@@ -1718,7 +1718,7 @@
   + attendClassId - 用户预约课id
   + userId - 用户id
   + attendClassId=14&userId=4 （私教课程详情接口事例）
-  + attendClassId=8&userId=5 （公开课程详情接口事例）
+  + attendClassId=8&userId=5  （公开课程详情接口事例）
 + Description
     + attendTypeName - 课程性质
     + attendTimeBucket - 上课时间段
@@ -1846,7 +1846,7 @@
             {
                 "status": "400",
                 "title": "Bad Request",
-                "detail": "该预约课程在开课前6小时内不能取消预约！"
+                "detail": "该私教课开课前12小时内不能取消预约！"
             }
         ]
       }
@@ -2261,132 +2261,42 @@
     + weight (String) - 体重
     + bmi (String) - BMI指数
     + others (String) - 其他
-### 评估方案列表[GET]/evaluations
+### 评估方案列表[GET]/evaluations/clientEvaluations
 + Parameters
   + userId - 用户id（例用户为1）
-  + filter[userId]=1&sort=-modified
-
++ Description
+  + cardEvaluation 当对象值为true时，用卡评估方案详情接口；当对象值为false时，用课程评估方案详情接口；
 + Response 200 (application/json)
 
       {
-        "meta": {
-            "totalPages": 1,
-            "totalElements": 3,
-            "size": 10,
-            "number": 1,
-            "numberOfElements": 3,
-            "first": true,
-            "last": true,
-            "sort": [
-                {
-                    "direction": "DESC",
-                    "property": "modified",
-                    "ignoreCase": false,
-                    "nullHandling": "NATIVE",
-                    "descending": true,
-                    "ascending": false
-                }
-            ]
-        },
-        "links": {
-            "self": "/evaluations?filter[userId]=1&sort=-modified&page[number]=1&page[size]=10",
-            "first": "/evaluations?filter[userId]=1&sort=-modified&page[number]=1&page[size]=10",
-            "last": "/evaluations?filter[userId]=1&sort=-modified&page[number]=1&page[size]=10"
-        },
         "data": [
             {
-                "id": 6,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2019-04-19 11:28:50",
-                "modified": "2019-04-19 11:28:49",
-                "state": 0,
-                "userId": 1,
-                "realName": "熊爱华",
-                "age": 18,
-                "gestationEx": "0",
-                "mianCoachName": "张三"
+                "mianCoachName": "未添加真实姓名",
+                "created": "2019-07-26 18:13:08",
+                "cardEvaluation": true
             },
             {
-                "id": 7,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
-                "created": "2019-04-19 11:28:47",
-                "modified": "2019-04-19 11:28:43",
-                "state": 0,
-                "userId": 1,
-                "realName": "熊爱华",
-                "age": 19,
-                "gestationEx": "0",
-                "mianCoachName": "贝多芬"
+                "mianCoachName": "白求恩",
+                "created": "2019-05-31 12:19:43",
+                "cardEvaluation": false
             },
             {
-                "id": 4,
-                "enabled": 1,
-                "creator": 0,
-                "modifier": 0,
+                "mianCoachName": "的分公司的国际法都死了",
+                "created": "2019-05-20 17:15:49",
+                "cardEvaluation": false
+            },
+            {
+                "mianCoachName": "白求恩",
+                "assistCoachName": "小高",
                 "created": "2019-04-19 11:28:32",
-                "modified": "2019-04-19 11:28:35",
-                "state": 1,
-                "userId": 1,
-                "realName": "熊爱华",
-                "age": 19,
-                "gestationNum": 2,
-                "childbirth": "2019-04-22",
-                "babyBirthWeight": "7",
-                "gestationEx": "0",
-                "childbirthMode": 0,
-                "spontaneousLaborEx": "0,1,2,3,4",
-                "caesareanEx": "0,1",
-                "sleepCondition": 0,
-                "sleepLackReason": 2,
-                "sleepTime": "3",
-                "mentality": 1,
-                "appetite": 0,
-                "posture": "1,2",
-                "neck": 1,
-                "neckAbout": 0,
-                "neckEx": "1,2",
-                "arm": "1,2",
-                "shoulder": 1,
-                "shoulderAbout": 0,
-                "shoulderEx": "1,2",
-                "wrist": "1,2",
-                "waist": 1,
-                "waistAbout": 0,
-                "waistEx": "1,2",
-                "pelvis": 1,
-                "pelvisAbout": 2,
-                "pelvisEx": "1,2",
-                "sciaticNerve": 1,
-                "sciaticNerveEx": "1,2",
-                "leg": "1,2",
-                "pelvicFloor": "0,2",
-                "abdomenMuscle": 0,
-                "abdomenMuscleAbout": 1,
-                "abdomenMuscleSeparateLen": "两厘米",
-                "abdomenMuscleDepth": "两毫米",
-                "abdomenWall": 1,
-                "bust": "胸围八十",
-                "waistline": "腰围六十",
-                "abdomenling": "腹围三十",
-                "hipline": "臀围三十五",
-                "height": "身高一米七",
-                "weight": "体重50公斤",
-                "bmi": "BMI指数1",
-                "others": "其它数据",
-                "mianCoachName": "贝多芬",
-                "assistCoachName": "小高"
+                "cardEvaluation": false
             }
         ]
       }
 
-### 评估方案详情[GET]/evaluations/clientDetails/{id}
+### 课程评估方案详情[GET]/evaluations/clientDetails/{id}
 + Parameters
   + id - 评估id（例id为51）
-+ Description
 + Response 200 (application/json)
 
       {
@@ -2466,6 +2376,64 @@
             ],
             "pictures": [
                 "2019-05-21/a843d8161d394b3083eeaf66bca627ab.png"
+            ]
+        }
+      }
+
+### 卡评估方案详情[GET]/evaluationCards/details/{id}
++ Parameters
+  + id - 评估id（例id为10）
++ Response 200 (application/json)
+
+      {
+        "data": {
+            "id": 10,
+            "state": "提交",
+            "userId": 24,
+            "realName": "白白白",
+            "age": 12,
+            "gestationNum": 12,
+            "childbirth": "2019-07-29",
+            "babyBirthWeight": "12",
+            "gestationEx": "adsfa",
+            "childbirthMode": "顺产",
+            "spontaneousLabor": [
+                "撕裂Ⅱ度",
+                "撕裂Ⅲ度"
+            ],
+            "sleepCondition": "充足",
+            "mentality": "一般",
+            "appetite": "一般",
+            "posture": "正常",
+            "neck": "无不适",
+            "arm": "无不适",
+            "shoulder": "无不适",
+            "wrist": "无不适",
+            "waist": "无不适",
+            "pelvis": "无不适",
+            "sciaticNerve": "无",
+            "leg": "水肿",
+            "pelvicFloor": "压力性尿失禁",
+            "abdomenMuscle": "阴性",
+            "abdomenWall": "松弛无力",
+            "bust": "12",
+            "waistline": "12",
+            "abdomenling": "12",
+            "hipline": "12",
+            "height": "12",
+            "weight": "12",
+            "others": "df",
+            "courses": [
+                {
+                    "courseTitle": "12",
+                    "thumbnail": "2019-06-12/f1b60918de5848a19e5805e3231c06bf.jpg",
+                    "description": "12"
+                },
+                {
+                    "courseTitle": "33",
+                    "thumbnail": "2019-06-12/1ee0905e92914a8d9649569aee9e0529.jpg",
+                    "description": "dd"
+                }
             ]
         }
       }
