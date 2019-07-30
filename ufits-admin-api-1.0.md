@@ -3168,6 +3168,7 @@
   + filter[cardId]=4（示例）
   + filter[startDate]=2019-05-08（非必填；时间筛选条件）
   + filter[endDate]=2019-06-04（非必填；时间筛选条件）
+  + page[number]=1&page[size]=10
 + Description
     + id - 评估ID
     + attendTimeBucket - 评估时间段
@@ -3180,7 +3181,11 @@
 
       {
         "data": {
-            "adminEvaluations": [
+            "number": 1,
+            "size": 10,
+            "numberOfElements": 5,
+            "totalPages": 1,
+            "content": [
                 {
                     "id": 117,
                     "attendTimeBucket": "2019.09.27 00:00-06:00",
