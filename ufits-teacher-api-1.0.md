@@ -1018,6 +1018,10 @@
                     {
                         "id": 2                 // 课程id
                     }
+                ],
+                "attachmentIds": [              // 图片id
+                    2,
+                    3
                 ]
             }
         }
@@ -1542,8 +1546,6 @@
         
 + param: 
 
-        [long] userId 学员id（当attachmentTag为evaluation_card_attachment时必传，其它情况不用传）
-        [long] cardId 会员卡id（当attachmentTag为evaluation_card_attachment时必传，其它情况不用传）
         [long] attendClassId 预约上课id（当attachmentTag为evaluation_card_attachment时不用传）
         [string] attachmentTag 图片标识，如：summary_attachment（小结图片）、evaluation_attachment（评估图片）、
             evaluation_card_attachment（针对会员卡评估时的图片）
@@ -1552,13 +1554,10 @@
 + resp: 201
 
         {
-            "errors": [
-                {
-                    "status": "201",
-                    "title": "Created"
-                }
-            ]
-        } 
+            "data": {
+                "attachmentId": 2   // 图片id
+            }
+        }
         
 #### 4.17 获取课程级别（课程服务）
     用于教练端 我的课程模块 -> 预约 -> 课程服务
