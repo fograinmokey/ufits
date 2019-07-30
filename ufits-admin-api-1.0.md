@@ -3174,43 +3174,51 @@
     + mianCoachName - 评估教练
     + created - 创建时间
     + modified - 修改时间
+    + cardEvaluation 当对象值为true时，用客户端卡评估方案详情接口；当对象值为false时，用客户端课程评估方案详情接口；
 
 + Response 200 (application/json)
 
       {
         "data": {
-            "content": [
+            "adminEvaluations": [
                 {
-                    "id": 7,
-                    "created": "2019-04-19 11:28:47",
-                    "modified": "2019-04-19 11:28:43",
-                    "mianCoachName": "白求恩",
-                    "attendDate": "2019-04-19",
-                    "beginTime": "16:40",
-                    "endTime": "16:50",
-                    "attendTimeBucket": "2019.04.19 16:40-16:50",
-                    "coachId": 2
+                    "id": 117,
+                    "attendTimeBucket": "2019.09.27 00:00-06:00",
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-30 16:59:52",
+                    "modified": "2019-07-30 16:59:52",
+                    "cardEvaluation": false
                 },
                 {
-                    "id": 4,
-                    "created": "2019-04-19 11:28:32",
-                    "modified": "2019-04-19 11:28:35",
-                    "mianCoachName": "白求恩",
-                    "attendDate": "2019-04-16",
-                    "beginTime": "18:10",
-                    "endTime": "16:30",
-                    "attendTimeBucket": "2019.04.16 18:10-16:30",
-                    "coachId": 2
+                    "id": 9,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-29 18:20:03",
+                    "modified": "2019-07-29 18:20:03",
+                    "cardEvaluation": true
+                },
+                {
+                    "id": 8,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-28 18:20:02",
+                    "modified": "2019-07-28 18:20:02",
+                    "cardEvaluation": true
+                },
+                {
+                    "id": 7,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-27 18:20:02",
+                    "modified": "2019-07-27 18:20:02",
+                    "cardEvaluation": true
+                },
+                {
+                    "id": 3,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-26 17:05:52",
+                    "modified": "2019-07-26 17:05:52",
+                    "cardEvaluation": true
                 }
             ],
-            "totalPages": 1,
-            "totalElements": 2,
-            "last": true,
-            "number": 0,
-            "size": 10,
-            "numberOfElements": 2,
-            "sort": null,
-            "first": true
+            "totalElements": 5
         }
       }
 
