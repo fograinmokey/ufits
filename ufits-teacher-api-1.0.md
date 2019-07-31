@@ -1703,7 +1703,8 @@
 + param:
 
         [long] inlineId 关联id，如summaryAttachmentId、evaluationAttachmentId
-        [string] attachmentTag 图片标识，如：summary_attachment（小结图片）、evaluation_attachment（评估图片）
+        [string] attachmentTag 图片标识，如：summary_attachment（小结图片）、evaluation_attachment（评估图片）、
+            evaluation_card_attachment（会员卡评估图片）
         
 + resp: 204
 
