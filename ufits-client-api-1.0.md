@@ -2263,7 +2263,7 @@
     + others (String) - 其他
 ### 评估方案列表[GET]/evaluations/clientEvaluations
 + Parameters
-  + userId - 用户id（例用户为1）
+  + filter[userId] - 用户id（例用户为1）
 + Description
   + cardEvaluation 当对象值为true时，用卡评估方案详情接口；当对象值为false时，用课程评估方案详情接口；
 + Response 200 (application/json)
