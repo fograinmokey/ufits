@@ -1052,12 +1052,14 @@
                 {
                     "id": 1,                            // 评估id
                     "coachName": "李四",                // 评估教练
-                    "evaluationDate": "2019-07-26"      // 评估日期
+                    "evaluationDate": "2019-07-26",     // 评估日期
+                    "evaluationType": "classEvaluation" // 评估类型，课程评估：classEvaluation，卡评估：cardEvaluation
                 },
                 {
                     "id": 2,
-                    "coachName": "李四",                // 评估教练
-                    "evaluationDate": "2019-07-27"
+                    "coachName": "李四",                
+                    "evaluationDate": "2019-07-27",
+                    "evaluationType": "cardEvaluation"
                 }
             ]
         }
@@ -1070,13 +1072,14 @@
 + param:                                      
         
         [long] id 评估id
+        [string] evaluationType 评估类型，课程评估：classEvaluation，卡评估：cardEvaluation
 + resp: 200
 
         {
             "data": {
                 "id": 1,                                        // id
                 "studentId": 1,                                 // 学员id
-                "cardId": 1,                                    // 会员卡id
+                "cardId": 1,                                    // 会员卡id, 可选
                 "state": 0,                                     // 状态，0：草稿，1：提交
                 "studentName": "张小芳",                        //  姓名
                 "age": 24,                                      // 会员年龄
