@@ -142,7 +142,7 @@
                "purchaseCourseNumber": 5,               // 购课数
                "giveCourseNumber": 1,                   // 赠课数
                "inDoorFee": 5,                          // 上门费
-               "payWay": 2,                             // 支付方式，0：大众点评，1：支付宝，2：微信，3：现金，4：刷卡，5：其他
+               "payWay": 2,                             // 支付方式，0：大众点评团购，1：支付宝，2：微信，3：现金，4：刷卡，5：其他，6：大众点评闪惠
                "effectiveDate": "2020-04-20",           // 卡有效期
                "coachId": 5,                            // 销售教练id
                "cooperationCoach": {
@@ -185,7 +185,7 @@
                "purchaseCourseNumber": 5,               // 购课数
                "giveCourseNumber": 1,                   // 赠课数
                "inDoorFee": 5,                          // 上门费
-               "payWay": 2,                             // 支付方式，0：大众点评，1：支付宝，2：微信，3：现金，4：刷卡，5：其他
+               "payWay": 2,                             // 支付方式，0：大众点评团购，1：支付宝，2：微信，3：现金，4：刷卡，5：其他，6：大众点评闪惠
                "effectiveDate": "2020-04-20",           // 卡有效期
                "coachId": 5,                            // 销售教练id
                "cooperationCoach": {
