@@ -594,7 +594,7 @@
                 "giveCourseNumber": 2,                              // 赠课数
                 "remainCourseNumber": 80,                           // 剩余课时数
                 "inDoorFee": 0,                                     // 上门费
-                "payWay": 2,                                        // 支付方式，0：大众点评，1：支付宝，2：微信，3：现金，4：刷卡，5：其他
+                "payWay": 2,                                        // 支付方式，0：大众点评团购，1：支付宝，2：微信，3：现金，4：刷卡，5：其他，6：大众点评闪惠
                 "effectiveDate": "2019-05-30",                      // 有效期
                 "customerSourceId": 4,                              // 来源id
                 "customerSource": "方庄妇幼保健院",                  // 来源
@@ -820,7 +820,7 @@
                "purchaseCourseNumber": 5,               // 购课数
                "giveCourseNumber": 1,                   // 赠课数
                "inDoorFee": 5,                          // 上门费
-               "payWay": 2,                             // 支付方式，0：大众点评，1：支付宝，2：微信，3：现金，4：刷卡，5：其他
+               "payWay": 2,                             // 支付方式，0：大众点评团购，1：支付宝，2：微信，3：现金，4：刷卡，5：其他，6：大众点评闪惠
                "effectiveDate": "2020-04-20",           // 卡有效期
                "customerSourceId": 4,                   // 客户来源id
                "coachId": 5,                            // 销售教练
@@ -871,7 +871,7 @@
                "giveCourseNumber": 1,                   // 赠送课时/课数
                "remainCourseNumber": 3,                 // 剩余课时
                "inDoorFee": 5,                          // 上门费
-               "payWay": 2,                             // 支付方式，0：大众点评，1：支付宝，2：微信，3：现金，4：刷卡，5：其他
+               "payWay": 2,                             // 支付方式，0：大众点评团购，1：支付宝，2：微信，3：现金，4：刷卡，5：其他，6：大众点评闪惠
                "effectiveDate": "2020-04-20",           // 有效日期
                "customerSourceId": 4,                   // 来源合作机构标识
                "coachId": 5,                            // 销售教练
