@@ -1421,27 +1421,6 @@
             ]
         }  
         
-#### 4.11 删除失败预约
-    用于教练端 我的课程模块 -> 课程详情
-+ uri:
-
-        [DELETE] /v1/teacher/attend-classes/{reservationId}
-        
-+ param: 
-
-        [long] reservationId 预约id
-        
-+ resp: 204 删除成功
-
-        {
-            "errors": [
-                {
-                    "status": "404",
-                    "title": "Not Found"
-                }
-            ]
-        }
-        
 #### 4.12 获取所有动作库类别列表
     用于教练端 我的课程 -> 上课详情 -> 做小结 -> 上课记录 -> 课程记录添加 -> 动作库分类列表
 + uri: 
