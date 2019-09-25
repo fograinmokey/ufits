@@ -270,6 +270,7 @@
         {
             "data": {
                 "cardNumber": "20190416000002",                 // 卡号
+                "studentNum": 8,                                // 到场人数
                 "datetimeRange": "2019-05-07 12:51-14:51",      // 课程时间段
                 "strPlace": "方庄妇幼保健院",                    // 场所
                 "studentName": "小龙女",                        // 用户
@@ -1503,6 +1504,7 @@
         {
             "data": {
                 "cardNumber": "cardNumber",     // 卡号
+                "studentNum": 8,                // 到场人数
                 "attendClassId": 2,             // 预约上课id
                 "coachAttendClassId": 70,       // 教练上课id
                 "courseTypeId": 2,              // 课程分类id, 如私教、公开、查房 的id
