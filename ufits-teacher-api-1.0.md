@@ -53,7 +53,8 @@
         {
             "data": {
                 "token": "token",   // 登录状态标识
-                "userId": 3         // 用户id
+                "userId": 3,        // 用户id
+                "name": "张三"      // 姓名
             }
         }
         
