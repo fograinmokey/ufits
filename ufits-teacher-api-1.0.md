@@ -1053,6 +1053,7 @@
             "data": [
                 {
                     "id": 1,                            // 评估id
+                    "state": 1,                         // 状态，0：草稿，1：提交
                     "coachName": "李四",                // 评估教练
                     "evaluationDate": "2019-07-26",     // 评估日期
                     "evaluationType": "classEvaluation" // 评估类型，课程评估：classEvaluation，卡评估：cardEvaluation
@@ -1144,7 +1145,7 @@
             }
         }
         
-#### 3.22 根据学员id获取学员的所有评估记录
+#### 3.22 根据学员id获取学员的所有评估记录，不包括草稿
     用于教练端 我的客户 -> 评估记录列表
 + uri:
 
@@ -1158,12 +1159,14 @@
             "data": [
                 {
                     "id": 1,                            // 评估id
+                    "state": 1,                         // 状态，0：草稿，1：提交
                     "coachName": "李四",                // 评估教练
                     "evaluationDate": "2019-07-26",     // 评估日期
                     "evaluationType": "classEvaluation" // 评估类型，课程评估：classEvaluation，卡评估：cardEvaluation
                 },
                 {
                     "id": 2,
+                    "state": 1,
                     "coachName": "李四",                
                     "evaluationDate": "2019-07-27",
                     "evaluationType": "cardEvaluation"
