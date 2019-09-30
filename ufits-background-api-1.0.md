@@ -280,6 +280,7 @@
         
 ### 2 回访
 #### 2.1 获取回访人
+    用于后台提交回访中的回访人列表显示
 + uri:
 
         [GET] /admin/backVisits/admin      
@@ -294,4 +295,72 @@
             "71": "tengli"
           }
         }
-                                                                                                                                                        
+        
+#### 2.2 回访状态（固定内容）
+    用于后台提交回访中的回访状态列表显示
+    
+    1 无意向会员     // 标识、描述
+    2 有意向未到店
+    3 约访到店
+    4 客户已到访
+    5 （首次）报名-准会员
+    6 （非首次）报名-准会员      
+    
+#### 2.3 提交回访
+    用于后台提交回访
++ uri:
+
+        [POST] /admin/backVisits
++ param: json
+
+        {
+            "data": {
+               "studentId": 24,                             // 学员id               
+               "coachId": 34,                               // 教练id
+               "visitStatus": 2,                            // 回访状态标识：1、无意向会员；2、有意向未到店；3、约访到店；4、客户已到访；5、（首次）报名-准会员；6、（非首次）报名-准会员
+               "content": "询问锻炼情况。",                  // 回访内容
+               "nextVisitDatetime": "2019-09-27 18:41:22"   // 下次回访时间，可选
+            }
+        }                  
+          
++ resp: 200
+
+        {
+            "errors": [
+                {
+                    "status": "200",
+                    "title": "OK"
+                }
+            ]
+        }     
+        
+#### 2.4 获取用户回访记录
+    用于后台用户管理中的用户回访记录和查询所有回访记录
++ uri: 
+
+        [GET] /admin/backVisits
++ param:
+
+        [int] page[number]  当前是第几页
+        [int] page[size]    每页多少条数据
++ resp: 200
+
+        {
+          "data": {
+            "total": 1,                                     // 用户回访记录条数
+            "totalPages": 1,                                // 总页数
+            "backVisitVOList": [
+              {
+                "backVisitId": 2,                           // 回访记录id
+                "coachId": 34,                              // 回访人Id
+                "coachName": "张三",                        // 回访人姓名
+                "studentId": 24,                            // 被访学员id
+                "studentName": "江小白",                    // 学员姓名
+                "phoneNumber": "17600261644",               // 学员手机号
+                "visitStatus": 2,                           // 回访状态标识：1、无意向会员；2、有意向未到店；3、约访到店；4、客户已到访；5、（首次）报名-准会员；6、（非首次）报名-准会员
+                "visitStatusContent": "有意向未到店",        // 回访状态内容
+                "visitDatetime": "2019-09-27"               // 回访时间
+              }
+            ]
+          }
+        }                                                                                                                                                           
