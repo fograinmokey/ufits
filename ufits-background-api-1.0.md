@@ -341,8 +341,9 @@
         [GET] /admin/backVisits
 + param:
 
-        [int] page[number]  当前是第几页
-        [int] page[size]    每页多少条数据
+        [int] page[number]  当前是第几页，默认为1
+        [int] page[size]    每页多少条数据，默认为10
+        [long] studentId    可选，学员id，不填查出所有记录，否则查出该学员回访记录
 + resp: 200
 
         {
@@ -363,4 +364,30 @@
               }
             ]
           }
-        }                                                                                                                                                           
+        } 
+        
+#### 2.5 获取回访记录详情
+    用于后台管理查看用户回访记录详情
++ uri:
+
+        [GET] /admin/backVisits/{id}     
++ param:
+
+        [long] id 回访记录id
++ resp: 200
+        
+        {
+          "data": {
+            "backVisitId": 2,                                   // 回访记录id
+            "coachId": 34,                                      // 回访人Id
+            "coachName": "张三",                                // 回访人姓名
+            "studentId": 24,                                    // 被访学员id
+            "studentName": "江小白",                            // 学员姓名
+            "phoneNumber": "17600261644",                       // 学员手机号
+            "visitStatus": 2,                                   // 回访状态标识：1、无意向会员；2、有意向未到店；3、约访到店；4、客户已到访；5、（首次）报名-准会员；6、（非首次）报名-准会员
+            "visitStatusContent": "有意向未到店",                // 回访状态内容
+            "content": "进行深入友好的交流，询问锻炼情况。",      // 回访内容
+            "visitDatetime": "2019-09-27",                      // 回访时间
+            "nextVisitDatetime": "2019-09-29"                   // 下次回访时间，可能无
+          }
+        }                                                                                                                                                                                         
