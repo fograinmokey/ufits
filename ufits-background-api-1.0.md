@@ -386,7 +386,7 @@
             "phoneNumber": "17600261644",                       // 学员手机号
             "visitStatus": 2,                                   // 回访状态标识：1、无意向会员；2、有意向未到店；3、约访到店；4、客户已到访；5、（首次）报名-准会员；6、（非首次）报名-准会员
             "visitStatusContent": "有意向未到店",                // 回访状态内容
-            "content": "进行深入友好的交流，询问锻炼情况。",       // 回访内容
+            "content": "进行深入友好的交流，询问锻炼情况。",      // 回访内容
             "visitDatetime": "2019-09-27",                      // 回访时间
             "nextVisitDatetime": "2019-09-29"                   // 下次回访时间，可能无
           }
@@ -417,4 +417,54 @@
                     "title": "OK"
                 }
             ]
-        }                                                                                                                                                                                                                                                        
+        }
+        
+#### 2.7 回访记录查询
+    用于后台管理回访列表搜索
++ uri:
+
+        [GET] /admin/backVisits/search
++ param:
+
+        [int]       page[number]          可选，当前是第几页，默认为1
+        [int]       page[size]            可选，每页多少条数据，默认为10
+        [long]      studentId             可选，被访学员id
+        [string]    studentName           可选，用户名
+        [string]    phoneNumber           可选，手机号
+        [int]       visitStatus           可选，回访状态标识：1、无意向会员；2、有意向未到店；3、约访到店；4、客户已到访；5、（首次）报名-准会员；6、（非首次）报名-准会员
+        [long]      coachId               可选，回访人
+        [datetime]  visitDatetime         可选，回访时间
++ resp: 200
+
+        {
+          "data": {
+            "total": 7,                                             // 用户回访记录数
+            "totalPages": 1,                                        // 页数
+            "backVisitVOList": [                                    // 列表数据
+              {
+                "backVisitId": 2,                                   // 回访id
+                "coachId": 34,                                      // 回访人id
+                "coachName": "张三",                                // 回访人
+                "studentId": 24,                                    // 用户id
+                "studentName": "江小白",                            // 用户名
+                "phoneNumber": "17600261644",                       // 手机号
+                "visitStatus": 2,                                   // 回访状态标识：1、无意向会员；2、有意向未到店；3、约访到店；4、客户已到访；5、（首次）报名-准会员；6、（非首次）报名-准会员
+                "content": "进行深入友好的交流，询问锻炼情况。",      // 回访记录
+                "nextVisitDatetime": "2019-09-29",                  // 下次回访时间
+                "visitDatetime": "2019-09-27"                       // 回访时间
+              },
+              {
+                "backVisitId": 3,
+                "coachId": 34,
+                "coachName": "张三",
+                "studentId": 25,
+                "studentName": "李白",
+                "phoneNumber": "17085145711",
+                "visitStatus": 2,
+                "content": "进行深入友好的交流，询问锻炼情况2。",
+                "nextVisitDatetime": "2019-09-29",
+                "visitDatetime": "2019-09-27"
+              }
+            ]
+          }
+        }                                                                                                                                                                                                                                                                         
