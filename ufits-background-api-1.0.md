@@ -433,7 +433,7 @@
         [string]    phoneNumber           可选，手机号
         [int]       visitStatus           可选，回访状态标识：1、无意向会员；2、有意向未到店；3、约访到店；4、客户已到访；5、（首次）报名-准会员；6、（非首次）报名-准会员
         [long]      coachId               可选，回访人
-        [datetime]  visitDatetime         可选，回访时间
+        [datetime]  visitDatetime         可选，回访时间，格式为yyyy/MM/dd
 + resp: 200
 
         {
