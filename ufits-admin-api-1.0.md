@@ -1958,6 +1958,7 @@
     
       {
     	 "data":{
+            "studentNum":1,
     		 "categoryId":1,
     		 "mianCoachId":2,
     		 "place":1,
@@ -1974,6 +1975,7 @@
 
       {
     	 "data":{
+    	    "studentNum":2,
     		 "categoryId":1,
     		 "mianCoachId":2,
     		 "assistCoachId":"4",
@@ -2018,34 +2020,39 @@
 + Response 200 (application/json)
 
 ### 详情 [GET] /admin/attendClass/{id}
-+ Description
-  + 私教课id=35（示例）
++ Parameters
+  + 私教课id=11（示例）
   + 公开课id=33（示例）
++ Description
+  + singnInDatetime - 签到时间
+  + singnBackDatetime - 签退时间
+  + distance - 距离相差值
 + Response 200 (application/json) （私教课）
     
       {
         "data": {
-            "categoryId": 2,
-            "mianCoachId": 26,
-            "courseLevelId": 3,
-            "nature": 1,
-            "category": "私教课",
-            "mianCoach": "李四",
+            "category": "查房",
+            "mianCoach": "白求恩",
             "place": "上门",
-            "attendDate": "2020-05-09",
-            "beginTime": "14:51",
-            "endTime": "15:06",
-            "timeLength": 15,
-            "courseLevel": "高级",
-            "student": [
-                {
-                    "userId": 24,
-                    "userName": "周芷若",
-                    "phoneNumber": "17600261644",
-                    "cardNumber": "20190425000000"
-                }
+            "attendTimeBucket": "2019-04-25 17:49~18:19",
+            "studentSignIn": "系统自动签到",
+            "coachSignInState": "已签到",
+            "coachSignInAddress": "上海市静安区温馨小区五单元801室",
+            "coachSignBackState": "已签退",
+            "coachSignBackAddress": "上海市宜家小区2010室",
+            "classRecord": [
+                "瑜伽锻炼"
             ],
-            "mianCoachPhoneNumber": "17085145712"
+            "homeworks": [
+                "测试动作11133"
+            ],
+            "coachRemarks": "学院很认真。",
+            "commentContent": "w我的评价是教练不错，动作到位，很有作用。",
+            "salespersonName": "小苏",
+            "state": "已预约",
+            "singnInDatetime": "2019-05-07",
+            "singnBackDatetime": "2019-05-07",
+            "distance": 4
         }
       }
 
@@ -2092,7 +2099,8 @@
             "mianCoachPhoneNumber": "17085145712",
             "assistCoachPhoneNumber": "13000000000",
             "organizationId": 2,
-            "shopId": 2
+            "shopId": 2,
+            "distance": 0
         }
       }   
 
@@ -2110,162 +2118,130 @@
 + Description
   + organizationTitle - 合作机构名称
   + studentName - 学生姓名
+  + studentNum - 上课人数
 + Response 200 (application/json)
 
       {
         "meta": {
-            "totalPages": 3,
-            "totalElements": 22,
-            "size": 10,
+            "totalPages": 19,
+            "totalElements": 94,
+            "size": 5,
             "number": 1,
-            "numberOfElements": 10,
+            "numberOfElements": 5,
             "first": true,
             "last": false,
-            "sort": null
+            "sort": [
+                {
+                    "direction": "DESC",
+                    "property": "modified",
+                    "ignoreCase": false,
+                    "nullHandling": "NATIVE",
+                    "ascending": false,
+                    "descending": true
+                }
+            ]
         },
         "links": {
-            "self": "/admin/attendClass?page[number]=1&page[size]=10",
-            "first": "/admin/attendClass?page[number]=1&page[size]=10",
-            "next": "/admin/attendClass?page[number]=2&page[size]=10",
-            "last": "/admin/attendClass?page[number]=3&page[size]=10"
+            "self": "/admin/attendClass?sort=-modified&page[number]=1&page[size]=5",
+            "first": "/admin/attendClass?sort=-modified&page[number]=1&page[size]=5",
+            "next": "/admin/attendClass?sort=-modified&page[number]=2&page[size]=5",
+            "last": "/admin/attendClass?sort=-modified&page[number]=19&page[size]=5"
         },
         "data": [
             {
-                "id": 4,
-                "created": "2019-04-16 14:02:57",
-                "modified": "2019-04-16 14:02:54",
+                "id": 154,
+                "created": "2019-10-10 10:16:29",
+                "modified": "2019-10-10 10:16:27",
                 "state": 0,
-                "categoryId": 2,
-                "attendDate": "2019-04-16",
-                "beginTime": "18:10",
-                "endTime": "16:30",
-                "attendTimeBucket": "2019.04.16 18:10-16:30",
-                "mianCoachName": "白求恩",
-                "attendClassStateName": "已预约",
-                "categoryTitle": "私教课",
-                "showSign": false
-            },
-            {
-                "id": 5,
-                "created": "2019-04-23 14:03:01",
-                "modified": "2019-04-23 14:02:59",
-                "state": 0,
-                "categoryId": 4,
-                "attendDate": "2019-04-17",
-                "beginTime": "16:34",
-                "endTime": "16:44",
-                "attendTimeBucket": "2019.04.17 16:34-16:44",
-                "mianCoachName": "张三1",
-                "attendClassStateName": "已预约",
-                "categoryTitle": "小班课",
-                "showSign": false
-            },
-            {
-                "id": 6,
-                "state": 0,
-                "categoryId": 5,
-                "attendDate": "2019-04-18",
-                "beginTime": "16:35",
-                "endTime": "16:45",
-                "attendTimeBucket": "2019.04.18 16:35-16:45",
-                "mianCoachName": "张三1",
-                "attendClassStateName": "已预约",
-                "categoryTitle": "查房",
-                "showSign": false
-            },
-            {
-                "id": 7,
-                "state": 0,
-                "categoryId": 2,
-                "attendDate": "2019-04-19",
-                "beginTime": "16:40",
-                "endTime": "16:50",
-                "attendTimeBucket": "2019.04.19 16:40-16:50",
-                "mianCoachName": "白求恩",
-                "attendClassStateName": "已预约",
-                "categoryTitle": "私教课",
-                "showSign": false
-            },
-            {
-                "id": 8,
-                "state": 0,
-                "categoryId": 4,
-                "attendDate": "2019-04-25",
-                "beginTime": "17:13",
-                "endTime": "17:53",
-                "attendTimeBucket": "2019.04.25 17:13-17:53",
-                "mianCoachName": "白求恩",
-                "attendClassStateName": "已预约",
-                "categoryTitle": "小班课",
-                "showSign": false
-            },
-            {
-                "id": 11,
-                "state": 0,
-                "categoryId": 5,
-                "attendDate": "2019-04-25",
-                "beginTime": "17:49",
-                "endTime": "18:19",
-                "attendTimeBucket": "2019.04.25 17:49-18:19",
-                "mianCoachName": "白求恩",
-                "attendClassStateName": "已预约",
-                "categoryTitle": "查房",
-                "showSign": false
-            },
-            {
-                "id": 14,
-                "created": "2019-04-28 13:32:59",
-                "modified": "2019-04-28 13:32:59",
-                "state": 2,
                 "categoryId": 3,
-                "attendDate": "2019-05-02",
-                "beginTime": "09:20",
-                "endTime": "18:50",
-                "attendTimeBucket": "2019.05.02 09:20-18:50",
+                "attendDate": "2019-10-10",
+                "beginTime": "13:13",
+                "endTime": "13:43",
+                "organizationId": 8,
+                "attendTimeBucket": "2019.10.10 13:13-13:43",
                 "mianCoachName": "白求恩",
-                "attendClassStateName": "已完结",
+                "attendClassStateName": "已预约",
                 "categoryTitle": "助教课",
+                "organizationTitle": " 3撒旦飞洒发",
+                "studentName": [
+                    "黄蓉"
+                ],
                 "showSign": false
             },
             {
-                "id": 16,
+                "id": 151,
+                "created": "2019-10-08 17:00:44",
+                "modified": "2019-10-08 17:00:44",
+                "state": 0,
+                "categoryId": 1,
+                "attendDate": "2019-10-25",
+                "beginTime": "14:51",
+                "endTime": "15:06",
+                "attendTimeBucket": "2019.10.25 14:51-15:06",
+                "mianCoachName": "白求恩",
+                "attendClassStateName": "已预约",
+                "categoryTitle": "公开课",
+                "studentName": [
+                    "李白",
+                    "黄蓉"
+                ],
+                "studentNum": 2,
+                "showSign": false
+            },
+            {
+                "id": 152,
+                "created": "2019-10-08 17:00:44",
+                "modified": "2019-10-08 17:00:44",
+                "state": 0,
+                "categoryId": 1,
+                "attendDate": "2019-10-25",
+                "beginTime": "14:51",
+                "endTime": "15:06",
+                "organizationId": 6,
+                "attendTimeBucket": "2019.10.25 14:51-15:06",
+                "mianCoachName": "的分公司的国际法都死了",
+                "attendClassStateName": "已预约",
+                "categoryTitle": "公开课",
+                "organizationTitle": "asdfsdfsadfs",
+                "studentName": [
+                    "江小白"
+                ],
+                "showSign": false
+            },
+            {
+                "id": 150,
+                "created": "2019-10-08 17:00:32",
+                "modified": "2019-10-08 17:00:32",
                 "state": 0,
                 "categoryId": 2,
-                "attendDate": "2019-04-25",
-                "beginTime": "18:31",
-                "endTime": "18:51",
-                "attendTimeBucket": "2019.04.25 18:31-18:51",
+                "attendDate": "2019-10-20",
+                "beginTime": "14:51",
+                "endTime": "15:06",
+                "attendTimeBucket": "2019.10.20 14:51-15:06",
                 "mianCoachName": "白求恩",
                 "attendClassStateName": "已预约",
                 "categoryTitle": "私教课",
+                "studentName": [
+                    "李白"
+                ],
                 "showSign": false
             },
             {
-                "id": 17,
-                "state": 0,
-                "categoryId": 4,
-                "attendDate": "2019-05-02",
-                "beginTime": "11:15",
-                "endTime": "18:55",
-                "attendTimeBucket": "2019.05.02 11:15-18:55",
-                "mianCoachName": "白求恩",
-                "attendClassStateName": "已预约",
-                "categoryTitle": "小班课",
-                "showSign": false
-            },
-            {
-                "id": 18,
-                "created": "2019-05-07 13:45:13",
-                "modified": "2019-05-07 13:45:15",
+                "id": 149,
+                "created": "2019-10-08 17:00:25",
+                "modified": "2019-10-08 17:00:25",
                 "state": 0,
                 "categoryId": 2,
-                "attendDate": "2019-05-07",
-                "beginTime": "12:51",
-                "endTime": "14:51",
-                "attendTimeBucket": "2019.05.07 12:51-14:51",
-                "mianCoachName": "ycl",
+                "attendDate": "2019-10-20",
+                "beginTime": "14:51",
+                "endTime": "15:06",
+                "attendTimeBucket": "2019.10.20 14:51-15:06",
+                "mianCoachName": "白求恩",
                 "attendClassStateName": "已预约",
                 "categoryTitle": "私教课",
+                "studentName": [
+                    "李白"
+                ],
                 "showSign": false
             }
         ]
@@ -2508,6 +2484,8 @@
 + Parameters
   + packageType(0:新买卡，1：续课，2：套餐升级)
   + 不填packageType统计页销售教练排名
+  + filter[coachName] - 教练姓名
+  + filter[phoneNumber] - 教练电话
   + filter[startDate]=2019-05-08（非必填；时间筛选条件）
   + filter[endDate]=2019-06-04（非必填；时间筛选条件）
 + Description
@@ -2515,6 +2493,7 @@
   + coachName - 教练名称
   + phoneNumber - 手机号
   + packageType - 销售卡状态
+  + totalMoney - 销售金额
   + salesNum - 销售个数
   + ranking - 排名
   
@@ -2530,7 +2509,8 @@
                     "coachId": 24,
                     "coachName": "江小白",
                     "phoneNumber": "17600261644",
-                    "ranking": 1
+                    "ranking": 1,
+                    "totalMoney": 3049188
                 },
                 {
                     "packageType": 0,
@@ -3112,6 +3092,9 @@
     + commentContent - 客户评价
     + salespersonName - 销售教练
     + state - 课程状态
+    + singnInDatetime - 签到时间
+    + singnBackDatetime - 签退时间
+    + distance - 距离相差值
 
 + Response 200 (application/json)（私教课）
 
@@ -3135,7 +3118,10 @@
             "coachRemarks": "学院很认真。",
             "commentContent": "w我的评价是教练不错，动作到位，很有作用。",
             "salespersonName": "小苏",
-            "state": "已预约"
+            "state": "已预约",
+            "singnInDatetime": "2019-05-07",
+            "singnBackDatetime": "2019-05-07",
+            "distance": 4
         }
       }
 
@@ -3158,7 +3144,8 @@
             "homeworks": "教练未留作业",
             "commentContent": "评价评价评价评价评价~~~",
             "salespersonName": "ycl",
-            "state": "已完结"
+            "state": "已完结",
+            "distance": 0
         }
       }
 
@@ -3671,20 +3658,421 @@
         ]
       }
 
+### 会员卡交易记录列表[GET] /admin/cardOrders/transactionRecord
++ Parameters
+  + 注意：以下参数为非必填;payMethod、packageType、pregnancyStage为值查询；其余为模糊查询filter[参数]
+  + cardNumber - 卡号
+  + userName - 用户姓名
+  + phoneNumber - 手机号
+  + payMethod - 支付方式
+  + packageType - 卡状态
+  + pregnancyStage - 卡种类
+  + projectTitle - 套餐名称
+  + salespersonName - 教练名称
+  + endDate - 结束时间
+  + startDate - 开始时间
+  + page[number]=1&page[size]=10
++ Description
+  + id - 订单ID
+  + cardId - 会员卡ID
+  + cardNumber - 卡号
+  + userName - 用户名
+  + phoneNumber - 手机号
+  + pregnancyStage - 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后（卡种类）
+  + projectTitle - 项目名称（套餐）
+  + packageType - 套餐类型，0：新买课，1：续课，2，套餐升级
+  + packageTypeName - 套餐类型（卡状态）“（）”：中指原型属性
+  + salespersonName - 销售教练
+  + classTime - 购买课时
+  + money - 支付金额
+  + payMethod - 支付方式，0：大众点评团购，1：支付宝，2：微信，3：现金，4：刷卡，5：其他，6：大众点评闪惠
+  + payMethodName - 支付方式
+  + created - 交易时间
+  
++ Response 200 (application/json) 
+
+      {
+        "data": {
+            "content": [
+                {
+                    "id": 62,
+                    "created": "2019-10-10 18:32:45",
+                    "cardId": 72,
+                    "userId": 24,
+                    "packageType": 1,
+                    "projectTitle": "11节孕产套课",
+                    "cardNumber": "20190730000030",
+                    "money": 1006666,
+                    "classTime": 674,
+                    "payMethod": 0,
+                    "effectiveDate": "2019-08-30",
+                    "packageTypeName": "续课",
+                    "payMethodName": "大众点评",
+                    "salespersonName": "江小白",
+                    "coachId": 24,
+                    "phoneNumber": "17600261644",
+                    "ranking": 0,
+                    "userName": "江小白",
+                    "pregnancyStageNum": 0,
+                    "pregnancyStage": "未知"
+                },
+                {
+                    "id": 61,
+                    "created": "2019-10-10 18:31:54",
+                    "cardId": 72,
+                    "userId": 24,
+                    "packageType": 1,
+                    "projectTitle": "11节孕产套课",
+                    "cardNumber": "20190730000030",
+                    "money": 6666,
+                    "classTime": 74,
+                    "payMethod": 0,
+                    "effectiveDate": "2019-08-30",
+                    "packageTypeName": "续课",
+                    "payMethodName": "大众点评",
+                    "salespersonName": "江小白",
+                    "coachId": 24,
+                    "phoneNumber": "17600261644",
+                    "ranking": 0,
+                    "userName": "江小白",
+                    "pregnancyStageNum": 0,
+                    "pregnancyStage": "未知"
+                },
+                {
+                    "id": 60,
+                    "created": "2019-10-10 14:39:31",
+                    "cardId": 74,
+                    "userId": 24,
+                    "packageType": 1,
+                    "projectTitle": "3000套餐",
+                    "cardNumber": "20190927000032",
+                    "money": 3000,
+                    "classTime": 10,
+                    "payMethod": 0,
+                    "effectiveDate": "2019-10-27",
+                    "packageTypeName": "续课",
+                    "payMethodName": "大众点评",
+                    "salespersonName": "江小白",
+                    "coachId": 24,
+                    "phoneNumber": "17600261644",
+                    "ranking": 0,
+                    "userName": "江小白",
+                    "pregnancyStageNum": 0,
+                    "pregnancyStage": "未知"
+                },
+                {
+                    "id": 59,
+                    "created": "2019-10-09 15:55:34",
+                    "cardId": 74,
+                    "userId": 24,
+                    "packageType": 2,
+                    "projectTitle": "2000套餐",
+                    "cardNumber": "20190927000032",
+                    "money": 1000,
+                    "classTime": 10,
+                    "payMethod": 0,
+                    "effectiveDate": "2019-10-27",
+                    "packageTypeName": "套餐升级",
+                    "payMethodName": "大众点评",
+                    "salespersonName": "江小白",
+                    "coachId": 24,
+                    "phoneNumber": "17600261644",
+                    "ranking": 0,
+                    "userName": "江小白",
+                    "pregnancyStageNum": 0,
+                    "pregnancyStage": "未知"
+                },
+                {
+                    "id": 58,
+                    "created": "2019-09-30 15:17:31",
+                    "cardId": 76,
+                    "userId": 2,
+                    "packageType": 0,
+                    "projectTitle": "12节孕期瑜伽小班课",
+                    "cardNumber": "20190930000034",
+                    "money": 12000,
+                    "classTime": 18,
+                    "payMethod": 0,
+                    "effectiveDate": "2019-10-30",
+                    "packageTypeName": "新买课",
+                    "payMethodName": "大众点评",
+                    "salespersonName": "江小白",
+                    "coachId": 24,
+                    "phoneNumber": "18331931950",
+                    "ranking": 0,
+                    "userName": "白求恩",
+                    "pregnancyStageNum": 0,
+                    "pregnancyStage": "未知"
+                }
+            ],
+            "totalPages": 11,
+            "last": false,
+            "totalElements": 53,
+            "number": 0,
+            "size": 5,
+            "sort": null,
+            "first": true,
+            "numberOfElements": 5
+        }
+      }
+
+### 会员卡消费记录列表[GET] /admin/attendClass/expenseData
++ Parameters
+  + 注意：以下参数为非必填;pregnancyStage为值查询；其余为模糊查询filter[参数]
+  + pregnancyStage - 卡种类
+  + endDate - 结束时间
+  + userName - 用户名
+  + startDate - 开始时间
+  + cardNumber - 卡号
+  + phoneNumber - 手机号
+  + projectName - 套餐名称
+  + mianCoachName - 教练名称
+  + beginDateTime - 上课具体时间
+  + organizationTitle - 上课机构
+  + attendCategoryTitle - 课程分类
++ Description
+  +  id - 预约课ID
+  +  cardId - 会员卡ID
+  +  userName - 用户姓名
+  +  phoneNumber - 手机号
+  +  pregnancyStageName - 孕产阶段（卡种类）
+  +  projectName - 项目名称（套餐）
+  +  attendCategoryTitle - 课程分类
+  +  mianCoachName - 上课教练
+  +  organizationTitle - 上课机构
+  +  timeLength - 本次消费课时
+  +  remainingClassTime - 剩余课时
+  +  attendDate - 上课时间
+
++ Response 200 (application/json) 
+
+      {
+        "data": {
+            "content": [
+                {
+                    "id": 132,
+                    "attendDate": "2019-09-27",
+                    "timeLength": 45,
+                    "attendCategoryTitle": "公开课",
+                    "mianCoachName": "坤坤",
+                    "projectName": "孕期瑜伽小班课",
+                    "cardNumber": "20190418000000",
+                    "studentUserId": 1,
+                    "organizationTitle": "宝迪",
+                    "userName": "小苏",
+                    "phoneNumber": "13051638532",
+                    "pregnancyStage": 0,
+                    "coachId": 51,
+                    "remainingClassTime": 10,
+                    "beginDateTime": "2019-09-27 15:45:00.0",
+                    "cardId": 24,
+                    "pregnancyStageName": "未知",
+                    "showSign": false
+                },
+                {
+                    "id": 127,
+                    "attendDate": "2019-09-22",
+                    "timeLength": 6,
+                    "attendCategoryTitle": "私教课",
+                    "mianCoachName": "江小白",
+                    "projectName": "11节孕产套课",
+                    "cardNumber": "20190730000030",
+                    "studentUserId": 24,
+                    "organizationTitle": "北京月子会所",
+                    "userName": "江小白",
+                    "phoneNumber": "17600261644",
+                    "pregnancyStage": 0,
+                    "coachId": 24,
+                    "remainingClassTime": 1315,
+                    "beginDateTime": "2019-09-22 00:00:00.0",
+                    "cardId": 72,
+                    "pregnancyStageName": "未知",
+                    "showSign": false
+                },
+                {
+                    "id": 125,
+                    "attendDate": "2019-08-24",
+                    "timeLength": 6,
+                    "attendCategoryTitle": "私教课",
+                    "mianCoachName": "江小白",
+                    "projectName": "11节孕产套课",
+                    "cardNumber": "20190730000030",
+                    "studentUserId": 24,
+                    "organizationTitle": "北京月子会所",
+                    "userName": "江小白",
+                    "phoneNumber": "17600261644",
+                    "pregnancyStage": 0,
+                    "coachId": 24,
+                    "remainingClassTime": 1315,
+                    "beginDateTime": "2019-08-24 12:02:00.0",
+                    "cardId": 72,
+                    "pregnancyStageName": "未知",
+                    "showSign": false
+                },
+                {
+                    "id": 118,
+                    "attendDate": "2019-08-23",
+                    "timeLength": 0.5,
+                    "attendCategoryTitle": "私教课",
+                    "mianCoachName": "江小白",
+                    "projectName": "11节孕产套课",
+                    "cardNumber": "20190730000030",
+                    "studentUserId": 24,
+                    "organizationTitle": "北京月子会所",
+                    "userName": "江小白",
+                    "phoneNumber": "17600261644",
+                    "pregnancyStage": 0,
+                    "coachId": 24,
+                    "remainingClassTime": 1315,
+                    "beginDateTime": "2019-08-23 00:01:00.0",
+                    "cardId": 72,
+                    "pregnancyStageName": "未知",
+                    "showSign": false
+                },
+                {
+                    "id": 119,
+                    "attendDate": "2019-08-23",
+                    "timeLength": 0.5,
+                    "attendCategoryTitle": "私教课",
+                    "mianCoachName": "江小白",
+                    "projectName": "11节孕产套课",
+                    "cardNumber": "20190730000030",
+                    "studentUserId": 24,
+                    "organizationTitle": "月子会所",
+                    "userName": "江小白",
+                    "phoneNumber": "17600261644",
+                    "pregnancyStage": 0,
+                    "coachId": 24,
+                    "remainingClassTime": 1315,
+                    "beginDateTime": "2019-08-23 12:04:00.0",
+                    "cardId": 72,
+                    "pregnancyStageName": "未知",
+                    "showSign": false
+                },
+                {
+                    "id": 97,
+                    "attendDate": "2019-05-31",
+                    "timeLength": 45,
+                    "attendCategoryTitle": "公开课",
+                    "mianCoachName": "白求恩",
+                    "projectName": "孕期瑜伽小班课",
+                    "cardNumber": "20190418000000",
+                    "studentUserId": 1,
+                    "organizationTitle": "月子会所",
+                    "userName": "小苏",
+                    "phoneNumber": "13051638532",
+                    "pregnancyStage": 0,
+                    "coachId": 2,
+                    "remainingClassTime": 10,
+                    "beginDateTime": "2019-05-31 17:45:00.0",
+                    "cardId": 24,
+                    "pregnancyStageName": "未知",
+                    "showSign": false
+                }
+            ],
+            "totalElements": 6,
+            "last": true,
+            "totalPages": 1,
+            "number": 0,
+            "size": 10,
+            "sort": null,
+            "first": true,
+            "numberOfElements": 6
+        }
+      }
+
+### 未消费提醒记录列表[GET] /admin/cards/notSpendingCard
++ Parameters
+  + date=2019-09-13（非必填；默认时间为15天）
++ Description
+  + id - 卡ID
+  + userId - 用户ID
+  + cardNumber - 卡号
+  + realName - 用户姓名
+  + phoneNumber - 用户手机号
+  + attendDate - 上次消费时间
+  + remainingClassTime - 剩余课时
+  + salespersonName - 销售教练
+
++ Response 200 (application/json) 
+
+      {
+        "data": {
+            "number": 1,
+            "size": 5,
+            "numberOfElements": 5,
+            "totalPages": 7,
+            "content": [
+                {
+                    "id": 32,
+                    "userId": 4,
+                    "cardNumber": "20190422000000",
+                    "realName": "小文",
+                    "remainingClassTime": 20,
+                    "salesperson": 1,
+                    "phoneNumber": "18611194890",
+                    "attendDate": "2019-05-31",
+                    "salespersonName": "小苏"
+                },
+                {
+                    "id": 5,
+                    "userId": 3,
+                    "cardNumber": "20190414000001",
+                    "realName": "李四",
+                    "remainingClassTime": 31,
+                    "salesperson": 26,
+                    "phoneNumber": "18810649831",
+                    "salespersonName": "李四"
+                },
+                {
+                    "id": 7,
+                    "userId": 2,
+                    "cardNumber": "20190414000002",
+                    "realName": "王五",
+                    "remainingClassTime": 15,
+                    "salesperson": 3,
+                    "phoneNumber": "18331931950",
+                    "salespersonName": "的分公司的国际法都死了"
+                },
+                {
+                    "id": 12,
+                    "userId": 2,
+                    "cardNumber": "20190415000001",
+                    "realName": "阿斯达",
+                    "remainingClassTime": 11,
+                    "salesperson": 2,
+                    "phoneNumber": "18331931950",
+                    "salespersonName": "白求恩"
+                },
+                {
+                    "id": 14,
+                    "userId": 5,
+                    "cardNumber": "20190416000002",
+                    "realName": "小龙女",
+                    "remainingClassTime": 100,
+                    "salesperson": 3,
+                    "phoneNumber": "17085145710",
+                    "salespersonName": "的分公司的国际法都死了"
+                }
+            ],
+            "totalElements": 35
+        }
+      }
+
 ### 请假管理
 ### 请假管理列表[GET] /admin/cardLeaves
 + Parameters
   + sort=state&sort=-modified（请假列表示例）
   + page[number]=1&page[size]=10
 + Description
-    + cardId - 会员卡ID
-    + cardNumber - 卡号
-    + studentName - 用户
-    + leaveDays - 请假天数
-    + leaveRemainingNum - 剩余请假次数
-    + leaveRemainingDays - 剩余请假天数
-    + leaveReason - 请假理由
-    + leaveStateName - 状态
+  + cardId - 会员卡ID
+  + cardNumber - 卡号
+  + studentName - 用户
+  + leaveDays - 请假天数
+  + leaveRemainingNum - 剩余请假次数
+  + leaveRemainingDays - 剩余请假天数
+  + leaveReason - 请假理由
+  + leaveStateName - 状态
 
 + Response 200 (application/json) 
 
