@@ -955,7 +955,10 @@
       }
 
 ### 订单详情 [GET] /cardOrders/{id}
-
++ Description
+  + dtdFee - 上门费
+  + giftClassTime - 赠送课数
+  
 + Response 200 (application/json)
 
       {
@@ -979,7 +982,10 @@
             "remarks": "不是吧大神，那卖方都南方",
             "packageTypeName": "续课",
             "payMethodName": "微信",
-            "salespersonName": "贝多芬"
+            "salespersonName": "白求恩",
+            "ranking": 0,
+            "dtdFee": 200,
+            "giftClassTime": 4
         }
       }
 
@@ -1065,9 +1071,9 @@
   + page[number]=1&page[size]=10
   + sort -modified(从新到旧) | modified(从旧到新)
 + Description
-    + projectName - 项目名称
-    + attendClass - 完结的课程
-    + SalespersonName  - 销售教练名称
+  + projectName - 项目名称
+  + attendClass - 完结的课程
+  + SalespersonName  - 销售教练名称
 
 + Response 200 (application/json)
 
