@@ -109,7 +109,8 @@
                         "courseType": "私教课",                         // 课程类型
                         "strState": "未完成",                           // 完成状态
                         "address": "方庄妇幼保健院",                     // 场所
-                        "courseName": "12节孕期瑜伽小班课"               // 标题
+                        "courseName": "12节孕期瑜伽小班课",              // 标题
+                        "isNeedEvalution": 0                            // 是否需要评估，1:是, 0:否
                     }
                 ]
             }
@@ -1197,7 +1198,8 @@
                         "acId": 18,                             // 预约上课id
                         "nature": 1,                            // 课程性质，0：公开，1：私教
                         "address": "上门",                      // 地址
-                        "courseName": "12节孕期瑜伽小班课"       // 课程名
+                        "courseName": "12节孕期瑜伽小班课",      // 课程名
+                        "isNeedEvalution": 0                    // 是否需要评估，1:是, 0:否
                     }
                 ]
             }
