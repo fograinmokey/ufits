@@ -527,18 +527,22 @@
 + resp: 200
 
       {
-        "data": [
-          {
-            "id": 1,                                // 日志id
-            "message": "Ufits log test 001.",       // 日志内容
-            "creatorName": "江小白",                // 操作人名字
-            "createDateTime": "2019-10-15 14:43"    // 操作时间
-          },
-          {
-            "id": 2,
-            "message": "Ufits log test 002.",
-            "creatorName": "江小白",
-            "createDateTime": "2019-10-15 14:52"
-          }
-        ]
-      }                                                                                                                                                                                                                                                                                                         
+        "data": {
+          "pages": 1,                                   // 总页数
+          "count": 2,                                   // 总数据条数
+          "ufitsLogs": [
+            {
+              "id": 1,                                  // 日志id
+              "message": "Ufits log test 001.",         // 日志内容
+              "creatorName": "江小白",                  // 操作人名字
+              "createDateTime": "2019-10-15 14:43"      // 操作时间
+            },
+            {
+              "id": 2,
+              "message": "Ufits log test 002.",
+              "creatorName": "江小白",
+              "createDateTime": "2019-10-15 14:52"
+            }
+          ]
+        }
+      }                                                                                                                                                                                                                                                                                         
