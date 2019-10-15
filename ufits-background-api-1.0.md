@@ -479,7 +479,7 @@
         
         {
           "data": {
-            "message": "Ufits log test 001."
+            "message": "Ufits log test 001."    // 日志内容
           }
         }
         
@@ -507,10 +507,10 @@
 
        {
          "data": {
-           "id": 2,
-           "message": "Ufits log test 002.",
-           "creatorName": "江小白",
-           "createDateTime": "2019-10-15 14:52"
+           "id": 2,                                 // 日志id
+           "message": "Ufits log test 002.",        // 日志内容
+           "creatorName": "江小白",                 // 操作人名字
+           "createDateTime": "2019-10-15 14:52"     // 操作时间
          }
        } 
        
@@ -529,10 +529,10 @@
       {
         "data": [
           {
-            "id": 1,
-            "message": "Ufits log test 001.",
-            "creatorName": "江小白",
-            "createDateTime": "2019-10-15 14:43"
+            "id": 1,                                // 日志id
+            "message": "Ufits log test 001.",       // 日志内容
+            "creatorName": "江小白",                // 操作人名字
+            "createDateTime": "2019-10-15 14:43"    // 操作时间
           },
           {
             "id": 2,
