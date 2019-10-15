@@ -467,4 +467,78 @@
               }
             ]
           }
-        }                                                                                                                                                                                                                                                                         
+        }  
+        
+### 3 日志
+#### 3.1 保存日志
++ uri: 
+        
+      [POST] /ufitslogs
+
++ param: json
+        
+        {
+          "data": {
+            "message": "Ufits log test 001."
+          }
+        }
+        
++ resp: 201
+
+        {
+          "errors": [
+            {
+              "status": "201",
+              "title": "Created"
+            }
+          ]
+        }       
+        
+#### 3.2 获取日志详情
++ uri:
+
+      [GET] /ufitslogs/{logId}
+
++ param:
+    
+      [long] logId 日志id
+      
++ resp: 201
+
+       {
+         "data": {
+           "id": 2,
+           "message": "Ufits log test 002.",
+           "creatorName": "江小白",
+           "createDateTime": "2019-10-15 14:52"
+         }
+       } 
+       
+#### 3.3 获取日志列表
++ uri:
+
+      [GET] /ufitslogs
+      
++ param     
+
+      [int] page[number] 可选，当前是第几页，默认为1
+      [int] page[size]   可选，每页多少条数据，默认为10     
+      
++ resp: 200
+
+      {
+        "data": [
+          {
+            "id": 1,
+            "message": "Ufits log test 001.",
+            "creatorName": "江小白",
+            "createDateTime": "2019-10-15 14:43"
+          },
+          {
+            "id": 2,
+            "message": "Ufits log test 002.",
+            "creatorName": "江小白",
+            "createDateTime": "2019-10-15 14:52"
+          }
+        ]
+      }                                                                                                                                                                                                                                                                                                         
