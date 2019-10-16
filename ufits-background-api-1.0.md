@@ -545,4 +545,43 @@
             }
           ]
         }
-      }                                                                                                                                                                                                                                                                                         
+      }    
+      
+#### 3.4 日志搜索
+    可根据内容、创建者、创建时间组合搜索 
++ uri:
+
+      [GET] /ufitslogs/search
+      
++ param:
+
+      [int]     page[number]    可选，当前是第几页，默认为1
+      [int]     page[size]      可选，每页多少条数据，默认为10     
+      [long]    id              可选，日志id
+      [string]  message         可选，日志内容
+      [long]    creatorId       可选，创建人id
+      [string]  creatorName     可选，创建人名字
+      [string]  createDateTime  可选，创建时间, 格式为"yyyy/MM/dd [[HH]:[mm]:[ss]]"，中括号表示可选
+      
++ resp: 200
+
+      {
+        "data": {
+          "pages": 1,                                   // 总页数
+          "count": 2,                                   // 总数据条数
+          "ufitsLogs": [
+            {
+              "id": 1,                                  // 日志id
+              "message": "Ufits log test 001.",         // 日志内容
+              "creatorName": "江小白",                  // 操作人名字
+              "createDateTime": "2019-10-15 14:43"      // 操作时间
+            },
+            {
+              "id": 2,
+              "message": "Ufits log test 002.",
+              "creatorName": "江小白",
+              "createDateTime": "2019-10-15 14:52"
+            }
+          ]
+        }
+      }                                                                                                                                                                                                                                                                                                
