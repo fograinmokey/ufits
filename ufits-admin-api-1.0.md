@@ -3343,6 +3343,108 @@
         }
       }
 
+### 用户评估列表[GET] /admin/evaluations/userEvaluation
++ Parameters
+  + studentId - 用户ID（必填项）
+  + startDate - 开始时间
+  + endDate - 结束时间
+  + page[number]=2&page[size]=10
++ Description
+  +  包含该用户下[课程评估]与[用户卡评估]的所有评估数据
+  +  id - 评估ID
+  +  mianCoachName - 评估教练
+  +  attendTimeBucket - 评估时间
+  +  created - 创建时间
+  +  modified - 修改时间
+  +  cardEvaluation - 当值为true时，用课程评估方案详情接口；当值为false时，用卡评估方案详情接口；
++ Response 200 (application/json)
+
+       {
+        "data": {
+            "number": 1,
+            "size": 10,
+            "numberOfElements": 10,
+            "totalPages": 2,
+            "content": [
+                {
+                    "id": 27,
+                    "mianCoachName": "江小白",
+                    "created": "2019-09-26 18:19:06",
+                    "modified": "2019-09-26 18:46:23",
+                    "cardEvaluation": false
+                },
+                {
+                    "id": 26,
+                    "mianCoachName": "江小白",
+                    "created": "2019-09-26 17:16:06",
+                    "modified": "2019-09-26 17:16:06",
+                    "cardEvaluation": false
+                },
+                {
+                    "id": 128,
+                    "attendTimeBucket": "2019.08.26 00:04-06:04",
+                    "mianCoachName": "江小白",
+                    "created": "2019-08-22 18:00:36",
+                    "modified": "2019-09-26 11:51:57",
+                    "cardEvaluation": true
+                },
+                {
+                    "id": 117,
+                    "attendTimeBucket": "2019.09.27 00:00-06:00",
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-30 16:59:52",
+                    "modified": "2019-09-26 11:52:00",
+                    "cardEvaluation": true
+                },
+                {
+                    "id": 17,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-30 14:30:32",
+                    "modified": "2019-07-30 14:30:32",
+                    "cardEvaluation": false
+                },
+                {
+                    "id": 18,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-30 14:30:32",
+                    "modified": "2019-07-30 14:30:32",
+                    "cardEvaluation": false
+                },
+                {
+                    "id": 10,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-29 18:30:53",
+                    "modified": "2019-07-29 18:30:53",
+                    "cardEvaluation": false
+                },
+                {
+                    "id": 11,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-29 18:30:53",
+                    "modified": "2019-07-29 18:30:53",
+                    "cardEvaluation": false
+                },
+                {
+                    "id": 12,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-29 18:30:53",
+                    "modified": "2019-07-29 18:30:53",
+                    "cardEvaluation": false
+                },
+                {
+                    "id": 13,
+                    "mianCoachName": "江小白",
+                    "created": "2019-07-29 18:30:53",
+                    "modified": "2019-07-29 18:30:53",
+                    "cardEvaluation": false
+                }
+            ],
+            "totalElements": 13
+        }
+      }
+
+
+
 ## 会员卡管理
 ### 已开卡列表[GET] /admin/cards
 + Parameters
