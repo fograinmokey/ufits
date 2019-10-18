@@ -612,6 +612,8 @@
                 "comment": "没有",                                  // 备注
                 "mainCoachTag": 1,                                  // 是否是主教练，0：否，1：是
                 "giveCardDate": "2019-05-08",                       // 开卡日期
+                "recommenderId": 3,                                 // 推荐人id
+                "recommenderName": "张三",                          // 推荐人名
                 "cardState": 0                                      // 状态，0：审核中，1：正常，2：请假中，3：审核未通过
             }
         }
