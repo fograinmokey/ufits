@@ -836,7 +836,8 @@
                "doorType": 1,                           // 是否有上门，0：否，1：是
                "comment": "no comment",                 // 备注
                "longitude": 23.45,                      // 经度
-               "latitude": 45.22                        // 维度
+               "latitude": 45.22,                       // 维度
+               "recommenderId": 3                       // 推荐人id 
             }
         }
         
@@ -887,7 +888,8 @@
                "doorType": 1,                           // 是否有上门，0：否，1：是
                "comment": "no comment",                 // 备注
                "editTag": "check",                      // 修改状态，当值为check时为后台审核操作，为空或其它值则不是
-               "checkState"                             // 审核状态，通过为on，不通过为off           
+               "checkState": 1,                         // 审核状态，通过为on，不通过为off
+               "recommenderId": 3                       // 推荐人id            
             }
         }
         
