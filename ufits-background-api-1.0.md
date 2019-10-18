@@ -470,6 +470,29 @@
         }  
         
 ### 3 日志
+#### 3.0 日志类型id及对应名字
+    1	新开会员卡
+    2	会员卡续课
+    3	会员卡套餐升级
+    4	删除会员卡
+    5	修改会员卡
+    6	审核会员卡
+    7	审核请假
+    8	新增用户
+    9	删除用户
+    10	修改用户
+    11	新增回访
+    12	修改回访
+    13	新增课程分类
+    14	删除课程分类
+    15	修改课程分类
+    16	新增课程服务分类
+    17	删除课程服务分类
+    18	修改课程服务分类
+    19	新增课程
+    20	删除课程
+    21	修改课程
+
 #### 3.1 保存日志
 + uri: 
         
@@ -479,6 +502,9 @@
         
         {
           "data": {
+            "logTypeId": 5,                     // 日志类型id，如 3.0 所示
+            "cardId": 5,                        // 可选，会员卡id
+            "studentId": 3,                     // 可选，学员id
             "message": "Ufits log test 001."    // 日志内容
           }
         }
@@ -507,12 +533,19 @@
 
        {
          "data": {
-           "id": 2,                                 // 日志id
-           "message": "Ufits log test 002.",        // 日志内容
-           "creatorName": "江小白",                 // 操作人名字
-           "createDateTime": "2019-10-15 14:52"     // 操作时间
+           "id": 14,                                   // 日志id
+           "logTypeCode": 5,                           // 日志类型标识
+           "logTypeName": "修改会员卡",                 // 日志类型名
+           "cardId": 5,                                // 会员卡id
+           "cardNumber": "20190414000001",             // 会员卡号
+           "studentId": 3,                             // 学员id
+           "studentName": "的分公司的国际法都死了",     // 学员名
+           "phoneNumber": "18810649831",               // 学员手机号
+           "message": "Ufits log test 007.",           // 日志内容
+           "creatorName": "江小白",                    // 操作人
+           "createDateTime": "2019-10-18 10:21"        // 操作时间
          }
-       } 
+       }
        
 #### 3.3 获取日志列表
 + uri:
@@ -528,27 +561,28 @@
 
       {
         "data": {
-          "pages": 1,                                   // 总页数
-          "count": 2,                                   // 总数据条数
+          "pages": 2,                                     // 总页数
+          "count": 15,                                    // 总数据条数
           "ufitsLogs": [
             {
-              "id": 1,                                  // 日志id
-              "message": "Ufits log test 001.",         // 日志内容
-              "creatorName": "江小白",                  // 操作人名字
-              "createDateTime": "2019-10-15 14:43"      // 操作时间
-            },
-            {
-              "id": 2,
-              "message": "Ufits log test 002.",
-              "creatorName": "江小白",
-              "createDateTime": "2019-10-15 14:52"
+              "id": 14,                                   // 日志id
+              "logTypeCode": 5,                           // 日志类型标识
+              "logTypeName": "修改会员卡",                 // 日志类型名
+              "cardId": 5,                                // 会员卡id
+              "cardNumber": "20190414000001",             // 会员卡号
+              "studentId": 3,                             // 学员id
+              "studentName": "的分公司的国际法都死了",      // 学员名
+              "phoneNumber": "18810649831",               // 学员手机号
+              "message": "Ufits log test 007.",           // 日志内容
+              "creatorName": "江小白",                     // 操作人
+              "createDateTime": "2019-10-18 10:21"         // 操作时间
             }
           ]
         }
       }    
       
 #### 3.4 日志搜索
-    可根据内容、创建者、创建时间组合搜索 
+    可根据内容、创建者、创建时间组合搜索；前端根据正则表达式判断是手机号还是姓名
 + uri:
 
       [GET] /ufitslogs/search
@@ -558,7 +592,10 @@
       [int]     page[number]    可选，当前是第几页，默认为1
       [int]     page[size]      可选，每页多少条数据，默认为10     
       [long]    id              可选，日志id
-      [string]  message         可选，日志内容
+      [int]     logTypeCode     可选，日志类型标识
+      [string]  cardNumber      可选，会员卡号
+      [string]  phoneNumber     可选，会员手机号
+      [string]  studentName     可选，会员名 
       [long]    creatorId       可选，创建人id
       [string]  creatorName     可选，创建人名字
       [string]  createDateTime  可选，创建时间, 格式为"yyyy/MM/dd [[HH]:[mm]:[ss]]"，中括号表示可选
@@ -566,22 +603,23 @@
 + resp: 200
 
       {
-        "data": {
-          "pages": 1,                                   // 总页数
-          "count": 2,                                   // 总数据条数
-          "ufitsLogs": [
-            {
-              "id": 1,                                  // 日志id
-              "message": "Ufits log test 001.",         // 日志内容
-              "creatorName": "江小白",                  // 操作人名字
-              "createDateTime": "2019-10-15 14:43"      // 操作时间
-            },
-            {
-              "id": 2,
-              "message": "Ufits log test 002.",
-              "creatorName": "江小白",
-              "createDateTime": "2019-10-15 14:52"
-            }
-          ]
-        }
+          "data": {
+            "pages": 2,                                     // 总页数
+            "count": 15,                                    // 总数据条数
+            "ufitsLogs": [
+              {
+                "id": 14,                                   // 日志id
+                "logTypeCode": 5,                           // 日志类型标识
+                "logTypeName": "修改会员卡",                 // 日志类型名
+                "cardId": 5,                                // 会员卡id
+                "cardNumber": "20190414000001",             // 会员卡号
+                "studentId": 3,                             // 学员id
+                "studentName": "的分公司的国际法都死了",      // 学员名
+                "phoneNumber": "18810649831",               // 学员手机号
+                "message": "Ufits log test 007.",           // 日志内容
+                "creatorName": "江小白",                     // 操作人
+                "createDateTime": "2019-10-18 10:21"         // 操作时间
+              }
+            ]
+          }
       }                                                                                                                                                                                                                                                                                                
