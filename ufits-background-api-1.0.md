@@ -503,7 +503,7 @@
         
         {
           "data": {
-            "logTypeId": 5,                     // 日志类型id，如 3.0 所示
+            "logTypeCode": 5,                   // 日志类型id，如 3.0 所示
             "cardId": 5,                        // 可选，会员卡id
             "studentId": 3,                     // 可选，学员id
             "message": "Ufits log test 001."    // 日志内容
