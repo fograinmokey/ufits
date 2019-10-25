@@ -2022,11 +2022,23 @@
 ### 详情 [GET] /admin/attendClass/{id}
 + Parameters
   + 私教课id=11（示例）
-  + 公开课id=33（示例）
+  + 公开课id=132（示例）
 + Description
   + singnInDatetime - 签到时间
   + singnBackDatetime - 签退时间
   + distance - 距离相差值
+  + category - 课程分类
+  + mianCoach - 主教练
+  + assistCoach - 助教
+  + attendTimeBucket - 上课时间段
+  + distance - 签到距离
+  + organization - 机构
+  + categoryId - 课程分类标识
+  + mianCoachId - 主教练
+  + assistCoachId - 助教
+  + nature - 课程性质
+  + organizationId - 合作机构标识
+  + courseLevelId - 课程服务分类标识
 + Response 200 (application/json) （私教课）
     
       {
@@ -2052,7 +2064,25 @@
             "state": "已预约",
             "singnInDatetime": "2019-05-07",
             "singnBackDatetime": "2019-05-07",
-            "distance": 4
+            "distance": 4,
+            "organization": "方庄妇幼保健院",
+            "beginTime": "17:49",
+            "endTime": "18:19",
+            "timeLength": 0,
+            "studentUser": [
+                {
+                    "studentName": "小文",
+                    "phoneNumber": "18611194890",
+                    "cardNumber": "20190422000000"
+                }
+            ],
+            "studentNum": 1,
+            "categoryId": 5,
+            "mianCoachId": 2,
+            "site": "上门",
+            "nature": "私教课",
+            "organizationId": 4,
+            "courseLevelId": 2
         }
       }
 
@@ -2060,49 +2090,44 @@
     
        {
         "data": {
-            "categoryId": 1,
-            "mianCoachId": 26,
-            "assistCoachId": 22,
-            "courseLevelId": 1,
-            "nature": 0,
             "category": "公开课",
-            "mianCoach": "李四",
-            "assistCoach": "张教练",
-            "place": "到店",
-            "organization": "月子会所",
-            "shop": "瘦身健康中心",
-            "attendDate": "2019-05-15",
-            "beginTime": "10:51",
-            "endTime": "11:06",
-            "timeLength": 15,
-            "courseLevel": "初级",
-            "student": [
+            "mianCoach": "坤坤",
+            "assistCoach": "张三",
+            "place": "幸福月子门店",
+            "attendTimeBucket": "2019-09-27 15:45~16:30",
+            "studentSignIn": "系统自动签到",
+            "coachSignInState": "未签到",
+            "coachSignBackState": "未签退",
+            "classRecord": "该私教课教练尚未记录",
+            "homeworks": "该私教课教练未留作业",
+            "state": "已预约",
+            "distance": 0,
+            "organization": "宝迪",
+            "beginTime": "15:45",
+            "endTime": "16:30",
+            "timeLength": 2700,
+            "studentUser": [
                 {
-                    "userId": 1,
-                    "userName": "海燕",
+                    "studentName": "海燕",
                     "phoneNumber": "13051638532",
-                    "cardNumber": "20190414000000"
+                    "cardNumber": "20190418000000"
                 },
                 {
-                    "userId": 3,
-                    "userName": "李四",
-                    "phoneNumber": "18810649831",
-                    "cardNumber": "20190414000001"
-                },
-                {
-                    "userId": 2,
-                    "userName": "王五",
-                    "phoneNumber": "18331931950",
-                    "cardNumber": "20190414000002"
+                    "studentName": "周芷若",
+                    "phoneNumber": "17600261644",
+                    "cardNumber": "20190425000000"
                 }
             ],
-            "mianCoachPhoneNumber": "17085145712",
-            "assistCoachPhoneNumber": "13000000000",
-            "organizationId": 2,
-            "shopId": 2,
-            "distance": 0
+            "studentNum": 2,
+            "categoryId": 24,
+            "mianCoachId": 51,
+            "assistCoachId": 34,
+            "site": "到店",
+            "nature": "团体课",
+            "organizationId": 16,
+            "courseLevelId": 1
         }
-      }   
+      }  
 
 ### 删除 [DELETE] /admin/attendClass/{id} 
 + Description
@@ -3454,6 +3479,8 @@
   + [GET]admin/cards/projectCategories?projectcategoryId=1(参数为卡类型id)
   + filter[salesperson]=5（销售教练搜索）
   + filter[packageType]=0（套餐类型（卡状态）搜索）
+  + filter[recommenderId:eq]=0 - 此卡未有推荐人；
+  + filter[recommenderId:gt]=0 - 有推荐人
   + filter[state]=0&filter[state]=3&sort=state（会员卡审核列表）
   + filter[remainingClassTime:le]=5&sort=-remainingClassTime&sort=-modified（会员卡到期提醒列表）
   + page[number]=1&page[size]=10
@@ -3468,7 +3495,8 @@
     + remainingClassTime - 剩余课时
     + effectiveDate - 有效期
     + modified - 修改时间
-    + state - 状态，0：审核中，1：正常，2：请假中，3：审核未通过  
+    + state - 状态，0：审核中，1：正常，2：请假中，3：审核未通过
+    + recommenderName - 推荐用户
 
 + Response 200 (application/json) （开卡列表）
 
