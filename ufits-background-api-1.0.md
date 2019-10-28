@@ -597,9 +597,9 @@
       [string]  cardNumber      可选，会员卡号
       [string]  phoneNumber     可选，会员手机号
       [string]  studentName     可选，会员名 
-      [long]    creatorId       可选，创建人id
-      [string]  creatorName     可选，创建人名字
-      [string]  createDateTime  可选，创建时间, 格式为"yyyy/MM/dd [[HH]:[mm]:[ss]]"，中括号表示可选
+      [long]    creatorId       可选，操作人id
+      [string]  creatorName     可选，操作人名字
+      [string]  createDateTime  可选，操作时间, 格式为"yyyy/MM/dd [[HH]:[mm]:[ss]]"，中括号表示可选
       
 + resp: 200
 
