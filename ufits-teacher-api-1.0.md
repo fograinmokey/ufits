@@ -1345,7 +1345,8 @@
                "timeLength": 40,                // 上课时长，以分钟为单位
                "attendDate": "2019-05-15",      // 开课日期
                "beginTime": "10:10:10",         // 上课时间
-               "courseLevelId": 4,              // 课程服务，需调用5.3获取
+               "courseId": 3,                   // 课程id
+               "courseLevelId": 4,              // 课程级别id，需调用4.3获取
                "comment": "comment123"          // 备注
             }
         }    
