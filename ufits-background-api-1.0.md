@@ -429,8 +429,8 @@
         [int]       page[number]          可选，当前是第几页，默认为1
         [int]       page[size]            可选，每页多少条数据，默认为10
         [long]      studentId             可选，被访学员id
-        [string]    studentName           可选，用户名，支持前向模糊搜索如：张三丰，可通过张、张三、张三丰这样来模糊搜索，不支持三、三丰
-        [string]    phoneNumber           可选，手机号，支持前向模糊搜索
+        [string]    studentName           可选，用户名，支持模糊搜索
+        [string]    phoneNumber           可选，手机号，支持模糊搜索
         [int]       visitStatus           可选，回访状态标识：1、无意向会员；2、有意向未到店；3、约访到店；4、客户已到访；5、（首次）报名-准会员；6、（非首次）报名-准会员
         [long]      coachId               可选，回访人
         [datetime]  visitDatetime         可选，回访时间，格式为yyyy/MM/dd
