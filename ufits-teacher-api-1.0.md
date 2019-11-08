@@ -1736,16 +1736,14 @@
             ]
         }   
         
-#### 4.20 删除关联表图片
+#### 4.20 删除图片
 + uri:
 
         [DELETE] /v1/teacher/attachments
         
 + param:
 
-        [long] inlineId 关联id，如summaryAttachmentId、evaluationAttachmentId、evaluationCardAttachmentId
-        [string] attachmentTag 图片标识，如：summary_attachment（小结图片）、evaluation_attachment（评估图片）、
-            evaluation_card_attachment（会员卡评估图片）
+        [long] imageId 图片id
         
 + resp: 204
 
