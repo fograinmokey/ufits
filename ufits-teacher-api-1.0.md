@@ -888,7 +888,7 @@
                "doorType": 1,                           // 是否有上门，0：否，1：是
                "comment": "no comment",                 // 备注
                "editTag": "check",                      // 修改状态，当值为check时为后台审核操作，为空或其它值则不是
-               "checkState": 1,                         // 审核状态，通过为on，不通过为off
+               "checkState": "on",                         // 审核状态，通过为on，不通过为off
                "recommenderId": 3,                      // 推荐人id
                "updateTag": "updateContinue"            // 修改会员卡标识，新买课修改：updateNew，续课或套餐升级：updateContinue            
             }
