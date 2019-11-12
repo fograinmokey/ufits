@@ -304,7 +304,7 @@
                 "customerComment": "教练教得好。",              // 客户评价
                 "hasDoorFee": 0,                               // 是否收取上门费标识，可忽略
                 "images": {                                    
-                    "9": "2019-05-21/df.png",                  // 照片记录, key：关联id（如 summaryAttachmentId），值为照片地址
+                    "9": "2019-05-21/df.png",                  // 照片记录, key：照片id，值为照片地址
                     "10": "2019-05-21/db9.png"
                 },
             }
@@ -381,7 +381,7 @@
                     }
                 ],
                  "images": {                                    
-                    "9": "2019-05-21/df.png",                   // 照片记录, key：关联id（如 evaluationAttachmentId），值为照片地址
+                    "9": "2019-05-21/df.png",                   // 照片记录, key：照片id，值为照片地址
                     "10": "2019-05-21/db9.png"
                 },
             }
@@ -1147,7 +1147,7 @@
                     }
                 ],
                 "images": {                                    
-                    "9": "2019-05-21/df.png",                   // 照片记录, key：关联id（如 evaluationAttachmentId），值为照片地址
+                    "9": "2019-05-21/df.png",                   // 照片记录, key：照片id，值为照片地址
                     "10": "2019-05-21/db9.png"
                 }
             }
@@ -1543,8 +1543,8 @@
                 "attendClassId": 2,             // 预约上课id
                 "coachAttendClassId": 70,       // 教练上课id
                 "courseTypeId": 2,              // 课程分类id, 如私教、公开、查房 的id
-                "customerComment": "abc",       // 客户的评价
-                "coachComment": "efg",          // 上个教练给我的备注
+                "customerComment": "abc",       // 给客户的备注
+                "coachComment": "efg",          // 给教练/销售的备注
                 "hasDoorFee": 0,                // 是否收取上门费，0：否，1：是
                 "studentId": 2,                 // 学员id
                 "attendClassContent": "acd",    // 上课内容
