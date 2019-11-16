@@ -407,7 +407,8 @@
                             "id": 17,
                             "projectTitle": "免费体验课子项1",
                             "classTime": 3,                         // 课时数
-                            "money": 0                              // 金额
+                            "money": 0,                             // 金额
+                            "giftClassTime": 1                      // 赠课数
                         }
                     ]
                 },
@@ -419,13 +420,15 @@
                             "id": 18,
                             "projectTitle": "收费体验课子项1",
                             "classTime": 5,
-                            "money": 300
+                            "money": 0,                            
+                            "giftClassTime": 1                    
                         },
                         {
                             "id": 19,
                             "projectTitle": "收费体验课子项2",
                             "classTime": 4,
-                            "money": 0
+                            "money": 0,                          
+                            "giftClassTime": 1                    
                         }
                     ]
                 },
@@ -437,7 +440,8 @@
                             "id": 15,
                             "projectTitle": "孕期瑜伽小班课子项1",
                             "classTime": 10,
-                            "money": 1500
+                            "money": 0,                        
+                            "giftClassTime": 1                  
                         }
                     ]
                 },
@@ -449,7 +453,8 @@
                             "id": 16,
                             "projectTitle": "孕产套课子项1",
                             "classTime": 40,
-                            "money": 6000
+                            "money": 0,                            
+                            "giftClassTime": 1                     
                         }
                     ]
                 }
@@ -890,9 +895,9 @@
                "doorType": 1,                           // 是否有上门，0：否，1：是
                "comment": "no comment",                 // 备注
                "editTag": "check",                      // 修改状态，当值为check时为后台审核操作，为空或其它值则不是
-               "checkState": "on",                         // 审核状态，通过为on，不通过为off
+               "checkState": "on",                      // 审核状态，通过为on，不通过为off
                "recommenderId": 3,                      // 推荐人id
-               "updateTag": "updateContinue"            // 修改会员卡标识，新买课修改：updateNew，续课或套餐升级：updateContinue            
+               "updateTag": "updateContinue"            // 修改会员卡标识，新买课修改：updateNew，续课或套餐升级：updateContinue           
             }
         }
         
