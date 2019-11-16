@@ -937,13 +937,15 @@
                     "id": 1,                    // id
                     "realName": "小苏",         // 姓名              
                     "firstLetter": "X",         // 姓首字母
-                    "phoneNum": "13051638532"   // 手机
+                    "phoneNum": "13051638532",  // 手机
+                    "nickName": "苏苏"          // 昵称
                 },
                 {
                     "id": 2,
                     "realName": "白求恩",
                     "firstLetter": "B",
-                    "phoneNum": "18331931950"
+                    "phoneNum": "18331931950",
+                    "nickName": "苏苏"         
                 }
             ]
         }
