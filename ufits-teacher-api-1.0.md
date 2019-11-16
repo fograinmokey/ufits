@@ -408,7 +408,8 @@
                             "projectTitle": "免费体验课子项1",
                             "classTime": 3,                         // 课时数
                             "money": 0,                             // 金额
-                            "giftClassTime": 1                      // 赠课数
+                            "giftClassTime": 1,                     // 赠课数
+                            "effectiveDate": "2019-12-12"           // 有效期
                         }
                     ]
                 },
@@ -421,40 +422,16 @@
                             "projectTitle": "收费体验课子项1",
                             "classTime": 5,
                             "money": 0,                            
-                            "giftClassTime": 1                    
+                            "giftClassTime": 1,                     
+                            "effectiveDate": "2019-12-12"            
                         },
                         {
                             "id": 19,
                             "projectTitle": "收费体验课子项2",
                             "classTime": 4,
                             "money": 0,                          
-                            "giftClassTime": 1                    
-                        }
-                    ]
-                },
-                {
-                    "id": 3,
-                    "projectTitle": "孕期瑜伽小班课",
-                    "subProjects": [
-                        {
-                            "id": 15,
-                            "projectTitle": "孕期瑜伽小班课子项1",
-                            "classTime": 10,
-                            "money": 0,                        
-                            "giftClassTime": 1                  
-                        }
-                    ]
-                },
-                {
-                    "id": 4,
-                    "projectTitle": "孕产套课",
-                    "subProjects": [
-                        {
-                            "id": 16,
-                            "projectTitle": "孕产套课子项1",
-                            "classTime": 40,
-                            "money": 0,                            
-                            "giftClassTime": 1                     
+                            "giftClassTime": 1,         
+                            "effectiveDate": "2019-12-12"                 
                         }
                     ]
                 }
