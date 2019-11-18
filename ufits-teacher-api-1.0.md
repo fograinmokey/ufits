@@ -741,7 +741,7 @@
     用于教练端 我的客户 -> 发卡 -> 项目名称
 + uri: 
 
-    [GET] /v1/teacher/projects
+      [GET] /v1/teacher/projects
     
 + param: 无
 + resp: 200
@@ -756,7 +756,9 @@
                             "id": 1,                            // 项目id
                             "projectTitle": "免费体验课33",      // 项目名
                             "classTime": 0,                     // 课时数
-                            "money": 0                          // 金额
+                            "money": 0,                         // 金额
+                            "giftClassTime": 1,                 // 赠课数
+                            "effectiveDate": "2019-12-12"       // 有效期
                         }
                     ]
                 }
