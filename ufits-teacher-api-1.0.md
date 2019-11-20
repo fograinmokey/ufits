@@ -143,7 +143,8 @@
                 "customerAssessId": "customerAssessId",                 // 评估id
                 "mainCoachName": "mainCoachName",                       // 主教练名
                 "helpCoachName": "helpCoachName",                       // 助教名
-                "attendClassContent": "attendClassContent"              // 上课内容
+                "attendClassContent": "attendClassContent",             // 上课内容
+                "costClassTime": 2                                      // 扣课时数，已乘系数
             }
         }
         
@@ -1376,7 +1377,8 @@
                 "helpCoachName": "helpCoachName",               // 助教名，当课程性质为公开课时才显示
                 "attendClassId": 51,                            // 预约上课id, 也是评估id
                 "nature": 1,                                    // 课程性质，0：公开，1：私教
-                "coachAttendClassId": 70                        // 教练预约上课id
+                "coachAttendClassId": 70,                       // 教练预约上课id
+                "costClassTime": 2                              // 扣课时数，已乘系数
             }
         } 
         
