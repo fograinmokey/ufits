@@ -945,7 +945,9 @@
                     "phoneNum": "13051638531",              // 手机号码
                     "maternityStageTag": 1,                 // 孕产阶段，0：未知，1：备孕，2：怀孕，3：产后
                     "maternityDate": "2019-06-27",          // 孕产日期
-                    "address": "发生大幅度"                  // 学员住址
+                    "address": "发生大幅度",                 // 学员住址
+                    "organizationId": 3,                    // 用户来源id
+                    "organizationTitle": "美华"              // 用户来源名 
                 }
             ]
         }
