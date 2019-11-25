@@ -144,6 +144,7 @@
                "inDoorFee": 5,                          // 上门费
                "payWay": 2,                             // 支付方式，0：大众点评团购，1：支付宝，2：微信，3：现金，4：刷卡，5：其他，6：大众点评闪惠
                "effectiveDate": "2020-04-20",           // 卡有效期
+               "customerSourceId": 4,                   // 客户来源id
                "coachId": 5,                            // 销售教练id
                "cooperationCoach": {
                     "26": "李四"                        // 合作教练id和名字
