@@ -274,6 +274,9 @@
             "data": {
                 "cardNumber": "20190416000002",                 // 卡号
                 "studentNum": 8,                                // 到场人数
+                "attendClassContent": "上课内容",               // 上课内容
+                "keyUserRecord": "重点用户记录",                 // 重点用户记录
+                "coachComment": "给教练/销售的备注",             // 给教练/销售的备注
                 "datetimeRange": "2019-05-07 12:51-14:51",      // 课程时间段
                 "strPlace": "方庄妇幼保健院",                    // 场所
                 "studentName": "小龙女",                        // 用户
